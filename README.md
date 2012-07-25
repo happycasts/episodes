@@ -1,4 +1,2 @@
-episodes
-========
 
-Shownotes and stuff for all episodes
+Shownotes and stuff for all <Happycasts.net> episodes
