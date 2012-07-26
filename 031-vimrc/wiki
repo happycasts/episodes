@@ -1,1 +1,20 @@
 if there is no `.vimrc`, vim is in `compitiable` mode, so the differences ?
+
+1. commandline mode, tab completion fails
+
+
+1. load sequence
+
+	locate vimrc
+
+   and I see lots of vimrc
+
+1. derek vimrc video
+
+   1. vimrc is the heart of vim conf
+
+   1. :h vimrc
+      show people where .vimrc should be on Unix, if you don't have it, just create it!
+      actually it is just a file, it's name and location is special, because vim will look into it and auto load it
+      but if you have any other named file and :source thefile, it is the same thing
+      or you can excute all lines in the file in `command line mode`, again, same deal.
