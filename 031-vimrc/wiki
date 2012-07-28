@@ -11,7 +11,7 @@
 
    and I see lots of vimrc
 
-1. derek vimrc video
+1. derek vimrc video: http://www.derekwyatt.org/vim/vim-tutorial-videos/vim-intermediate-tutorial-videos/
 
    1. vimrc is the heart of vim conf
 
@@ -69,3 +69,22 @@
        /usr/share/vim/vimrc: symbolic link to `/etc/vim/vimrc'
 
  
+   1. comment it!
+
+   1. so expalain mappings to me, dear peter
+   1. talke about `leader`
+
+   1. you need to understand `runtimepath`
+      
+       :h rtp
+
+      so according to the output of the above, your one `.vim/` load first, thus if there is something same in /usr/share/vimrc ( production area ), then it will overwrite user's customization, luckliy most plugins will set a flag and saying if I've loaded, do n't load me again. then the `after`s, and your own `after` is after the production `after`
+      show people my own `.vim/after/stynax` as a example
+
+
+   1. never touch the "production area"
+
+   1. check :h rtp, and you can see a list of dirs that you can put into anyone of your `rtp` dir
+      like `doc`, `plugins`...
+
+   1. write a plugin drop it into plugins/, and it just works
