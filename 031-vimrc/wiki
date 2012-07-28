@@ -1,15 +1,18 @@
 1. "ALl the colon commands can be used in .vimrc, as well as vimscript"
 
 1. if there is no `.vimrc`, vim is in `compitiable` mode, so the differences ?
-
-   1. commandline mode, tab completion fails
+   but ubuntu vim will set noncompitaible in one of the production vimrc, so it is default anyway.
 
 
 1. load sequence
 
-	locate vimrc
+	   locate vimrc
 
    and I see lots of vimrc
+   check the output of `:scriptnames`, can I see no `/etc/vim/vimrc`, what's happening?
+
+       peter:~/episodes/031-vimrc$ file /usr/share/vim/vimrc
+       /usr/share/vim/vimrc: symbolic link to `/etc/vim/vimrc'
 
 1. derek vimrc video: http://www.derekwyatt.org/vim/vim-tutorial-videos/vim-intermediate-tutorial-videos/
 
@@ -21,8 +24,21 @@
       but if you have any other named file and :source thefile, it is the same thing
       or you can excute all lines in the file in `command line mode`, again, same deal.
 
-          1. show people three ways to `:set nu`
+1. you need to understand `runtimepath`
+      
+      :h rtp
 
+      so according to the output of the above, your one `.vim/` load first, thus if there is something same in /usr/share/vimrc ( production area ), then it will overwrite user's customization, luckliy most plugins will set a flag and saying if I've loaded, do n't load me again. then the `after`s, and your own `after` is after the production `after`
+      show people my own `.vim/after/stynax` as a example
+
+1. never touch the "production area"
+
+1. check :h rtp, and you can see a list of dirs that you can put into anyone of your `rtp` dir
+      like `doc`, `plugins`...
+
+1. write a plugin drop it into plugins/, and it just works
+
+   1. show people three ways to `:set nu`
 
 1. so my talk show have clear sturcture, it show have "parts", even though I still hope audience fells everything falls into a single logical flow
 
@@ -63,28 +79,5 @@
    1. first `setting options`, then `mappings`, `autocommand` is too difficult
 
 
-1. check the output of `:scriptnames`, can I see no `/etc/vim/vimrc`, what's happening?
-
-       peter:~/episodes/031-vimrc$ file /usr/share/vim/vimrc
-       /usr/share/vim/vimrc: symbolic link to `/etc/vim/vimrc'
 
  
-   1. comment it!
-
-   1. so expalain mappings to me, dear peter
-   1. talke about `leader`
-
-   1. you need to understand `runtimepath`
-      
-       :h rtp
-
-      so according to the output of the above, your one `.vim/` load first, thus if there is something same in /usr/share/vimrc ( production area ), then it will overwrite user's customization, luckliy most plugins will set a flag and saying if I've loaded, do n't load me again. then the `after`s, and your own `after` is after the production `after`
-      show people my own `.vim/after/stynax` as a example
-
-
-   1. never touch the "production area"
-
-   1. check :h rtp, and you can see a list of dirs that you can put into anyone of your `rtp` dir
-      like `doc`, `plugins`...
-
-   1. write a plugin drop it into plugins/, and it just works

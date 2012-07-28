@@ -1,0 +1,43 @@
+1. intro
+   1. all the colon commands, can be used in .vimrc, as well as vimscripts
+   1. show people three ways to `:set nu`
+   1. never touch the production area
+    
+       :scriptnames  
+
+   1. show people :h vimrc, to tell people where .vimrc should be on linux
+   1. if you don't have it, just create it.
+      actually it is just a file, it's name and location is special, because vim will look into it and auto load it
+      but if you have any other named file and :source thefile, it is the same thing
+      or you can excute all lines in the file in `command line mode`, again, same deal.
+
+1. settings
+
+   1. tell people where can they find all the alaviable options, and what are their current options
+
+          :h option-list "<c-]> to see details"
+          :options "to see the current setting"
+          :set nu? "to know one specifically"
+
+      everything come after a `:set` is a option: boolean, number, string
+
+1. mappings
+   
+       :h map.txt
+       :maps "to see all maps"
+       :map ,w "to see one"
+
+   1. tell people there is `imap`, `map` is is `nmap`
+
+1. function
+
+   show my own Browser()
+   
+   
+1. autocommand
+
+   1. :h autocmd.txt
+
+       autocmd FileType c set tabstop=4
+       autocmd FileType html set tabstop=2
+       autocmd BufWritePost ~/my_proj/* !ctags -f ~/my_proj/tags ~/my_proj/* 
