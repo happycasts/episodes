@@ -1,6 +1,8 @@
-if there is no `.vimrc`, vim is in `compitiable` mode, so the differences ?
+1. "ALl the colon commands can be used in .vimrc, as well as vimscript"
 
-1. commandline mode, tab completion fails
+1. if there is no `.vimrc`, vim is in `compitiable` mode, so the differences ?
+
+   1. commandline mode, tab completion fails
 
 
 1. load sequence
@@ -18,3 +20,52 @@ if there is no `.vimrc`, vim is in `compitiable` mode, so the differences ?
       actually it is just a file, it's name and location is special, because vim will look into it and auto load it
       but if you have any other named file and :source thefile, it is the same thing
       or you can excute all lines in the file in `command line mode`, again, same deal.
+
+          1. show people three ways to `:set nu`
+
+
+1. so my talk show have clear sturcture, it show have "parts", even though I still hope audience fells everything falls into a single logical flow
+
+   1. the main intro to vimrc
+   1. settings
+   1. mappings :h map.txt
+   1. functions
+   1. ...
+
+
+   there is simply no time to go into details about "mappings", "settings"... but make sure people understand what they are, and then point them to where they can learn more.
+
+   1. tell people there is `imap`, `map` is is `nmap`
+   1. tell people where can they find all the alaviable options, and what are their current options
+      
+          :h option-list "<c-]> to see details"
+          :options "to see the current setting"
+
+      everything come after a `:set` is a option: boolean, number, string
+
+
+1. point people to where they can learn `vim scripts`, `:h usr_41`
+
+1. how to check if a option is set?
+
+    :set compatible?
+
+1. :h usr_05 : set your settings
+
+   1. neet to show people they can add scripts in .vimrc
+      
+       if
+         ...
+       else
+         ...
+       endif
+
+   1. first `setting options`, then `mappings`, `autocommand` is too difficult
+
+
+1. check the output of `:scriptnames`, can I see no `/etc/vim/vimrc`, what's happening?
+
+       peter:~/episodes/031-vimrc$ file /usr/share/vim/vimrc
+       /usr/share/vim/vimrc: symbolic link to `/etc/vim/vimrc'
+
+ 
