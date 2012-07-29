@@ -1,5 +1,4 @@
-
-### main intro
+### 1. `.vimrc` 基本介绍
 
 ```vim
 :so peter.txt
@@ -13,7 +12,7 @@ function! Browser()
   exec "!firefox ".line
 endfunction
 ```
-## mappings
+### 2. 快捷键映射（ mappings ）
 
 ```.vimrc
 map ,w :call Browser()<cr>
@@ -24,7 +23,7 @@ imap jj <esc>
 :h map.txt
 ```
 
-### settings
+### 3. 选项设置（ settings ）
 
 ```.vimrc
 set nu
@@ -40,7 +39,7 @@ set tabstop=4
 :options
 ```
 
-### autocmd
+### 4. 自运行命令（ autocmd )
 
 ```.vimrc
 autocmd FileType c set tabstop=4
@@ -52,7 +51,7 @@ autocmd BufWritePost ~/my_proj/* !ctags -f ~/my_proj/tags ~/my_proj/*
 :h autocmd.txt
 ```
 
-### more info
+### 5. 更多信息
 
 ```vim
 :h usr_05.txt
