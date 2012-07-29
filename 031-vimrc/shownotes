@@ -1,0 +1,59 @@
+
+### main intro
+
+```vim
+:so peter.txt
+:h vimrc
+:scriptnames
+```
+
+```browser.vim
+function! Browser()
+  let line = getline(".")
+  exec "!firefox ".line
+endfunction
+```
+## mappings
+
+```.vimrc
+map ,w :call Browser()<cr>
+imap jj <esc> 
+```
+
+```vim
+:h map.txt
+```
+
+### settings
+
+```.vimrc
+set nu
+set tabstop=2
+set tabstop=4
+```
+
+```vim
+:h option-list
+:set nonu
+:set nu?
+:set tabstop?
+:options
+```
+
+### autocmd
+
+```.vimrc
+autocmd FileType c set tabstop=4
+autocmd FileType html set tabstop=2
+autocmd BufWritePost ~/my_proj/* !ctags -f ~/my_proj/tags ~/my_proj/*
+```
+
+```vim
+:h autocmd.txt
+```
+
+### more info
+
+```vim
+:h usr_05.txt
+```
