@@ -1,2 +1,2 @@
 
-Shownotes and stuff for all <Happycasts.net> episodes
+Shownotes and stuff for all <happycasts.net> episodes

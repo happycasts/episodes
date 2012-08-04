@@ -15,3 +15,7 @@
    1. git diff --cached
    1. git diff ew342e3 wer32w435
    1. git diff master test 
+
+1. what's the smallest unit of `git add`
+   1. `git add -i`, a patch? what is a patch?
+   1. git diff HEAD show diff of all staged or unstaged changes
