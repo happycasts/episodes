@@ -6,3 +6,12 @@
 1. FOR commit msg:
 
    "create README" or "created README"
+
+1. git-check-changes ( or should I name it just *git-diff* )
+   http://blip.tv/scott-chacon/gitcasts-basic-snapshotting-4240710
+
+   1. tell people about index
+   1. git log -p, tig
+   1. git diff --cached
+   1. git diff ew342e3 wer32w435
+   1. git diff master test 
