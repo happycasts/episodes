@@ -1,0 +1,61 @@
+1. create a repo
+
+   run:
+     
+       git commit -m "the first version"
+
+   then error
+
+       nothing to commit 
+
+   now `git status`, and here comes `git add ...`, and the concept of staging area
+   NOTE: run `git status` again after `git add`
+
+1. show people the progit graph
+
+   1. progit: figure1.6
+
+       Working dir --- everying except .git
+       staging area --- .git/index
+       git dir --- .git/ (but .git/objects/ is the place to store the commit objects)
+
+1. explain the `git diff` behavior
+
+   1. NOTE: you are not able to run `git diff` if you delete `.git/objects/*`
+      so you can not say it's all about "working dir" & "staging area"
+
+1. git diff --cached/--staged
+
+1. git diff HEAD
+
+   1. show people what is ref/HEAD
+
+1. git diff ew342e3 wer32w435
+
+   1. sure you can easily get this by `git log -p` or tig
+
+1. multi-branch diff
+
+       git diff master test
+
+1. NOTE: `git diff` can accept all kinds of parameters, but you have to be able to locate a certain set of files(or one file), by each of these parameters.
+
+   1. diff -u file1 file2
+   1. diff -Nurp tree1 tree2
+   1. git diff --no-index file1 file2
+
+1. <path>
+
+       git diff file
+       git diff dir
+       cd dir; git diff .
+
+1. tips
+  
+   1. show only diff for certain path
+   1. show ui.color
+   1. check what's in next commit
+      1. git diff --cached
+      1. git status
+      1. git commit -v
+
