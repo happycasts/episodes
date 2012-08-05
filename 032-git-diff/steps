@@ -59,3 +59,7 @@
       1. git status
       1. git commit -v
 
+   1. what changes `git diff` won't show?
+
+      1. untracked file
+      1. files in .gitignore 
