@@ -1,0 +1,34 @@
+1. progit: figure1.6
+   Working dir --- everying except .git
+   staging area --- .git/index
+   git dir --- .git/ (but .git/objects/ is the place to store the commit objects)
+
+1. git diff --cached/--staged
+1. everytime you do a commit
+   commit= a copy of the whole tree = a snapshot ( a photo)
+
+1. http://gitreal.codeschool.com/levels/1
+
+1. FOR commit msg:
+
+   "create README" or "created README"
+
+1. git-check-changes ( or should I name it just *git-diff* )
+   http://blip.tv/scott-chacon/gitcasts-basic-snapshotting-4240710
+
+   1. tell people about index
+   1. git log -p, tig
+   1. git diff --cached
+   1. git diff ew342e3 wer32w435
+   1. git diff master test 
+
+1. git diff HEAD show diff of all staged or unstaged changes
+
+1. what's the smallest unit of `git add`
+   1. `git add -i`, a patch? what is a patch?
+      1. I will call it a "change unit"
+      1. when you change sth, diff will get leading and trails 3 lines as context
+      1. so it takes 7 lines to separated a *change hunk* from another
+      1. it's the unit you can do `git add -i`
+      1. it's the unit to decide if it is a *conflict* or two, when you merge things
+
