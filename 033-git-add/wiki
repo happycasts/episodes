@@ -1,0 +1,36 @@
+`index` is a list of whatever will be in next commit
+it points to stuff in .git/objects, which is added by `git add`
+so it also brings concept of `tracked`
+
+first  `git add a_file`, then `a_dir`, then `.`, then challenge people what is the smallest unit of `git add`
+show them `git add -i` and talk in detail of what a "change" is? and how conflicts happen.
+
+show `git add -A`, but recomend `git commit -a`
+
+# untracked files
+
+`git add -i ` can handle untracked files very well
+`git add -p`
+
+progit
+6.2 Interactive Staging
+
+# .gitignore
+
+a must to have
+
+# never one way trip
+
+from progit.org
+
+    Unstaging a Staged File
+    git reset HEAD benchmarks.rb
+
+    rm files
+    git rm --cached file.rb
+    git rm file.rb
+
+# `git add .` rocks
+
+  show people how troublesome it can be to use `git mv` `git rm` `git add xxx`
+  then comes `git add .`
