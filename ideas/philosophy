@@ -1,0 +1,22 @@
+There is a lot of buzz on everybosy's blog about fuzzfinder, ctags, sendmail, but there is not really a nice railscasts.com quality screencast as a gateway to them, search in youtube and youku, I know I can easily makr a screencast on those things and people would love to share it. So happycasts--world's best screencasts on Linux toys.
+
+I think every cast, shall start with "today our pain is ..., and here is the fix..."
+
+# "Getting the job done" as the only fix
+trying to talk about http://ndpsoftware.com/git-cheatsheet.html#loc=workspace
+I will say: there is so much out of this diagram, I can talk about it for a day, but now I only have ten mins, so what's should be on top of the priority. Now the answer is happycasts is all above helping people who are building thing right now, so all happycasts episode will be serve the working craftsman, that is talk about things with most practical value with building things up. Pragmatic Programmer I am myself.
+
+Q: How to decide the angle to give the talk?
+A: Try to follow DHH, try to follow codeschool.com/org, try to follow Scott, all of them talk in different angle, but all of them are good options for me, since they are by their nature good programmers themselves(NOT like some Chiese stupid boring techers), following them, there is no way for happycasts to go wrong. Right now, I will try to be close to railscasts.com.
+
+# if you don't use sth in person, don't share it.
+
+Now I am trying to share `scope` cause I think its cool to use if you do a lot of C coding. But if you do not use it in person, you will going to make a shit, you won't have passion to update it. Also, most of your audience are people like you, so if you do not code C a lot, it is very like they do not either.
+# khan Academy
+http://www.youtube.com/watch?v=zxJgPHM5NYI
+Q: Have you thought put yourself visually on the vedio?
+A: If a funny face there, it will be hard to focus.
+
+Q: the format is so simple, why it appeals so many people?
+A: It's like I am sitting next to the person, and we are watching the paper together.
+I 90% of the time walk through the problem real time, this is kind of humanity there.
