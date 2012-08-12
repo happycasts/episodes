@@ -163,3 +163,24 @@ http://www.youtube.com/watch?v=Z2ZL14WWEJI
 then istead of doing `rebase -i` you do `git reset master-head`+`git add -p`, cause this way you only need to do the pick and choose seriously at the end
 you don't have to commit the patches for two ideas separatly as you do before while using `git reabse -i`, so a much better/natural/simple solution
        
+
+## a really nice workflow
+http://ruby-china.org/topics/4768
+http://blog.hashrocket.com/posts/feature-development-with-git-branching
+
+http://ruby-china.org/knwang
+
+    需要在branch上很久的时候多半是要完成一整块的feature set才能整合在master里面， 比如，凡是涉及到付费的时候就要把很多情形考虑到做完才能一起deploy。可以每做完一小块测试通过后就git checkout master; git pull --rebase origin master; git checkout my_branch; git rebase master
+
+    这样先把远程master别人的代码拿下来，再rebase到自己的branch上面。再跑测试。 通过了之后git push origin my_branch, 这样就不用担心比如电脑掉到水坑里，或者需要别人接着做这个大feature set. 再继续做下一小块。原因还是每次集成少量代码，有问题早解决。而remote branch伤得的commit message也可以作为一种和同事的交流工具，让别人知道你做到哪里。
+
+    等到feature set做完, 还是一样git checkout master; git pull --rebase origin master; git checkout my_branch, git rebase master; run test; git checkout master; git merge my_branch (fast forward); git push origin master; deploy
+
+    总结下，
+
+    1) 所有developer的本地master都紧跟remote master，而且都是working code, 随时可以deploy
+    2) 本地上推前先抓remote master， 整合测试通过后从local master push remote master, no conflict.
+    3) push/deploy often, push/deploy early
+    4) remote branches做备份和交流
+
+    要是出现了几个long living branch又都不能很快deploy的时候就比较复杂，可以考虑再开一个非master的integration branch. 但这种情况一旦出现更多的是整个项目的筹划出了问题。
