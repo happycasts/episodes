@@ -1,3 +1,8 @@
+# what is a "change" in diff/git world
+
+  show people the `7lines` rule, when talking about git merging
+  what's a conflict
+
 # vim indent
 Now my problem is in a .c file my indent is four spaces, this is nice, but NOT for my htmls!!!
 so have a look at 
@@ -184,3 +189,9 @@ http://ruby-china.org/knwang
     4) remote branches做备份和交流
 
     要是出现了几个long living branch又都不能很快deploy的时候就比较复杂，可以考虑再开一个非master的integration branch. 但这种情况一旦出现更多的是整个项目的筹划出了问题。
+
+
+on `my_feature` branch
+
+    git reset --soft HEAD^^^
+    git add -p

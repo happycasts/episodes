@@ -1,25 +1,60 @@
+### Basic idea
+
 `index` is a list of whatever will be in next commit
 it points to stuff in .git/objects, which is added by `git add`
 so it also brings concept of `tracked`
 
-first  `git add a_file`, then `a_dir`, then `.`, then challenge people what is the smallest unit of `git add`
-show them `git add -i` and talk in detail of what a "change" is? and how conflicts happen.
+show people `git add` under the hood
+   
+    cat .git/index
+    cat .git/objects
+    git add sth
+    cat .git/index
+    cat .git/objects
 
-show `git add -A`, but recomend `git commit -a`
+Q: what are tracked/untracked files?
+A: if the filename is in `index`, then it is tracked, you can check all tracked files with `git list-files`, and u can rm a file from
+   index, thus it becomes untracked, with `git rm --cached file`
 
-# untracked files
+### `git add` basics
 
-`git add -i ` can handle untracked files very well
-`git add -p`
+first  `git add a_file`, then `a_dir`, then `.`, 
 
-progit
-6.2 Interactive Staging
+rm a file
+ 
+  git rm file = git rm --cached file + rm file
 
-# .gitignore
+when you add a file, then modify its content again, u need to run `git add this_file` again
 
-a must to have
+so for all the troule, here comes to my workflow
 
-# never one way trip
+if you do not delete, rename, add newfile(commit -a can actually handle the "delete")
+
+   just use `git commit -a -v`
+
+otherwise, just do everything with /bin/rm mv , and then `git add .`, this is like `git add -A`
+
+gitignore
+
+
+### long intro to `git add -p`
+
+`git add -p` is nice, but it can not handle untracked files, so it brings us to `git add -i`
+
+### `git add -i ` can handle untracked files very well
+
+I don't know much about it
+so check:
+
+    progit
+    6.2 Interactive Staging
+
+
+### never one way trip, rm things from index
+
+get everything out of index
+
+   git reset
 
 from progit.org
 
@@ -30,7 +65,12 @@ from progit.org
     git rm --cached file.rb
     git rm file.rb
 
-# `git add .` rocks
+    This means that git reset -p is the opposite of git add -p (see git-add(1))
+ 
+### `git rm --cached file` vs `git reset file`, what't the difference?
 
-  show people how troublesome it can be to use `git mv` `git rm` `git add xxx`
-  then comes `git add .`
+The both remove things from index.
+To understand this, one must be clear with the structure of index. 
+`git rm --cached file` will remove `file` from index, thus you can no longer find `file` in next snapshot.
+and you can still find `file` in the working tree, its just become `untracked`
+`git reset file` only get the changes of `file` out of index, `file ` will still show up in next snapshot

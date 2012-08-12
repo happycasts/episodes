@@ -1,0 +1,9 @@
+my throw and throwh as a must
+
+the how to repair the lastest commit
+
+    $ git commit ...
+    $ git reset --soft HEAD^      (1)
+    $ edit                        (2)
+    $ git commit -a -c ORIG_HEAD  (3)
+
