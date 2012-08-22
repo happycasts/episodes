@@ -1,2 +1,2 @@
 
-Stuff for <happycasts.net> episodes
+Stuff for http://happycasts.net episodes
