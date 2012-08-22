@@ -1,3 +1,9 @@
+# a git tutorial with nice graph
+http://marklodato.github.com/visual-git-guide/index-en.html
+
+NOTE: still I don't want graphs for happycasts, cause its not about
+*explaining*.
+
 # add time point
 
 Sean Soong suggested he wanted to get the point he want quickly
