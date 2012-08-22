@@ -7,3 +7,6 @@ the how to repair the lastest commit
     $ edit                        (2)
     $ git commit -a -c ORIG_HEAD  (3)
 
+
+http://stackoverflow.com/questions/2530060/can-you-explain-what-git-reset-does-in-plain-english
+
