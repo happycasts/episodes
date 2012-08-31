@@ -1,0 +1,37 @@
+some cool git-config tricks for myself, will be a talkshow
+
+1. where it is?
+
+    man git-config # check FILES and ENV
+    # smaller scope, higher priority
+   
+   It's just unix covention, show `ls -a`
+
+1. set username&email for commits
+
+   1. use commandline
+
+       git commit --author="Peter Wang <happypeter@dog.org>"  -a -m"hello" # no way to set --committer
+       # for really selfish people
+   
+   1. write into your ~/.gitconfig # this is what --global will do, and 99% time your want to do
+
+      works for author&commiter, in all the user's projects
+      .git/config 
+
+   1. the ENV, I think it's git server sys admins to write script, so I never touched it before.
+
+1. a quick walkthrough of my .gitconfig
+
+1. query the settings, even you can have `cat ~/.gitconfig`, you still want
+
+       git config user.email
+       git config alias.throw
+       git config push.default
+       git config --list
+
+1. a lot other cool things, check man git-config
+
+   1. check the meaning of a specific option
+
+      man git-config # then `/push.default`
