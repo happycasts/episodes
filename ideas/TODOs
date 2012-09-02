@@ -1,3 +1,18 @@
+# github basic contribute workflow
+http://www.youtube.com/watch?v=rsnodzi2ULM
+Tom:
+A bisic: create+fork+pull request+cherry-pick workflow
+Chris:
+Why distributed? A very intellegent talk
+Scott:
+`rebase onto` really cool 00:49:04
+change Email for all commits
+
+    git filter-branch --env-filter "export GIT_AUTHOR_EMAIL=you@you.com" HEAD
+
+`git bisect` is simple and helpful
+`.gitattribes` make img diff for you, very useful info shown in the diff result
+
 # what is a "change" in diff/git world
 
   show people the `7lines` rule, when talking about git merging
