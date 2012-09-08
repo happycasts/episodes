@@ -32,3 +32,6 @@ so stop using rbenv for this, too much trouble, go back and use rvm instead, now
 
 Sites:
 http://daveliu.github.com/
+
+Bug:
+https://github.com/imathis/octopress/issues/748
