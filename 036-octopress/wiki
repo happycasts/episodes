@@ -1,0 +1,34 @@
+# install rbenv and ruby
+https://github.com/sstephenson/rbenv#section_2
+
+NOTE: on ubuntu don't use `.bash_profile`, just use `.bashrc`
+go to Zh site to download 1.9.3, En site seems to be blocked
+http://www.ruby-lang.org/zh_cn/downloads/
+
+to compile, have to 
+
+     sudo apt-get install autoconf bison
+     # automake is installed as dep
+
+after make&&make install, do
+
+   rbenv rehash
+   rbenv version #current verion is still `system`
+   rbenv global 1.9.3-p0
+
+
+now clone octopress
+
+   cd octopress
+   rm  .rbenv-version # cause it requires higher verion than p0
+   gem install bundler
+   # error: you have not write permission to /home/peter/.rvm/xxx
+   # fuck, rvm is still here
+
+so stop using rbenv for this, too much trouble, go back and use rvm instead, now back to user: peter
+
+
+    rake preview # Great
+
+Sites:
+http://daveliu.github.com/
