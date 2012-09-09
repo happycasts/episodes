@@ -1,3 +1,7 @@
+1. why octopress
+   1. jekyll lacks features
+   http://blog.xdite.net/posts/2011/10/07/what-is-octopress/
+
 1. setup
    basically, follow whatever in http://octopress.org/docs/
 
@@ -51,6 +55,7 @@
    1. add about.html
 
         rake new_page['about.markdown'] # then remove `sharing` and `comment` option in this page
+        # add a img here, show people how easy it is.
 
    1. add field in navbar
 
@@ -74,6 +79,7 @@
    1. version control your source; update octopress 
 
       now I know why `rake install` in the first place
+      but even there won't be conflicts for source/ and sass/, but still Rakefile and _config.yml is changed as well!!!
 
        git checkout source
        git pull octopress master
