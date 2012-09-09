@@ -1,70 +1,90 @@
-# install rbenv and ruby
-https://github.com/sstephenson/rbenv#section_2
+1. setup
+   basically, follow whatever in http://octopress.org/docs/
 
-NOTE: on ubuntu don't use `.bash_profile`, just use `.bashrc`
-go to Zh site to download 1.9.3, En site seems to be blocked
-http://www.ruby-lang.org/zh_cn/downloads/
+   1. install git, rvm and ruby
+      http://octopress.org/docs/setup/
 
-to compile, have to 
+          sudo apt-get update; sudo apt-get install git
+          rvm install the_version_in_octopress_rvmrc
+          cd octopress # the version shall be that version now
+          ruby -v
 
-     sudo apt-get install autoconf bison
-     # automake is installed as dep
+      now clone octopress
 
-after make&&make install, do
-
-   rbenv rehash
-   rbenv version #current verion is still `system`
-   rbenv global 1.9.3-p0
+         cd octopress
+         gem install bundler
+         bundle install
 
 
-now clone octopress
+    1. install theme
 
-   cd octopress
-   rm  .rbenv-version # cause it requires higher verion than p0
-   gem install bundler
-   # error: you have not write permission to /home/peter/.rvm/xxx
-   # fuck, rvm is still here
+         rake install # why? for theme customization and updating octopress, talk later
 
-so stop using rbenv for this, too much trouble, go back and use rvm instead, now back to user: peter
+   1. deploy to github
 
-# google analytics
+      http://octopress.org/docs/deploying/
+      http://octopress.org/docs/deploying/github/
+ 
+      git add . # check .gitignore
+      git push orign source # master is used for _deploy
 
-super easy to add
+1. common tasks to help people understand the structure better
+   
+   1. google analytics
 
-# disqus
+   1. disqus
 
-check _layout/page.html, I see
+      check _layout/page.html, I see
 
-    {% if site.disqus_short_name and page.comments == true %}
+          {% if site.disqus_short_name and page.comments == true %}
 
-so I need to set two options to get disqus work, one is in _config.yml, the other only needed for pages,
-so by default for posts, you can leave this option empty.
+      so I need to set two options to get disqus work, one is in _config.yml, the other only needed for pages,
+      so by default for posts, you can leave this option empty.
 
-# diable the `tweet` link
+   1. diable the `tweet` link
+      trace where it is from: _layout/post.html -> _include/post/sharing.html -> _config.yml
+       
+          twitter_tweet_button: false
 
-trace where it is from: _layout/post.html -> _include/post/sharing.html -> _config.yml
+      this will work after you restart 'rake preview'
+      can also use `sharing: false` in each post page to hide the sharing div, but this is not the desired result.
+   1. add about.html
 
-    twitter_tweet_button: false
+        rake new_page['about.markdown'] # then remove `sharing` and `comment` option in this page
 
-this will work after you restart 'rake preview'
-can also use `sharing: false` in each post page to hide the sharing div, but this is not the desired result.
+   1. add field in navbar
 
-# test
+      _includes/custom/navigation.html:
+
+         <li><a href="{{ root_url }}/about.html">About</a></li>
+
+1. workflow, to explain the dir structure
+   1. do local work
 
     rake preview # Great
 
-# add about.html
+     need to to `git add .; git commit xxx; git push orign source` early, in order to see changes with `git diff & git st`
+     Just do sth minium add then 'push orign source', then delete octopress, and clone happycasts.github.com, and continue work on its `source` branch
 
-     rake new_page['about.markdown'] # then remove `sharing` and `comment` option in this page
 
-# add field in navbar
+   1. rake
 
-_includes/custom/navigation.html:
+      rake -T # to see all the tasks
 
-     <li><a href="{{ root_url }}/about.html">About</a></li>
+   1. version control your source; update octopress 
 
-Sites:
-http://daveliu.github.com/
+      now I know why `rake install` in the first place
 
-Bug:
-https://github.com/imathis/octopress/issues/748
+       git checkout source
+       git pull octopress master
+
+1. Tips:
+   1. custom domain
+      http://octopress.org/docs/deploying/github/
+
+   1. change theme
+      https://github.com/imathis/octopress/wiki/List-Of-Octopress-Themes
+      https://github.com/imathis/octopress/wiki/Octopress-Sites
+
+1. Bug:
+   https://github.com/imathis/octopress/issues/748
