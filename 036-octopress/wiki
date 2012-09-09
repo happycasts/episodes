@@ -27,8 +27,41 @@ now clone octopress
 
 so stop using rbenv for this, too much trouble, go back and use rvm instead, now back to user: peter
 
+# google analytics
+
+super easy to add
+
+# disqus
+
+check _layout/page.html, I see
+
+    {% if site.disqus_short_name and page.comments == true %}
+
+so I need to set two options to get disqus work, one is in _config.yml, the other only needed for pages,
+so by default for posts, you can leave this option empty.
+
+# diable the `tweet` link
+
+trace where it is from: _layout/post.html -> _include/post/sharing.html -> _config.yml
+
+    twitter_tweet_button: false
+
+this will work after you restart 'rake preview'
+can also use `sharing: false` in each post page to hide the sharing div, but this is not the desired result.
+
+# test
 
     rake preview # Great
+
+# add about.html
+
+     rake new_page['about.markdown'] # then remove `sharing` and `comment` option in this page
+
+# add field in navbar
+
+_includes/custom/navigation.html:
+
+     <li><a href="{{ root_url }}/about.html">About</a></li>
 
 Sites:
 http://daveliu.github.com/
