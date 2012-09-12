@@ -1,3 +1,11 @@
+# weibo
+people start to resend my weibo tweets recently, so details matter:
+
+1. the link to happycast site mixed in contents not easy to reach
+1. viewer can not find out it's not a simple blog, but a awesome podcast
+
+so the fix is, move the link to the end of the weibo, and add "click to see video: " 
+before it
 # Get sth done
 I know git and bash and things well, but if I talk about these thing, nobody will be interested. I need to help them get sth done
 
