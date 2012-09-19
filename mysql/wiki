@@ -1,0 +1,13 @@
+1. install 
+1. basic commandline tricks
+   1. insert
+   1. clear
+   1. jop
+   1. use where id="1"
+   1. make it a story, say I want to test a web app, and so I need to insert some data to the db, this is where the thing begins
+      https://github.com/happypeter/railscasts-china/wiki/install
+
+   1. stress beginner mistakes
+
+1. a list of mysql GUI front-end
+    http://en.wikipedia.org/wiki/MySQL
