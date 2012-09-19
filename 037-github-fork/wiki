@@ -1,0 +1,39 @@
+old episode: http://happycasts.net/episodes/12?autoplay=true
+you fork, and you clone, but you never work on the master branch of your clone, you create featherx to work on
+
+1. do not talk about the stupid web-interface fork&edit at first, cause it just confuse newbies, you can metion it at the end of the video at the end however.
+
+git checkout -b featureX # pull and rebase will upstream while you are editing
+                         # so that your merger and do a fastforward merge with
+                         # less possibility of bugs
+# but of course, merge two lines of development is also very common in real
+# world, show   https://github.com/happypeter/railscasts-china/network
+
+# send pull request and then delete featureX, when merged by upstream
+
+git push origin :featureX
+
+1. don't use github merge button! cause it's `git merger --no-ff`
+   so even a PR is fastfowardable, it will still create a merge commit, as show here: 
+        http://happycasts.net/episodes/12?autoplay=true
+
+
+1. to make all the history in one-line, sometimes you may need to 
+
+       curl the_path.diff|git am
+       git commit --author="xxx"
+
+1. how github use github to build github
+  http://v.youku.com/v_show/id_XMzgzMjI1ODcy.html
+
+  you don't need to fork first to send a pull request, pull request can happen within a repo between two branches,
+  this is how github guys work
+
+1. the upstream owner's work flow
+
+   get the pull request; never just click the "merge" button, well instead do a local pull+test first
+   git add contributor_name url
+   git pull contributor_name the_patch_branch
+   test the code
+   if pass; push this code to upstream master
+   if fail; go to the pull request, and talk to the contibutor
