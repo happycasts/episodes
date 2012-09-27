@@ -9,49 +9,18 @@ Opening: in rails-set, I talked about passenger+nginx+rvm, today I want to talk 
     1. to remove automizing scripts like capistrano and unicorn_init.sh
     1. just try to tell you what is the things done on earth
 
+mainly I will talk about:
 
-```
-apt-get -y update
-apt-get -y install curl git-core python-software-properties
-```
-
-1. mysql
-   1. tell people they need to set a password for root user installing mysql, that psword will show up in database.yml file
-   1. tell people their database.yml file is not in git repo
-
+1. install ruby things
+   ruby rbenv bundler 
+1. install mysql
+1. install nginx
+1. install unicorn
 
 1. I won't talk about how to create a vps, or how to install sendmail
    No capistrano: just refs:
       1. http://railscasts.com/episodes/335-deploying-to-a-vps
       1. http://railscasts.com/?tag_id=21
-
-1. install ruby
-
-   1. rbenv https://github.com/fesplugas/rbenv-installer
-
-       curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
-       vim ~/.bashrc # add rbenv to the top, so it works with capistrano
-       . ~/.bashrc
-       rbenv bootstrap-ubuntu-12-04 # to install deb packages for ruby, tell people this is automization, but this is clear like water, so nice
-
-   1. bootstrap-ubuntu-12-04 ERRORS: it did "apt-get update" first, but still lots of errors, need to explain
-
-   1. despit these errors, ruby can be installed.
-
-       rbenv install 1.9.3-p125
-       rbenv global 1.9.3-p125
-       gem install bundler --no-ri --no-rdoc
-       rbenv rehash
-
-1. mysql
-
-      sudo apt-get install mysql-server # mysql-client installed as dep
-
-1. gem install rails, or shall I put it into bunlder
-   if I have a global rails, and also a bundle installed rails for a certain project, will rbenv handle this properly?
-
-       rails new blog -d mysql
-       sudo apt-get install libmysqlclient-dev # for error bundling mysql2 gem, even you do bootstrap-ubuntu-12-04
 
 1. javacript runtime Node.js
 
@@ -64,35 +33,62 @@ apt-get -y install curl git-core python-software-properties
     sudo apt-get -y install nodejs
 
 
-1. database.yml
-
-      add it to .gitignore 
-      cp config/database.yml config/database.example.yml # for later server database.yml
-
-1. unicorn
-
-   1. how to write unicorn.rb
-   1. how to get unicorn start in every mode
-   1. how to do the unicorn_init.sh # link people to http://railscasts.com/episodes/335-deploying-to-a-vps
-      # casue I will left this out as well like capistrano
-
-1. nginx
-   sudo rm /etc/nginx/sites-enabled/default
-   sudo service nginx restart
-
-
 ############ deploy happycasts ##################
 
-1. remove databse.yml
-   add it to .gitignore
+1. get happycasts source code
+   
+       sudo apt-get -y update
+       sudo apt-get install git
+       git clone ...
 
+1. db things
+    1. remove databse.yml
+       add it to .gitignore
+
+           mv config/database.yml config/database.example.yml # for later server database.yml
+           git push orign master
+
+    1. mysql
+       1. tell people they need to set a password for root user installing mysql, that psword will show up in database.yml file
+           
+           sudo apt-get -y install mysql-server # mysql-client installed as dep
+           # there are still headers for mysql2 gem, blah... talk it later
+
+1. install ruby
+   1. rbenv https://github.com/fesplugas/rbenv-installer
+
+       sudo apt-get -y install curl 
+       curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
+       vim ~/.bashrc # add rbenv to the top, so it works with capistrano
+       . ~/.bashrc
+       rbenv bootstrap-ubuntu-12-04 # to install deb packages for ruby, tell people this is automization, but this is clear like water, so nice 
+       # cd .rbenv; find .|grep bootstrap-ubuntu-12-04
+
+   1. bootstrap-ubuntu-12-04 ERRORS: it did "apt-get update" first, but still lots of errors, but just for "apt-get update", all the packages done with no error.
+
+   1. so, ruby can be installed.
+
+       rbenv install 1.9.3-p125
+       rbenv global 1.9.3-p125
+       gem install bundler --no-ri --no-rdoc
+       rbenv rehash
+
+1. gem install rails, or shall I put it into bunlder
+   if I have a global rails, and also a bundle installed rails for a certain project, will rbenv handle this properly?
+
+       rails new blog -d mysql
+       sudo apt-get install libmysqlclient-dev # for error bundling mysql2 gem, even you do bootstrap-ubuntu-12-04
+
+
+# server things ( unicorn + ngnix )
 1. instal nginx 
 
     sudo apt-get install python-software-properties
     sudo add-apt-repository ppa:nginx/stable
-    sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 00A6F0A3C300EE8C # this only necessary if you failed to addkey by doing last command
+    sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 00A6F0A3C300EE8C # this only necessary if you failed to addkey by doing last command. 
+    # in my case 12.04 ubuntu, this is not needed.
     sudo apt-get update # some error here, but I don't really care, case this only downloading deb names/index, as long as next step is done, it's good.
-    sudo apt-get install nginx
+    sudo apt-get install nginx # if nginx is from ppa.xxx as the output shows it's all fine.
 
 1. add unicorn to Gemfile, and bundle it.
 
