@@ -1,5 +1,5 @@
 http://ruby-china.org/topics/5753
-http://railscasts.com/episodes/335-deploying-to-a-vps
+http://railscasts.com/episodes/335-deploying-to-a-vps # fuck, it's a pro episode, so I need to encourage people to buy
 https://gist.github.com/3704968
 
 Opening: in rails-set, I talked about passenger+nginx+rvm, today I want to talk about unicorn+nginx+rbenv, 
@@ -22,16 +22,6 @@ mainly I will talk about:
       1. http://railscasts.com/episodes/335-deploying-to-a-vps
       1. http://railscasts.com/?tag_id=21
 
-1. javacript runtime Node.js
-
-   now if run 'rails s', you see lacking js runtime error, so install node 
-   Edit: come on, we are deploying a server, not setting up local dev env, so no "rails s", try to deploy happycasts/ on vps
-   show people when the error happens that way, maybe when I am doing "rake assets:precompile"
-
-    sudo add-apt-repository ppa:chris-lea/node.js
-    sudo apt-get -y update
-    sudo apt-get -y install nodejs
-
 
 ############ deploy happycasts ##################
 
@@ -41,18 +31,11 @@ mainly I will talk about:
        sudo apt-get install git
        git clone ...
 
-1. db things
-    1. remove databse.yml
-       add it to .gitignore
+1. remove databse.yml
+   add it to .gitignore
 
-           mv config/database.yml config/database.example.yml # for later server database.yml
-           git push orign master
-
-    1. mysql
-       1. tell people they need to set a password for root user installing mysql, that psword will show up in database.yml file
-           
-           sudo apt-get -y install mysql-server # mysql-client installed as dep
-           # there are still headers for mysql2 gem, blah... talk it later
+       mv config/database.yml config/database.example.yml # for later server database.yml
+       git push orign master
 
 1. install ruby
    1. rbenv https://github.com/fesplugas/rbenv-installer
@@ -73,39 +56,37 @@ mainly I will talk about:
        gem install bundler --no-ri --no-rdoc
        rbenv rehash
 
-1. gem install rails, or shall I put it into bunlder
-   if I have a global rails, and also a bundle installed rails for a certain project, will rbenv handle this properly?
-
-       rails new blog -d mysql
-       sudo apt-get install libmysqlclient-dev # for error bundling mysql2 gem, even you do bootstrap-ubuntu-12-04
 
 
-# server things ( unicorn + ngnix )
 1. instal nginx 
 
-    sudo apt-get install python-software-properties
-    sudo add-apt-repository ppa:nginx/stable
+    sudo apt-get install python-software-properties; sudo add-apt-repository ppa:nginx/stable
     sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 00A6F0A3C300EE8C # this only necessary if you failed to addkey by doing last command. 
     # in my case 12.04 ubuntu, this is not needed.
     sudo apt-get update # some error here, but I don't really care, case this only downloading deb names/index, as long as next step is done, it's good.
     sudo apt-get install nginx # if nginx is from ppa.xxx as the output shows it's all fine.
 
-1. add unicorn to Gemfile, and bundle it.
+1. add unicorn, remove "therubyracer" to Gemfile, and bundle it.
+
 
    need this for GEM: nokogiri
    
       sudo apt-get install libxml2-dev libxslt1-dev
       # show people the error, tell them no worry, just try to type "apt-get install libxml<tab>"
       # things will be soloved, and everything is natural
-  
-   also mention mysql2 GEM, header issue here, cause it's same thing
+
+   for error bundling mysql2 gem, even you do bootstrap-ubuntu-12-04
+
+     sudo apt-get -y install libmysqlclient-dev 
+
+   never forget to do 'rbenv rehash'
 
 1. add unicorn.rb and nginx.conf to happycasts/config (copy and change from onestep/)
 
    now 
 
-      sudo ln -s /home/peter/happycasts/config/nginx.conf /etc/nginx/happycasts
-      sudo rm /ect/nginx/default
+      sudo ln -s /home/peter/happycasts/config/nginx.conf /etc/nginx/sites-enabled/happycasts
+      sudo rm /etc/nginx/sites-enabled/default
       service nginx start/restart
 
    now start unicorn
@@ -118,28 +99,40 @@ mainly I will talk about:
       touch log/unicorn.log
 
    now start unicorn done, but the webpage tells us "sorry, something wrong"
-   so I go to check unicorn.log, everytime is OK, but I production.log, I see:
+   so I go to check unicorn.log I see: "no database.yml"
+   so I:
+       
+       cp database.example.yml databse.yml # change things of course: so I really need to install mysql
 
-      database.yml xxxxx
-      rake db:create RAILS_ENV=procution
-      rake db:migrate .....
+    1. mysql
+       1. tell people they need to set a password for root user installing mysql, that psword will show up in database.yml file
+           
+          sudo apt-get -y install mysql-server # mysql-client installed as dep
+          rake db:create RAILS_ENV=procution
+          rake db:migrate .....
 
-   so I need to add database.yml by hand, after this do I need to restart 
+   
+    restart unicorn
 
-   unicorn? Yes
-   nginx? No
+       ps aux|grep unicorn # tell people the master pid is in tmp/pids/unicorn.pid
+       kill -9 `cat tmp/pids/unicorn.pid`  # omit this step first, in order to show people where stderr_path is!!!
+       unicorn -D -c config/unicorn.rb -E production
 
+   the command is too long, that's why people have unicorn_init.sh( point to railscasts#335)
    trying to restart unicorn, and I see :"master fail to start,  check stderr log for details"
    I need to show people "stderr_path" in unicorn.rb
 
    when this is done, the production.log tells me: "xxx not precompiled"
 
-      rake assets:precompile # if I did install nodejs, this is when the error occour I suppose
+      rake assets:precompile # if nodejs is not installed, and the GEM: therubyracer is removed, "no js runtime" error occour 
 
-   now restart ngnix, made no difference, so restart unicorn is important(mention unicorn_init.sh)
+    1. javacript runtime Node.js
 
-      kill -9 `cat tmp/pids/unicorn.pid`
-      unicorn -D -c config/unicorn.rb -E production
+        sudo add-apt-repository ppa:chris-lea/node.js
+        sudo apt-get -y update
+        sudo apt-get -y install nodejs
+
+  after "asset:precomiple", only need to restart unicorn, not nginx
 
    now site works
 
