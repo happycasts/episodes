@@ -25,22 +25,24 @@ mainly I will talk about:
 
 ############ deploy happycasts ##################
 
+1. prework
+   get a deploy key on github
+
 1. get happycasts source code
    
        sudo apt-get -y update
-       sudo apt-get install git
-       git clone ...
+       sudo apt-get install git-core
+       git clone git://github.com/happypeter/happycasts.git # a read only link
 
 1. remove databse.yml
    add it to .gitignore
 
        mv config/database.yml config/database.example.yml # for later server database.yml
-       git push orign master
+       git push orign master # can ommit this, since we are on server, git is not configed
 
 1. install ruby
    1. rbenv https://github.com/fesplugas/rbenv-installer
 
-       sudo apt-get -y install curl 
        curl -L https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer | bash
        vim ~/.bashrc # add rbenv to the top, so it works with capistrano
        . ~/.bashrc
@@ -64,20 +66,19 @@ mainly I will talk about:
     sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 00A6F0A3C300EE8C # this only necessary if you failed to addkey by doing last command. 
     # in my case 12.04 ubuntu, this is not needed.
     sudo apt-get update # some error here, but I don't really care, case this only downloading deb names/index, as long as next step is done, it's good.
-    sudo apt-get install nginx # if nginx is from ppa.xxx as the output shows it's all fine.
+    sudo apt-get -y install nginx # if nginx is from ppa.xxx as the output shows it's all fine.
 
 1. add unicorn, remove "therubyracer" to Gemfile, and bundle it.
-
-
-   need this for GEM: nokogiri
-   
-      sudo apt-get install libxml2-dev libxslt1-dev
-      # show people the error, tell them no worry, just try to type "apt-get install libxml<tab>"
-      # things will be soloved, and everything is natural
 
    for error bundling mysql2 gem, even you do bootstrap-ubuntu-12-04
 
      sudo apt-get -y install libmysqlclient-dev 
+
+   need this for GEM: nokogiri
+   
+      sudo apt-get -y install libxml2-dev libxslt1-dev
+      # show people the error, tell them no worry, just try to type "apt-get install libxml<tab>"
+      # things will be soloved, and everything is natural
 
    never forget to do 'rbenv rehash'
 
@@ -87,19 +88,25 @@ mainly I will talk about:
 
       sudo ln -s /home/peter/happycasts/config/nginx.conf /etc/nginx/sites-enabled/happycasts
       sudo rm /etc/nginx/sites-enabled/default
-      service nginx start/restart
+      sudo service nginx start
 
    now start unicorn
 
       unicorn -D -c config/unicorn.rb -E production
+      # check ps aux to see if unicorn is working
       # by the errors here, i know I need to
       mkdir -p tmp/pids
-      touch -p tmp/pids/unicorn.pid
+      touch  tmp/pids/unicorn.pid
       mkdir log/
       touch log/unicorn.log
 
    now start unicorn done, but the webpage tells us "sorry, something wrong"
-   so I go to check unicorn.log I see: "no database.yml"
+   so I go to check unicorn.log I see: 
+
+
+   "no js runtime", so I install nodejs, and check again 
+   
+    still some errors, but no "no database.yml" error, so this is not wothe shring to people, just create the yml file and do mysql stuff
    so I:
        
        cp database.example.yml databse.yml # change things of course: so I really need to install mysql
@@ -108,7 +115,7 @@ mainly I will talk about:
        1. tell people they need to set a password for root user installing mysql, that psword will show up in database.yml file
            
           sudo apt-get -y install mysql-server # mysql-client installed as dep
-          rake db:create RAILS_ENV=procution
+          rake db:create RAILS_ENV=prodcution
           rake db:migrate .....
 
    
