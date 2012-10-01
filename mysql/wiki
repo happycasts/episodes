@@ -16,3 +16,5 @@
 
    1. I will still want a mysql front-end that's gives my auto-tab-complition, is there one?
    1. oh, you get tab completion in Rails C
+
+    update users set admin=true where id=1;
