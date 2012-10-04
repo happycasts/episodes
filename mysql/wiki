@@ -23,3 +23,25 @@ http://thenewboston.org/watch.php?cat=49&number=30
     update users set admin=true where id=1;
 
 1. maybe phpmyadmin or Active record( the dev log) can show me very useful sql lines!!!
+
+1. mysql on ubuntu
+
+    sudo apt-get install mysql-server # client and things are installed as deps
+    sudo apt-get install phpmyadmin # php-cli and things are installed as deps
+
+and now:
+
+    root@lover:/etc/phpmyadmin# vim config.inc.php+
+
+uncomment this line:
+
+    $cfg['Servers'][$i]['AllowNoPassword'] = TRUE;
+
+and add a link:
+
+    peter@lover:/var/www$ ln -s /usr/share/phpmyadmin/
+
+now point firefox at:
+
+    http://happypeter.org/phpmyadmin/
+
