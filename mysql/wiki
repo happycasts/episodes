@@ -1,4 +1,6 @@
+http://thenewboston.org/watch.php?cat=49&number=30
 1. install 
+1. mysql has different datatypes, how to set default values
 1. basic commandline tricks
    1. insert
    1. clear
@@ -8,6 +10,7 @@
       https://github.com/happypeter/railscasts-china/wiki/install
 
    1. stress beginner mistakes
+   1. sure I need to talk about import and dump
 
 1. a list of mysql GUI front-end
     http://en.wikipedia.org/wiki/MySQL
@@ -18,3 +21,5 @@
    1. oh, you get tab completion in Rails C
 
     update users set admin=true where id=1;
+
+1. maybe phpmyadmin or Active record( the dev log) can show me very useful sql lines!!!
