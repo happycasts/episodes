@@ -1,4 +1,4 @@
-http://thenewboston.org/watch.php?cat=49&number=30
+http://thenewboston.org/list.php?cat=49
 1. install 
 1. mysql has different datatypes, how to set default values
 1. basic commandline tricks
@@ -45,3 +45,59 @@ now point firefox at:
 
     http://happypeter.org/phpmyadmin/
 
+1. good habit: All SQL language itself will be upppercase, and table coloumn names will be lowercase.
+   by nature, SQL is not case sensitive, but to make it easier to read...
+   white spaces and line breaks won't matter, so you can make a much easier to read version of your QUERY, by puting each keyword in a single line
+
+   SELECT * 
+   FROM users
+   LIMIT 2 , 4
+
+   SLECT id, name
+   FROM users
+
+1. need to know how LIMIT works really usesful?
+
+   SELECT DISTINCT state
+   FROM customers
+
+
+   SELECT * 
+   FROM  `users` 
+   ORDER BY id DESC 
+   LIMIT 0 , 30
+
+   SELECT * 
+   FROM users
+   WHERE id=3
+
+   SELECT * 
+   FROM users
+   WHERE id<3
+
+
+   SELECT * 
+   FROM users
+   WHERE id BETWEEN 20 and 30 
+
+   WHERE name=happypeter---WORNG, need to be WHERE name='happypeter'
+
+   select * from users where state="CA" and city="holywood"
+   select * from users where state="CA" or city="holywood"
+   select * from users where name LIKE 'h%' # % is * here, and even within '' strings are still not case-sensitive
+
+   INSERT INTO users (name, email) VALUES('peter', 'peter@peter.com')
+   delete from users where id=12 
+
+   CREATE TABLE users(
+   id int NOT NULL AUTO_INCREMENT,         
+   username varchar(30) NOR NULL, # a string no longer than 30 characters
+   PRIMARY KEY(id)
+   )
+
+   add a column
+
+   ALTER TABLE users ADD samplecolumn varchar(10)
+   ALTER TABLE users DROP samplecolumn 
+   DROP TABLE users
+   RENAME TABLE users TO superusers
