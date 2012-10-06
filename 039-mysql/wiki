@@ -1,5 +1,6 @@
 http://thenewboston.org/list.php?cat=49
 http://dev.mysql.com/doc/refman/5.6 # I hate manual
+1. I will first create db, table, clumn by SQL, the I will do the same steps with rails migration, RailsConsole...so maybe the same thing with GUI: phpmyadmin
 1. install mysql on ubuntu
 
     sudo apt-get install mysql-server # client and things are installed as deps
@@ -16,7 +17,7 @@ http://dev.mysql.com/doc/refman/5.6 # I hate manual
 
    1. stress beginner mistakes, why ; ?
    1. sure I need to talk about import and dump 
-      https://gist.github.com/3775346
+      mysqldump --extended-insert=FALSE --complete-insert=TRUE -uroot authlove_production>authlove_production.sql;
 
 1. things like Rails Console, provide a nice way to access db, so you can do select and insert and every thing you do with sql in Ruby syntax
 
@@ -90,6 +91,7 @@ now point firefox at:
    INSERT INTO users (name, email) VALUES('peter', 'peter@peter.com')
    delete from users where id=12 
 
+   CREAT DATABASE users
    CREATE TABLE users(
    id int NOT NULL AUTO_INCREMENT,         
    username varchar(30) NOR NULL, # a string no longer than 30 characters
@@ -104,3 +106,5 @@ now point firefox at:
    RENAME TABLE users TO superusers
 
     update users set admin=true where id=1;
+
+show I talk about primarykey, foreign key, and index?
