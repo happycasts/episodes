@@ -1,5 +1,7 @@
-# Chrome DevTool 
+# Chrome DevTool :Inspect, debug and optimize Web applications.
+"it is to chrome, what firebug to firefox"
 http://ruby-china.org/topics/5883
+https://developers.google.com/chrome-developer-tools/docs/videos
 
 Google I/O 2011: Chrome Dev Tools Reloaded
 http://www.youtube.com/watch?v=N8SS-rUEZPg
@@ -21,6 +23,7 @@ http://www.youtube.com/watch?v=N8SS-rUEZPg
 
    1. for each "request", there is a entry in network pannel
    1. so this is "loadtime"
+   1. XHR: xml+http+resources: sth has to do with ajax
 
 1. timeline
    https://developers.google.com/chrome-developer-tools/docs/timeline
@@ -28,7 +31,7 @@ http://www.youtube.com/watch?v=N8SS-rUEZPg
    1. "when we intersted in what's happening after the page load, we can look at the timeline"
    1. "The Timeline panel gives you a complete overview of where time is spent when loading and using your web app or page. All events, from loading resources to parsing JavaScript, calculating styles, and repainting are plotted on a timeline."
    1. time spend to render the page after timeline
-   1. javascript time
+   1. javascript time: loading -> scripting -> rendering -> painting
 
 1. js debugging
 
