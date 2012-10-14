@@ -109,3 +109,10 @@ http://www.youtube.com/watch?v=ee0CdsHWcto
 
 1. never been easier to learn layout ( click on a size, say "19px", then use arrow up or down)
 1. 'element.style{}' shows inline styling, so usually show be empty
+
+1. what I really want to know, when I click sth, what js code is executed！
+   # 2011 google IO has something similiar
+
+1. Traps
+
+   1. sometimes the style of a:hover and some  gradient won't show up in "inspect Element"
