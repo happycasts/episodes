@@ -1,118 +1,31 @@
 # Chrome DevTool :Inspect, debug and optimize Web applications.
-"it is to chrome, what firebug to firefox"
-http://ruby-china.org/topics/5883
-https://developers.google.com/chrome-developer-tools/docs/videos
-
-Google I/O 2011: Chrome Dev Tools Reloaded
-http://www.youtube.com/watch?v=N8SS-rUEZPg
-1. styling
-    1. It's a web app, that means its in Js&CSS&html, no C++ stuff
-    1. Dev tools are a set of integrated broswer tools, so part of the brower, no add-ons needed
-    1. you can make changes right here in the browser
-    1. double click to add css styling, tab works, also tab to autocomplete.
-     
-           back<tab> # give you background
-           background: papa<tab> # bring you the full color name
-
-    1. click the block after `color:`, you can try all kinds of colors, and see the effect right there
-    1. so do can do a lot of changes to your css, then goto "resources" right click on  the stylesheet and "save as"
-
-1. networking
-   https://developers.google.com/chrome-developer-tools/docs/network
-   Both 'networking' and 'timeline' are part of "Delivering to the client"
-
-   1. for each "request", there is a entry in network pannel
-   1. so this is "loadtime"
-   1. XHR: xml+http+resources: sth has to do with ajax
-
-1. timeline
-   https://developers.google.com/chrome-developer-tools/docs/timeline
-
-   1. "when we intersted in what's happening after the page load, we can look at the timeline"
-   1. "The Timeline panel gives you a complete overview of where time is spent when loading and using your web app or page. All events, from loading resources to parsing JavaScript, calculating styles, and repainting are plotted on a timeline."
-   1. time spend to render the page after timeline
-   1. javascript time: loading -> scripting -> rendering -> painting
-
+    
 1. js debugging
 
    1. open your script, ctrl-g( on ubuntu) to go to certain line
-   1. set a breakpoint by just clicking on the line number
    1. you can only console now, to type in a variable name to check its value
    1. Ctrl-shift-o(on ubuntu) to open member
 
-1. Sources or Resourses
-
-    1. you have the '{}'(pretty print) icon to handle uglified js&css code now!!
-
-       tested with happycasts.com, only works for js, not css
-
-   1. right click -> local modifications, very helpful
-      don't know how can make this work for uglified css and js
-
 1. ? to show helps
 
-Google I/O 2012 - Chrome Developer Tools Evolution
-http://www.youtube.com/watch?v=3pxf3Ju2row&feature=relmfu
-
-1. now dev tools is powerful enough, so that now people not only  use it to debug, but also to create
-1. dev tools is a web app, browser is the server!!
-1. so you have remote mode, "Remote debugging" is cool(10:38), and also mobile devices (23:00)
-1. chrome has version control(16:50)
-
-
-Google Chrome Developer Tools: 12 Tricks to Develop Quicker
-http://www.youtube.com/watch?v=nOEw9iiopwI
-
-1. blueline: Doucument ready(DOM content event fired); redline: load  event fired( all the images and iframes to finish)
-
-
-1. check youtube channel:  phpacademy
-
-   1. Chrome Dev Tool, live edit css
-      http://www.youtube.com/user/paulirish?feature=relchannel
-
-   1. Chrome Developer Tools Tutorial: Console
-      http://www.youtube.com/watch?v=54IgWgoFToc&feature=relmfu
-
-1. the console rocks as well
-   https://developers.google.com/chrome-developer-tools/docs/console
-
-   1. do sth
-
-          $('click_here').click()
-          $('click_here').innerHTML = 'hi'
-
-          var text = $0
-          setInterval( function() { text.textContent = parseInt(text.textContent) - 1; }, 1000);
-          console.log(document.getElementById('click_here'));
-
-   1. commandline APT -- from firebug : http://getfirebug.com/wiki/index.php/Command_Line_API
-          
-          $0  # the element I selected
-          $0.outerHTML
-          copy($0.outerHTML)
-
-          dir(document.body)
 1. Tips
 
-   1. "Element -> Metrics" very helpful to check paddings margins...
-   1. Setting -> General -> show user agent style
-   1. you can uncheck each styling, and you can click to add new styling
    1. "Cmd-F" to search, check Settings -> shortcut for more
+      1. if you want global search, you need to do it in "Resource" pane, if you want to pretty print js files, you have to be in "sources" pane
+         this is not good
+
    1. Recouses -> Cookie, you can delete something like `token`
-   1. inspect element -> click the head->js file -> you will be warned if you have errors in ur js code, cooool
-   1. show audit with happycast.net, truely useful sufggestions
+
+   1. chrome devtool came with its own $, it's not jquery, and used in cased like $$ $0
+
+! Now I see
+
+   1. the "li.current" attrributed is added on server, not by local js, that's why I could not grep "current" in resources
 
 
-Chrome Developer Tools Tutorial: Elements (Part 2/2)
-http://www.youtube.com/watch?v=ee0CdsHWcto
 
-1. never been easier to learn layout ( click on a size, say "19px", then use arrow up or down)
-1. 'element.style{}' shows inline styling, so usually show be empty
+1. other stuff
 
-1. what I really want to know, when I click sth, what js code is executed！
-   # 2011 google IO has something similiar
-
-1. Traps
-
-   1. sometimes the style of a:hover and some  gradient won't show up in "inspect Element"
+   http://ruby-china.org/topics/5883
+   1. check youtube channel:  phpacademy
+       https://developers.google.com/chrome-developer-tools/docs/console
