@@ -1,0 +1,45 @@
+1. show people the problem: hard to open any file in a big project treee
+   firstly open user_controler.rb, than route.rb (show people at the video as well, use ctrl-k)
+
+1. why fuzzyfinder? 
+
+   Cmd-T:
+
+   1. limited-feature
+   1. combersome installation
+   1. so I do not use it
+
+   Ctrlp:
+
+   1. Built-in root directory finder. --nice
+   1. Create new files and directories.  --nice
+   1. more newbie-friendly than fuzzyfinder
+
+   fuzzyfinder:
+
+   1. powerful and cool
+
+1. installation, as quickly AP, do copy&paste not typing!!! 
+
+   1. fuzzy match VS partial match
+      1. `:h fuf-search-patterns`
+
+   1. Ctrl-w to delete your string
+   1. double `ESC` to quit
+   1. show people the four open method:
+
+        <CR>  (|g:fuf_keyOpen|)        - opens in a previous window.
+        <C-j> (|g:fuf_keyOpenSplit|)   - opens in a split window.
+        <C-k> (|g:fuf_keyOpenVsplit|)  - opens in a vertical-split window.
+        <C-l> (|g:fuf_keyOpenTabpage|) - opens in a new tab page.
+
+
+1. it is a vritue to only match filenames not paths, use `app/` if you want o see dir match
+
+1. `h g:fuf_coveragefile_globPatterns` `:h g:fuf_coveragefile_exclude`
+
+1. get rid of error color
+
+1. Tips:
+
+   show people how to get `route.rb` while they are in `app/views/`, `:cd ~/happyec`

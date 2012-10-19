@@ -1,0 +1,15 @@
+1. `cd :%h` or `lcd :%h` then `:sh` to create  subdir and files turned out to be really stupid
+   1. cause fuzzyfinder won't load your newly created file
+   1. and if you `:cd somewhere`, you always have to `:cd ~/apps/happycasts` to continue the work, so shitty
+      1. so __Ctrp-P__ got this right that always keeps you at the top level of your project tree, but if you use fuzzyfinder wisely, you can be 
+         cooler:
+         1. just always stay at the top level of the tree, use `!mkdir -p app/views/posts` to create subdirs,
+            use `:e app/views/posts/index.html.erb`
+            (not `!touch`, casue then fuzzy finder won't load new file into search scope)
+
+         1. really cool stuff, if you are now in happyec/, you can `:cd ../happycasts`, open index.html.erb with fuzzyfinder
+            then go back to happyec/, and open another index.html here and do 'y' and 'p', super awesome
+
+1. in ep24, I still say errors when fuf find too many file in scope, fix this by
+
+       let g:fuf_enumeratingLimit = 500

@@ -1,0 +1,94 @@
+# ctrlp
+
+Q: fuzzfinder can also create new file, just type it can hit Enter, but it has problem creating its parent dir though
+so now if you want to create a file?
+
+A:  don't use fuzzyfinder use `e` or `vnew` casue they have tab-completion which fuzzy-finder doesnot.
+
+Q: and what if you want to create a dir? 
+
+A: user `:!mkdir`, not as cool as in Ctrlp, but still its very standard, and very nicely working with `:cd and :pwd`
+
+Q: ctrlp has `Ctrl-d` to switch between "fullpath search" or "file name search", while fuf defaults to "file name search", can it be "fullpath serch" somehow"?
+
+Q:  Ctrlp is nice in that the default file search scope is always the whole project, even you are deep in the tree.
+and my pain using fuf is when I am in `view/users/`, than I can not open things like `route.rb`, how to fix?
+
+A: just do `:cd ~/happyec/`, not so big a issue.
+
+Q: Ctrlp can create files and it parent dir, really sweet, how fuzzyfinder does this?
+
+A: it does not. Just use vim to talk with shell, like `sh`, or `!mkdir`, or `e ../comments/_partial.html` or `:vnew`
+
+Q: in fuf, if I have "app/hello.css" and "assets/hello.css", when i first type "hello", than I see the two options, than how can I narrow down the options?
+
+A: of course you can use `Ctrl-p` to nav, but you can also use 
+
+                   primary    refining  refining
+                 |----------| |-------| |----|
+        >MruFile>bookmark.vim;autoload/;/home/
+
+  so use !(partial matching) this way, it is actually more powerful than fuzzy matching
+
+Q: why in big project, the fuf-line is always in Error red?
+
+A: from `:h fuf`
+
+    If there are a lot of matching items, FuzzyFinder limits the number of
+    enumerating items (|g:fuf_enumeratingLimit|) to speed up a response time, and
+    highlights the pattern with "Error" group.
+
+# ubuntu install
+
+  sudo apt-get install ack-grep
+
+check `man ack-grep` and I know
+
+ Some packagers have called it "ack-grep" when creating packages because there's already a
+       package out there called "ack" that has nothing to do with this ack.
+    
+
++it basically does whatever I want for my xxx
++
++    sudo apt-get install ack-grep
++    sudo ln -s /usr/bin/ack-grep /usr/bin/ack
++
++    then in vim
++
++        :Ack xxx
++
++    or maybe have this in .vimrc
++
++        map ,k :Ack <cword><ENTER>
+
+
+# if I have fuzzyfinder
+
+I do not need my stupid
+
+   map <Tab> :bn<CR>
+
+casue I can navigate around buffers very easily, minibufferexploer is stupid
+
+        <C-j> (g:fuf_keyOpenSplit)   - opens in a split window.
+        <C-k> (g:fuf_keyOpenVsplit)  - opens in a vertical-split window.
+
+
+# buffers
+
+    :ba
+
+is nice to have
+http://vimeo.com/6154082 
+Derek Wyatt
+Find Command and the Path
+
+
+# Cmd-T
+
+the author said he want to "do one thing and do it well" so buffer navigation is not the thing to provide by Cmd-T
+https://wincent.com/products/command-t
+
+and you need to install ruby code into your .vim/, and you need to compile as well kind of dirty
+
+So after all the screencasts on official site, there is not special feature that get me excited, and there is only limitations, and the installation is kind of muddy, so I won't use it, the final decision!
