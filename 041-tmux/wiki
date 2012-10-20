@@ -1,0 +1,43 @@
+http://justinlilly.com/dotfiles/tmux.html
+
+
+Can I copy from linode:a_file to local_workstation:a_file with tmux?
+It will be cool if I can use Vim yank for this.
+
+Can I open a terminal, but what I see is sb else doing stuff on linode?
+They call it Pair programming, yea?
+
+Now I see Tmux is not just for pure-text consoles, like people saying
+
+    What's great about tools like GNU screen is that they allow you to quickly
+    move between your terminal windows using keyboard shortcuts, which can often
+    times be a lot quicker than alt+tab'ing to a new terminal window on your
+    OS.  When I first made the jump from using my OS terminal program to using
+    GNU screen a few years ago, my productivity shot up enormously, as I was
+    able to quickly move around through terminals like I never could before.
+
+    Pane and window management, copy-mode for navigating output,
+
+I may hate iTerm, but I should say being able to split the terminal is cool, and sometimes very useful
+A: can I give up my `:sh` in vim now?
+
+1. session > window -> pane
+1. shortcuts: http://www.dayid.org/os/notes/tm.html
+
+  C-a ?
+  C-a n
+  C-a , #rename the window
+  C-a c # create a new window
+  C-a % # vetical split
+  C-a " # horizential split
+  C-a arrow keys #switching window
+  C-a t # showtime super cool
+  C-a q #show pane number
+  
+
+1. Use case
+   1. when you login to linode, you do `rake assets:precompile` there, then there is nothing you can do except watching it to finish first
+   1. but if you do this in a tmux session, you can 'C-a d' to detach, do whatever you want and then go back and continue with `tmux a`
+   1. you can even logout linode and do sth, then login again, and type 'tmux a' you still get what you left off, supercool, cause this means you 
+      do not need to worry about, when you are doing sth there, and suddenly you lost your connection.
+
