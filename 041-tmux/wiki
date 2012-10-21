@@ -27,17 +27,56 @@ A: can I give up my `:sh` in vim now?
   C-a ?
   C-a n
   C-a , #rename the window
-  C-a c # create a new window
+  C-a c # create a new window === `tmux new-window -n window_name`
   C-a % # vetical split
   C-a " # horizential split
   C-a arrow keys #switching window
   C-a t # showtime super cool
   C-a q #show pane number
-  
 
+  tmux new-session -s my_session_name # start a session with a name `C-a $` to rename
+  tmux list-sessions  
+  tmux a -t name_of_one_session
+
+  tmux kill-sever #kill all sessions
+  tmux kill-session -t xxx # kill one session
+
+1. I want tab-complete tmux sub-commands
+1. copy and paste, big time!
 1. Use case
    1. when you login to linode, you do `rake assets:precompile` there, then there is nothing you can do except watching it to finish first
    1. but if you do this in a tmux session, you can 'C-a d' to detach, do whatever you want and then go back and continue with `tmux a`
    1. you can even logout linode and do sth, then login again, and type 'tmux a' you still get what you left off, supercool, cause this means you 
       do not need to worry about, when you are doing sth there, and suddenly you lost your connection.
 
+
+
+1. .tmux.conf
+
+bind a send-prefix
+#cycle between last window
+unbind ^A
+bind ^A last-window
+#split window like vim
+# vim's defination of a horizontal/vertical split is revised from tumx's
+bind s split-window -h
+bind v split-window -v
+# move arount panes wiht hjkl, as one would in vim after C-w
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+# resize panes like vim
+# feel free to change the "1" to however many lines you want to resize by,
+# only one at a time can be slow
+bind < resize-pane -L 10
+bind > resize-pane -R 10
+bind - resize-pane -D 10
+bind + resize-pane -U 10
+
+# bind : to command-prompt like vim
+# this is the default in tmux already
+bind : command-prompt
+
+#vi style controls for copy mode
+setw -g mode-keys vi
