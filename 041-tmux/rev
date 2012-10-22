@@ -1,0 +1,15 @@
+http://justinlilly.com/dotfiles/tmux.html
+
+1. I want tab-complete tmux sub-commands
+   1. FIXME, later
+
+Everybody say clearly that they love tmux over screen
+ - Screen only has Emacs key bindings
+ - Screen only allow less than 50 sessions
+ - Screen eats lots of memory
+ - Screen only support horizontal split
+
+
+1. why not use C-z+bg or 'firefox &''?
+   A: you still say stdout, it's annoying. so just never mind, ignore this!
+      And for sure we can handle this, but almost all the time, we actucally want to see the stdout result.

@@ -1,0 +1,88 @@
+1. what is tmux?
+   1. something you use to handle a lot of terminals(hidden or not) in one window
+1. why terminal mulitplexer?
+   1. if you use terminal a lot, you should use one
+1. why not GNU screen?
+   1. If you check everybody's blog, "screen works but not as good" that's what they say.
+1. why not just tabs or ITerm2 split windows? 
+   1. it's just a lot better, and also you can use it in plain-text console is a big plus
+1. basics
+   1. start tmux
+
+          tmux
+          tmux new-session -s my_session_name # start a session with a name `C-a $` to rename
+
+   1. now you have one session and one default window
+      give .tmux.conf:  bind a send-prefix
+      talk about prefix, talk about all shortcut start with this prefix
+      shortcut usually has a command counterpart
+
+          C-a ? # this comes first
+          tmux list-sessions  
+          tmux a -t name_of_one_session
+          tmux kill-sever #kill all sessions
+          tmux kill-session -t xxx # kill one session
+          C-a, n/number # switching window
+          C-a c # create a new window === `tmux new-window -n window_name`
+          C-a , #rename the window
+
+   1. now you have pane, and session->windows->pane, that's all
+
+          C-a q #show pane number
+          C-a t # showtime super cool
+          C-a arrow keys #switching pane
+          C-a % # vetical split
+          C-a " # horizential split
+
+1. A Dev workflow demo, with rails project
+1. Copy mode, big time!
+   1. C-a-[  go into copy mode, now space to start selecting, Enter to end it, finally C-a-] to paste
+      1. have one session named "rails", in which you have two windows: "happycasts" and "onestep"
+         1. now copy code from one project to paste in another is very simple
+         1. than add another windows, just leave the name as "bash", so I can run `tail -f xxx.log`, or git ...or rake
+   1. gg and G works in copy mode
+   1. MUST HAVE: I have to be able to copy from one window and paste into another, otherwise I can not use tmux
+      1. sure you can
+   1. navigate in copy mode is cool
+       1. being about to use gg/G is not so cool, but in copy mode use can use "/" to search is super cool
+          1. say you mointor log with 'tail -f xxx.log', you can now grep right with the stdout, cool aha?
+
+1. Remote server, long live sessions
+   1. Can I copy from linode:a_file to local_workstation:a_file with tmux?
+      A: Yes
+   1. when you login to linode, you do `rake assets:precompile` there, then there is nothing you can do except watching it to finish first
+   1. but if you do this in a tmux session, you can 'C-a d' to detach, do whatever you want and then go back and continue with `tmux a`
+   1. you can even logout linode and do sth, then login again, and type 'tmux a' you still get what you left off, supercool, cause this means you 
+      do not need to worry about, when you are doing sth there, and suddenly you lost your connection.
+   1. Pair Programming
+      1. Now you see why you most use terminal vim/emacs, not GUI things
+
+1. Make it just like Vim !!!
+   .tmux.conf
+
+        #split window like vim
+        # vim's defination of a horizontal/vertical split is revised from tumx's
+        bind s split-window -h
+        bind v split-window -v
+        # move arount panes wiht hjkl, as one would in vim after C-w
+        bind h select-pane -L
+        bind j select-pane -D
+        bind k select-pane -U
+        bind l select-pane -R
+
+        # resize panes like vim
+        # feel free to change the "1" to however many lines you want to resize by,
+        # only one at a time can be slow
+        bind < resize-pane -L 10
+        bind > resize-pane -R 10
+        bind - resize-pane -D 10
+        bind + resize-pane -U 10
+
+        # bind : to command-prompt like vim
+        # this is the default in tmux already
+        bind : command-prompt
+
+        #vi style controls for copy mode
+        setw -g mode-keys vi
+
+1. there is a lot more that tmux can do: check tmux.sf.net, and see the tools
