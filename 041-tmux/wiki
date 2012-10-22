@@ -1,31 +1,25 @@
 http://justinlilly.com/dotfiles/tmux.html
 
-Nice toturials:
-http://blog.hawkhost.com/2010/06/28/tmux-the-terminal-multiplexer/
+Everybody say clearly that they love tmux over screen
+ - Screen only has Emacs key bindings
+ - Screen only allow less than 50 sessions
+ - Screen eats lots of memory
+ - Screen only support horizontal split
 
+1. Can I copy from linode:a_file to local_workstation:a_file with tmux?
+   It will be cool if I can use Vim yank for this.
+   1. you can do this, but not Vim shortcut, it's Tmux vi mode shortcut
 
-Can I copy from linode:a_file to local_workstation:a_file with tmux?
-It will be cool if I can use Vim yank for this.
+1. Now I see Tmux is not just for pure-text consoles, like people saying
+   1. cause gnome-terminal tabs are slow
+   1. you can ngvigate even better with tmux copy mode
 
-Can I open a terminal, but what I see is sb else doing stuff on linode?
-They call it Pair programming, yea?
-
-Now I see Tmux is not just for pure-text consoles, like people saying
-
-    What's great about tools like GNU screen is that they allow you to quickly
-    move between your terminal windows using keyboard shortcuts, which can often
-    times be a lot quicker than alt+tab'ing to a new terminal window on your
-    OS.  When I first made the jump from using my OS terminal program to using
-    GNU screen a few years ago, my productivity shot up enormously, as I was
-    able to quickly move around through terminals like I never could before.
-
-    Pane and window management, copy-mode for navigating output,
-
-I may hate iTerm, but I should say being able to split the terminal is cool, and sometimes very useful
-A: can I give up my `:sh` in vim now?
+1. can I give up my `:sh` in vim now?
+   1. I think so, you can always use another pane or window for your job
 
 1. I will make tmux has the same set of vi shortcuts
-1. session > window -> pane
+   1. vi mode
+1. session > windows -> pane
 1. shortcuts: http://www.dayid.org/os/notes/tm.html
 
   C-a ?
@@ -46,26 +40,26 @@ A: can I give up my `:sh` in vim now?
   tmux kill-session -t xxx # kill one session
 
 1. I want tab-complete tmux sub-commands
+   1. FIXME, later
 1. copy and paste, big time!
    1. C-a-[  go into copy mode, now space to start selecting, Enter to end it, finally C-a-] to paste
       1. if you have more than one pane on a window, screen tainted after yanking, why??
-         1. don't know, just don't use more than one pane to show copy&paste
+         1. FIXME, don't know, just don't use more than one pane to show copy&paste
       1. have one session named "rails", in which you have two windows: "happycasts" and "onestep"
          1. now copy code from one project to paste in another is very simple
-      1. have one session named "dev", two window, one for code, the other for git
+         1. than add another windows, just leave the name as "bash", so I can run `tail -f xxx.log`, or git ...or rake
    1. gg and G works in copy mode
    1. MUST HAVE: I have to be able to copy from one window and paste into another, otherwise I can not use tmux
-      1. slect and copy by mouse select, paste by C-a-], this works among windows
-   1. being about to use gg/G is not so cool, but in copy mode use can use "/" to search is super cool
-      1. say you mointor log with 'tail -f xxx.log', you can now grep right with the stdout, cool aha?
-         1. And how!
+      1. sure you can
+   1. navigate in copy mode is cool
+       1. being about to use gg/G is not so cool, but in copy mode use can use "/" to search is super cool
+          1. say you mointor log with 'tail -f xxx.log', you can now grep right with the stdout, cool aha?
+
 1. Use case
    1. when you login to linode, you do `rake assets:precompile` there, then there is nothing you can do except watching it to finish first
    1. but if you do this in a tmux session, you can 'C-a d' to detach, do whatever you want and then go back and continue with `tmux a`
    1. you can even logout linode and do sth, then login again, and type 'tmux a' you still get what you left off, supercool, cause this means you 
       do not need to worry about, when you are doing sth there, and suddenly you lost your connection.
-
-
 
 1. .tmux.conf
 
@@ -97,11 +91,8 @@ A: can I give up my `:sh` in vim now?
     #vi style controls for copy mode
     setw -g mode-keys vi
 
-
 1. why not use C-z+bg or 'firefox &''?
    A: you still say stdout, it's annoying. so just never mind, ignore this!
       And for sure we can handle this, but almost all the time, we actucally want to see the stdout result.
 
-1. why not just use Terminal tabs?
-   1. when you close a tab, everything is gone, with tmux you just deattach
-   1. if you suddenly lose your connection with a remote server, it's fine
+1. there is a lot more that tmux can do: check tmux.sf.net, and see the tools
