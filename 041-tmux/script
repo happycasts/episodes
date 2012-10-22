@@ -6,6 +6,7 @@
    1. If you check everybody's blog, "screen works but not as good" that's what they say.
 1. why not just tabs or ITerm2 split windows? 
    1. it's just a lot better, and also you can use it in plain-text console is a big plus
+   1. you will tell it by seeing.
 1. basics
    1. start tmux
 
@@ -15,9 +16,8 @@
    1. now you have one session and one default window
       give .tmux.conf:  bind a send-prefix
       talk about prefix, talk about all shortcut start with this prefix
-      shortcut usually has a command counterpart
+      shortcut usually has a command counterpart: C-a ? 
 
-          C-a ? # this comes first
           tmux list-sessions  
           tmux a -t name_of_one_session
           tmux kill-sever #kill all sessions
@@ -35,11 +35,11 @@
           C-a " # horizential split
 
 1. A Dev workflow demo, with rails project
+   1. you have one for your code, another for git/rake things, maybe another for tails -f log
+   1. have one session named "rails", in which you have two windows: "happycasts" and "onestep"
+
 1. Copy mode, big time!
    1. C-a-[  go into copy mode, now space to start selecting, Enter to end it, finally C-a-] to paste
-      1. have one session named "rails", in which you have two windows: "happycasts" and "onestep"
-         1. now copy code from one project to paste in another is very simple
-         1. than add another windows, just leave the name as "bash", so I can run `tail -f xxx.log`, or git ...or rake
    1. gg and G works in copy mode
    1. MUST HAVE: I have to be able to copy from one window and paste into another, otherwise I can not use tmux
       1. sure you can
