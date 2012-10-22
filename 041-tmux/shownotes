@@ -1,3 +1,7 @@
+- <http://en.wikipedia.org/wiki/Tmux>
+
+### 配置文件
+```.tmux.conf
 unbind C-b
 set -g prefix C-a
 setw -g mode-keys vi
@@ -23,4 +27,4 @@ bind + resize-pane -U 10
 # bind : to command-prompt like vim
 # this is the default in tmux already
 bind : command-prompt
-
+```
