@@ -1,4 +1,7 @@
 Do sth that is not covered in Railscasts episodes, sth really simple and fill the need of real basic usage
+1. Code is the final documetation!!!
+   1. if you don't know a default value of certain variable
+      cd `bundle show cap`; xxx current_path
 
 133-cap-tasks-revised: very nice intro of the basics, what is a task, what is a role...
 337 cap recipes: not for beginners, but of great practical use after you pass the beginning
@@ -7,6 +10,13 @@ A nice tool is nice in that it encourages a very best common practices, nice wor
 And since we are following same workflows, it's now easier to communation within or outside our team.
 
 https://help.github.com/articles/deploying-with-capistrano
+
+
+1. have to run 'rake db:create RAILS_ENV=production' manually
+   all the tasks "cap deploy" "cap deploy:migrate" "cap deploy:setup" won't do it for me!!!
+
+1. "rake assets:precompile" won't be done either
+    I know I need to add some options in deploy.rb
 
 1. capistrano's flow demystified: check pdf here: https://github.com/capistrano/capistrano/wiki/2.x-Default-Deployment-Behaviour
 
@@ -35,3 +45,27 @@ https://help.github.com/articles/deploying-with-capistrano
 
    1. Deployment Directory Structure
    1. Still don't quit get app layer and cap deploy:cold stuff
+
+We don't talk about cap basics here, check rc#cap tasks 
+We talk about a minim deployment task transferring
+What I want to do(in my shell script ) to cap tasks.
+
+With your project getting large, you need to bring more tricks in, check docs for more info, and also when you deploy.rb gets really complex, it's better to rc#cap recipes.
+
+    Rake assets:precompile
+    Rake db: migrate # cap deploy:migrate
+    Unicorn restart # mostly we don't need to restart ngnix, right?
+    Apache restart # this will restart passenger as well right
+    Database.yml, symlinks,
+
+1. What't the point to have 
+
+       Shared current relase
+
+1. add deploy keys, very important
+
+1. Not so important stuff, but can be handy, see if I have time left for this? 
+    1. Vim on server is slow
+       So can I upload my database.yml to server?
+       1. you only need to do it once, so it doesn't matter so much
+       1. On the other hand, knowing this does not add complexity, so it's cool to know and use.
