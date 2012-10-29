@@ -1,0 +1,34 @@
+https://help.github.com/articles/deploying-with-capistrano
+
+1. Before I use capistrano, I use scripts
+   https://gist.github.com/3634487
+   1. but a nice automation tool has its place:
+      1. A nice tool is nice in that it encourages a very best common practices, nice workflows, 
+         that's why it worth while to learn a tool, rather than build it up from scrach.
+      1. And since we are following same workflows, it's now easier to communation within or outside our team.
+1. certain things will be handled by cap by default
+   1. capistrano's flow demystified: check pdf here: https://github.com/capistrano/capistrano/wiki/2.x-Default-Deployment-Behaviour
+1. do things, have mistakes, check what's need to be modified in your deploy.rb
+   (sometimes, we just don't know what to do, so steal! check ruby-china/deploy.rb)
+   1. if we don't know what to do, google it, if we don't know how to do, learn from other people's script
+   1. no bundle install (google it)
+      1. http://gembundler.com/deploying.html (tell you what to do)
+      1. http://blog.josephholsten.com/2010/09/deploying-with-bundler-and-capistrano/ (tell you what's happening under the hood)
+   1. no db:create
+      1. have to run 'rake db:create RAILS_ENV=production' manually
+         all the tasks "cap deploy" "cap deploy:migrate" "cap deploy:setup" won't do it for me!!!
+   1. "rake assets:precompile" won't be done either
+      I know I need to add some options in deploy.rb
+
+1. Code is the final documetation!!!
+   1. if you don't know a default value of certain variable
+      cd `bundle show cap`; xxx current_path
+
+
+1. about unicorn restart
+   1. ruby-china is simple
+   1. rails-casts is more flexiable with sys admin concern
+
+1. we won't cover how to orgnize all your stuff better, check
+   With your project getting large, you need to bring more tricks in,when you deploy.rb gets really complex, it's better to rc#cap recipes.
+   337 cap recipes: not for beginners, but of great practical use after you pass the beginning
