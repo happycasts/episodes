@@ -11,6 +11,7 @@
 
 1. create a new project named blog, copy nginx.conf and unicorn.rb form ep38
    1. I will use the env setup in ep38, that is I don't care rvm+ruby+nginx+unicorn+mysql installation
+   1. run db:migrate&bundle install locally is a MUST, for schema.rb and Gemfile.locak
 1. do things, have mistakes, check what's need to be modified in your deploy.rb
    (sometimes, we just don't know what to do, so steal! check ruby-china/deploy.rb)
    1. if we don't know what to do, google it, if we don't know how to do, learn from other people's script
