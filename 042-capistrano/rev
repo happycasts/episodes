@@ -1,3 +1,4 @@
+   
 1. railscasts's unicorn_init.sh is used to auto start unicorn when the server reboot
    but you need to run this first (17:23)
     sudo update-rc.d unicorn_blog default
@@ -38,3 +39,7 @@
    1. Still don't quit get app layer and cap deploy:cold stuff
 
 1. if you are deploying your app for the first time, of course you need to restart nginx as well, since you just added a new site-enabled/ entry!!
+   1. a subtle error about  this
+      1. if you once have nginx know about blog, then you delete blog/, and do a redeploy
+         now nginx still remember the Domain name point to the right place. so everything seems to be working, untill you find out, all the static assets(served by nginx) will be a 404 in the browser!!
+         1. it's like you can not find assets/appl.232423423.css, even it is just there
