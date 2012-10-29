@@ -43,3 +43,25 @@
       1. if you once have nginx know about blog, then you delete blog/, and do a redeploy
          now nginx still remember the Domain name point to the right place. so everything seems to be working, untill you find out, all the static assets(served by nginx) will be a 404 in the browser!!
          1. it's like you can not find assets/appl.232423423.css, even it is just there
+
+
+1. so the flow is like this
+   1. you call `cap deploy:setup`
+      edit database.yml, create `blog_production` db
+   1. change Capfile to handle asset-pipeline, add a line in deploy.rb to handle bundler
+   1. you call `cap deploy:migration`
+      this will first migrate all the db tables, then do a `cap deploy`
+      unicorn_init.sh is called with in 'cap deploy:restart' as part of 'cap deploy'
+
+   1. now point your brower to the url, it won't work
+      cause you just edited nginx config(add site-enabled/blog), so you have to restart nginx
+   1. now everything show work fine
+
+1. by default what `cap deploy` does is very minimum
+   1. get the code
+   1. restart the server
+   1. won't handle db:migration, cause you don't always change db
+   1. won't handle assets:precompile, cause a lot people prefer compile it locally
+   1. won't run bundler, cause you don't change Gemfile all the time
+   1. So it's wise of `cap deploy` not trying to do more than the basic, 
+      cause it will be fast this way
