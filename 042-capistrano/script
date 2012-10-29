@@ -1,5 +1,3 @@
-https://help.github.com/articles/deploying-with-capistrano
-
 1. Before I use capistrano, I use scripts
    https://gist.github.com/3634487
    1. but a nice automation tool has its place:
@@ -8,6 +6,9 @@ https://help.github.com/articles/deploying-with-capistrano
       1. And since we are following same workflows, it's now easier to communation within or outside our team.
 1. certain things will be handled by cap by default
    1. capistrano's flow demystified: check pdf here: https://github.com/capistrano/capistrano/wiki/2.x-Default-Deployment-Behaviour
+1. use a read-only git link, so you don't need to care about, deploy key stuff here
+   https://help.github.com/articles/deploying-with-capistrano
+
 1. create a new project named blog, copy nginx.conf and unicorn.rb form ep38
    1. I will use the env setup in ep38, that is I don't care rvm+ruby+nginx+unicorn+mysql installation
 1. do things, have mistakes, check what's need to be modified in your deploy.rb
