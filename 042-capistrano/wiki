@@ -10,8 +10,8 @@ A nice tool is nice in that it encourages a very best common practices, nice wor
 And since we are following same workflows, it's now easier to communation within or outside our team.
 
 https://help.github.com/articles/deploying-with-capistrano
-
-
+1. ruby-china does unicorn restart right in deploy.rb, also nice
+1. in Ep38, a lot of the commands about installing things, capistrano can handle installation too, but we won't cover that in this episode
 1. have to run 'rake db:create RAILS_ENV=production' manually
    all the tasks "cap deploy" "cap deploy:migrate" "cap deploy:setup" won't do it for me!!!
 
