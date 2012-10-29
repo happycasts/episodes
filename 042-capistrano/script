@@ -8,6 +8,8 @@ https://help.github.com/articles/deploying-with-capistrano
       1. And since we are following same workflows, it's now easier to communation within or outside our team.
 1. certain things will be handled by cap by default
    1. capistrano's flow demystified: check pdf here: https://github.com/capistrano/capistrano/wiki/2.x-Default-Deployment-Behaviour
+1. create a new project named blog, copy nginx.conf and unicorn.rb form ep38
+   1. I will use the env setup in ep38, that is I don't care rvm+ruby+nginx+unicorn+mysql installation
 1. do things, have mistakes, check what's need to be modified in your deploy.rb
    (sometimes, we just don't know what to do, so steal! check ruby-china/deploy.rb)
    1. if we don't know what to do, google it, if we don't know how to do, learn from other people's script
@@ -23,7 +25,6 @@ https://help.github.com/articles/deploying-with-capistrano
 1. Code is the final documetation!!!
    1. if you don't know a default value of certain variable
       cd `bundle show cap`; xxx current_path
-
 
 1. about unicorn restart
    1. ruby-china is simple
