@@ -1,3 +1,5 @@
+1. when you are in a nested tmux session
+   1. do use "C-a+a [" to enter copy mode, otherwise you only get the current screen of your output, scroll up seems to be broken
 http://justinlilly.com/dotfiles/tmux.html
 
 1. I want tab-complete tmux sub-commands
