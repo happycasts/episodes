@@ -1,0 +1,13 @@
+- <https://github.com/capistrano/capistrano/wiki>
+- [The Pdf chart](https://github.com/capistrano/capistrano/wiki/2.x-Default-Deployment-Behaviour)
+### deploy.rb
+
+check this [gist](https://gist.github.com/3977544)
+
+### unicorn_init.sh
+
+check this [gist](https://gist.github.com/3977557)
+
+### 更多东西，看第38期
+
+- <http://happycasts.net/episodes/38>
