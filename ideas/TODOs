@@ -3,11 +3,6 @@
 # bash
 http://wiki.bash-hackers.org/scripting/newbie_traps
 
-# sublime的视频
-
-# 想听 Rails的自动化部署，:-)
-# 有时间能讲讲 Rails 的自动化部署（capistrano）么？ by @chucai
-
 # mongodb
 http://happycasts.net/episodes/40
 # postgresql
@@ -19,14 +14,11 @@ maybe this is will be for railscasts-china
 
     pry(main)> show-doc Array#select
 
-
 # from knwang
 我对这个还有Chef, Puppet这些都感兴趣， @happypeter 有计划做这些的 Screencast 么
 
 # Mac or Linux, which is the dev workstation for us
 http://ruby-china.org/topics/5300
-
-
 
 # github basic contribute workflow
 http://www.youtube.com/watch?v=rsnodzi2ULM
@@ -62,15 +54,6 @@ things show work well with <enter> <c-t> <c-d> ...
 tabstop=xxx is not enough, you still need `expandtab`
 it's also about codingStyle
 
-# http://ruby-china.org/topics/4594
-people say "git比rails还难学习", its time for some gitcasts.
-
-# git collaboration
-
-btw,git的具体request的话,还是多人协作方面的内容吧
-(不是停留在表面的如何操作,我想更是如何参与开源项目的问题),我周围根本找不到
-用git的人,也不好大老远的找人去做实验,我想这方面的内容肯定有很多人感兴趣的
-
 # emacs manual
 
  我的github账号是 https://github.com/Teddy-ma
@@ -96,9 +79,6 @@ http://ruby-china.org/topics/4478
 # how to comment in vim
 https://github.com/tomtom/tcomment_vim
 
-# how to indent in vim
-cindent
-smartindent
 # pkg package, apt-get
 
     aptitude search cscope
