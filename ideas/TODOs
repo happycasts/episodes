@@ -83,6 +83,8 @@ https://github.com/tomtom/tcomment_vim
 
     aptitude search cscope
 
+1. `yum list` can list all the packages in the YUM repo, what's thet apt-get counterpart?
+
 # for happycast, buffer or tab
 http://ruby-china.org/topics/1271
 # http://ruby-china.org/topics/1178

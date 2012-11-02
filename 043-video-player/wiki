@@ -1,0 +1,62 @@
+http://www.linuxcast.net/public/cast_show/7
+http://diveintohtml5.info/table-of-contents.html#video (great html5 tutorial)
+http://videojs.com/2011/06/lynda-com-html5-video-tutorial-released/ (video)
+
+
+1. codeschool.com use mejs, not so nice
+1. detect if html5 video tag, or each codecs are supported or not by opening 
+   http://diveintohtml5.info/detect.html in your browser.
+1. what is mp4?
+    http://www.html5rocks.com/en/tutorials/video/basics/ (Very good!!!)
+   One of the main concerns about using the .mp4 format is that its video codec
+   (h.264) is not an open codec and the licenses that a company would have to pay
+   for using it are very complex to understand. There's more information about
+   this format in this video chapter.
+
+   1. is .mov a mp4 format, or at least is it H264 encoded?
+      http://diveintohtml5.info/video.html#webm-cli
+      The MPEG 4 container is based on Apple’s older QuickTime container
+      (.mov). Movie trailers on Apple’s website still use the older QuickTime
+      container, but movies that you rent from iTunes are delivered in an MPEG
+      4 container.
+   1. mp4 is just a "video container"
+      http://diveintohtml5.info/video.html#webm-cli
+
+   1. MAYBE: mp4 can be played by a flash player, becasue "YouTube now uses H.264 to encode high-definition videos, playable through Adobe Flash"
+   1. MAYBE:
+
+1. BIG NEWS: firefox does not support H264, that means my .mov videos can not
+   play on Linux+firefox, though can be played on chrome+Linux or Mac+firefox
+   check the table on: http://diveintohtml5.info/video.html#webm-cli
+   Chrome currently support everything by "will drop H264 soon"
+
+1. check if your brower support html5#video or not?
+   http://www.w3schools.com/html/html5_video.asp
+   A: if not supported, show people the download link, and hide the video player or whatever
+   this can be achieved by 
+
+       <video>
+          <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+          <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+          Video tag not supported. Download the video <a href="movie.webm">here</a>.
+       <video>
+
+       Note: Because of a bug in the iPad you will need to put .mp4 as the
+       first option if you want the video to be loaded in that device. That
+       is, until the bug is fixed.
+
+1. why MP4 is widely used as the web video format?
+   http://en.wikipedia.org/wiki/HTML5_video
+   A: Apple and Microsoft, controlling 39% of the browser market, support only H.264
+   NO single format is supported by all browsers, you have to have more than one `<source>`
+   in your video tag
+
+1. For maximum compatibility, here’s what your video workflow will look like:
+
+   Make one version that uses WebM (VP8 + Vorbis).
+   Make another version that uses H.264 baseline video and AAC “low complexity” audio in an MP4 container.
+   Make another version that uses Theora video and Vorbis audio in an Ogg container.
+   Link to all three video files from a single <video> element, and fall back to a Flash-based video player.
+
+1.  I’m going to use “Ogg video” as a shorthand for “Theora video and Vorbis audio in an Ogg container.” 
