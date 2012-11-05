@@ -2,3 +2,10 @@
    1. if I have only mp4 as source, (local server to test this)
       1. on Linux+firefox, it fails to fallback on flash, so won't play
       1. on Mac+firefox, it works, and I know on Mac the flash player version is very different
+
+1. now 
+   1. happycasts can be played on my thinkpad+linux+firefox, and flash is now in use
+   1. But in my Mac+VM+linux, Neither chrome nor firefox can play happycasts, but both can play localserver+videojs+webm/mp4 as source
+      1. remove webm, video.local still works as flash in firefox and html5 in chrome, great
+   1. happycasts now can only be played on thinkpad+linux+firefox, but not mac+firefox or vm+linux+firefox, be chrome can play happycasts no problem
+

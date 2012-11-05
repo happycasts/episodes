@@ -1,7 +1,8 @@
-
+1. flash is still giant, youku, youtube
 1. why html5 video?
    1. NO.1 it's the future
    1. ios does not support flash
+      1. not so sure, google it
    1. we will talk about fallback stretegys later
       1. fall back to flash
       1. fall back to a download link
@@ -19,7 +20,21 @@
    1. also check why it's nice add ogv as the third source, why? the table plz
       A: http://en.wikipedia.org/wiki/HTML5_video, no reason to add ogv now!!
 
-   NOTE: mp4 first for ipad
+   NOTE: mp4 first for ipad, this shall be for next episode, when I talk about deployment
+
+   In this ep, I will make people clear with why we should use a framework like jplayer or videojs
+   1. full screen support?
+   1. controls
+   1. skins
+   1. flash fallback
+   1. more on videojs homepage
+
+1. fallback on flash
+   http://osmf.org/configurator/fmp/
+   flash can only paly mp4 videos
+   paste the code as the last video tag element, after all sources
+   the video link must be a internet url
+   this only works when the old broswers where video tag is not supported
 
 1. But if you only have mp4 as source, you can use videojs to let it fallback on flash.
    1. But at first it will show a "can not find video with right MIME type" error?
