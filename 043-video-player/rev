@@ -1,3 +1,19 @@
+http://videojs.com/2011/06/lynda-com-html5-video-tutorial-released/ (video)
+1. videojs lynda course:
+   1. 'preload' is a double edged sword: http://www.lynda.com/home/Player.aspx?lpk4=84987&playChapter=False
+   1. 'autoplay' is easy, ios disable this by default to save bandwidth for mobile devices: http://www.lynda.com/home/Player.aspx?lpk4=84991&playChapter=False
+   1. 'loop' not so useful: http://www.lynda.com/home/Player.aspx?lpk4=84991&playChapter=False
+   1. 'poster' nice...
+   1. 'widthxheight' ...
+   1. 'subtitle' ...
+   1. to fall back on Flash, there are some code you need to add to your site, and these code will refer to adobe.com, so maybe slow
+      http://www.lynda.com/home/Player.aspx?lpk4=84991&playChapter=False
+      Does videojs handle this for me?
+   1. flash 9+ also support H264: http://www.lynda.com/home/Player.aspx?lpk4=84991&playChapter=False
+   1. if you want to customize your mp4 container, try Handbrake
+1. detect if html5 video tag, or each codecs are supported or not by opening 
+   http://diveintohtml5.info/detect.html in your browser.
+   Chrome currently support everything by "will drop H264 soon"
 1. for next video
    http://www.html5rocks.com/en/tutorials/video/basics/
    has a lot more nice features that I do not have time to check yet
@@ -6,5 +22,75 @@
    http://www.w3.org/2010/05/video/mediaevents.html
    All the js api here, amazing.
 
-1. why you "HAVE TO" use html5 video tag?
-   A: ios does not support flash!
+1. Is it really necessary to add 'codec' below:
+   as shown at: 
+   http://www.html5rocks.com/en/tutorials/video/basics/
+       <video> 
+          <source src="movie.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+          <source src="movie.webm" type='video/webm; codecs="vp8, vorbis"' />
+          <source src="movie.ogv" type='video/ogg; codecs="theora, vorbis"' />
+          Video tag not supported. Download the video <a href="movie.webm">here</a>.
+       </video>
+       
+       Another issue with the .mp4 format is that
+       the type attribute needs to be more specific than other formats
+       depending on the profile used to encode the video. Although the most
+       common is "avc1.42E01E, mp4a.40.2", you should double check this
+       profile list to be sure.
+    A: Maybe Not, the blog was done in 2010, you know..
+       http://videojs.com/docs/setup/ shows me no.
+
+1. For maximum compatibility, here’s what your video workflow will look like:
+
+   Make one version that uses WebM (VP8 + Vorbis).
+   Make another version that uses H.264 baseline video and AAC “low complexity” audio in an MP4 container.
+   Make another version that uses Theora video and Vorbis audio in an Ogg container.
+   Link to all three video files from a single <video> element, and fall back to a Flash-based video player.
+
+   Q: do I really care about "baseline" for H.264?
+
+1. what is mp4?
+    http://www.html5rocks.com/en/tutorials/video/basics/ (Very good!!!)
+   One of the main concerns about using the .mp4 format is that its video codec
+   (h.264) is not an open codec and the licenses that a company would have to pay
+   for using it are very complex to understand. There's more information about
+   this format in this video chapter.
+
+   1. is .mov a mp4 format, or at least is it H264 encoded?
+      http://diveintohtml5.info/video.html#webm-cli
+      The MPEG 4 container is based on Apple’s older QuickTime container
+      (.mov). Movie trailers on Apple’s website still use the older QuickTime
+      container, but movies that you rent from iTunes are delivered in an MPEG
+      4 container.
+   1. mp4 is just a "video container"
+      http://diveintohtml5.info/video.html#webm-cli
+
+   1. mp4 can be played by a flash player (version 9+)
+
+1. server types, is this really necessary? NOT SURE
+   http://www.html5rocks.com/en/tutorials/video/basics/
+    The most important thing to remember is to make sure your server is
+    serving video files with the correct MIME type in the Content-Type header.
+    If not, videos might not work properly, even if they were working on a
+    local copy of your site. In an Apache httpd.conf it's enough by adding
+    these lines:
+
+        AddType video/ogg .ogv
+        AddType video/mp4 .mp4
+        AddType video/webm .webm
+
+   you MUST add above to your .htaccess, according to: http://www.lynda.com/home/Player.aspx?lpk4=84987&playChapter=False
+   Windows + chrome/IE sometimes can not play happycasts, so need to check this
+   1. http://httpd.apache.org/docs/current/howto/htaccess.html
+      use http.conf instead of .htaccess is encouraged
+
+   1. if you have 
+
+        <Directory /home/peter/your_video_files/ >
+          # This relaxes Apache security settings.
+          AllowOverride all
+          # MultiViews must be turned off.
+          Options -MultiViews
+       </Directory>
+     
+      this will cause problem, remove `AllowOverride all` and `Options -MultiViews`, everything is ok

@@ -1,0 +1,37 @@
+
+1. why html5 video?
+   1. NO.1 it's the future
+   1. ios does not support flash
+   1. we will talk about fallback stretegys later
+      1. fall back to flash
+      1. fall back to a download link
+   1. you can customize the thing with CSS, rather than another skinning language
+   1. you get much more freedom by controling the thing with JS:
+      http://www.w3.org/2010/05/video/mediaevents.html
+1. create a html5 index.html
+1. add video tag have a source for mp4
+   1. It's much nicer to have / for source tag
+1. check it in chrome, no controls add 'controls', if you are using videojs or sth, this is not needed
+1. open it in firefox, see nothing, now show people the table
+   Tell people mp4 is just a container of H264 http://diveintohtml5.info/table-of-contents.html#video (great html5 tutorial)
+   and people will see firefox does not support H264
+   so add webm as the second source
+   1. also check why it's nice add ogv as the third source, why? the table plz
+      A: http://en.wikipedia.org/wiki/HTML5_video, no reason to add ogv now!!
+
+   NOTE: mp4 first for ipad
+
+1. But if you only have mp4 as source, you can use videojs to let it fallback on flash.
+   1. But at first it will show a "can not find video with right MIME type" error?
+      A: this is fixed by add `data-setup{}` as in videojs embed code
+         'AddType video/mp4 .mp4' in httpd.conf made no difference
+   1. So now you see it's easy to fallback on flash, so I can still use just one format (.mov) for all browsers
+      Yes, use just mp4, and nothing else. Tell this to people.
+      Problem here is flash controls looks different form html5 video controls, but with videojs, this is no issue
+      Update: NO, firefox sometimes can not Downgrade to flash, I need to add a webm source to make it work.
+
+1. VideoJS is super easy to use
+   1. add js&css link in your header: http://videojs.com/#section5
+   1. get the embed-code: http://videojs.com/tag-builder/
+   1. this is all u need to get going
+   1. check if it's html5 or flash is in use by right-click on the screen

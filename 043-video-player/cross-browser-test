@@ -1,0 +1,4 @@
+1. using videojs
+   1. if I have only mp4 as source, (local server to test this)
+      1. on Linux+firefox, it fails to fallback on flash, so won't play
+      1. on Mac+firefox, it works, and I know on Mac the flash player version is very different
