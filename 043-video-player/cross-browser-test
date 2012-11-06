@@ -9,3 +9,14 @@
       1. remove webm, video.local still works as flash in firefox and html5 in chrome, great
    1. happycasts now can only be played on thinkpad+linux+firefox, but not mac+firefox or vm+linux+firefox, be chrome can play happycasts no problem
 
+1. now
+   1. jplayer and vjs can only be played if you set proxy
+      So it seems my ISP will fuck my video uri
+   1. with firefox, even you cross the WALL, neither jp or vjs or railscasts won't play!!!
+   1. there is one thing here: youtube can play in both firefox and chrome anytime.
+      so maybe I shall set the default play mode to flash
+
+1. Most of the time, happycasts.net won't work, simply becasue a URL like this won't be reached by the broswer
+   http://media.happycasts.net/assets/episodes/videos/043-html5-video.mov
+
+   So May I move things back to my homeland ? and add CDN and stuff for my videos
