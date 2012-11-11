@@ -29,3 +29,15 @@
    1. there is another file named ssh.mp4 which I also uploaded days ago, still can not load in the broswer
    1. check 'about:cache' both ssh.mp4 and ctags.mov are in broswer cache
    1. delete the cache, still ctags.mov very fast and ssh.mp4 can not load
+
+1. upyun rocks
+
+   1. I just uploaded 002-snipmate.mov last night
+   1. This mornning, I open happycasts.b0.upaiyun.com/002-snipmate.mov, it takes no time to load
+   1. But the very moment I tried to open or wget http://media.happycasts.net/assets/episodes/videos/012-github-fork.mov, it did not work at all
+   1. wget happycasts.b0.upaiyun.com/ssh.mp4, also very fast, but chrome simply won't play the link
+
+1. wget 
+
+   1.  wget http://happycasts.b0.upaiyun.com/ssh.mp4, the first time I tried this, also blocked, the cancel and try again, it worked
+   1.  wget http://media.happycasts.net/assets/episodes/videos/011-ubuntu-install.mov, tried many times, won't work
