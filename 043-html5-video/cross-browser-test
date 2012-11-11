@@ -41,3 +41,7 @@
 
    1.  wget http://happycasts.b0.upaiyun.com/ssh.mp4, the first time I tried this, also blocked, the cancel and try again, it worked
    1.  wget http://media.happycasts.net/assets/episodes/videos/011-ubuntu-install.mov, tried many times, won't work
+
+1. formats
+   1. most of the times, if you are viewing a mov file chrome can open it, but viewing a mp4/webm file it will fail, but load local mp4/webm file
+      it will play no problem, so maybe I need to learn how to set "content-type"
