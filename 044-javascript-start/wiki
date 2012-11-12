@@ -32,10 +32,25 @@
          img.onclick = function() { this.style.display = "none" ;}
 
 1. why Jquery?
+   1. auto detect dirfferent browsers
+      so that you don't need a lot if-else in your code
+   1. Jquey have a much more newbie-friendly syntax
+        
+
+        document.getElementById("myDiv").className = "highlight";
+        jQuery('#myDiv').addClass('highlight');
+
+        $('img').hide(4000); //very cool
+
+        $('document').ready() mucher nicer than window.load() cause it can be called multiple times
+
+      It's not just jquey will do the same thing, it will do things in a bit better way
    1. do same thing with both JS and Juery, show people why jquey rocks?
 
       http://www.lynda.com/home/Player.aspx?lpk4=87543&playChapter=True
       Addevent 
+
+
 
 1. chrome devtools is not only the great way to learn CSS, but also greate to lean JS
 
@@ -45,3 +60,27 @@
 1. once you know the basics, anything specific first google it, then type into the chromedev tools and try it out
    starting from the reference manual usually does not work for beginners
    Give a example.
+
+1. window.onload
+   1. otherwise put your code at the bottom
+
+1. Timer
+
+     function hello() { alert('nice'); }
+     undefined
+     hello
+     function hello() { alert('nice'); }
+     hello()
+     undefined
+     setTimeout(hello, 2000)
+
+1. sth bigger as real world example
+   change Image every 5 sec, http://www.lynda.com/home/Player.aspx?lpk4=87543&playChapter=True
+
+1. debugging
+   1. Let chromedevtool tell you the error
+
+1. library
+  https://developers.google.com/speed/libraries/?hl=zh-CN
+   http://lokeshdhakar.com/projects/lightbox2/
+   twitter-bootstrap js components
