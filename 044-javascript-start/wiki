@@ -1,7 +1,4 @@
-1. having skull and meat
-   make the essential things covered, but also try to make it beautiful and interesting
-
-1. Web = Js + css + html
+1 Web = Js + css + html
    To learn JS, you first need to know about the other too
    But to know the other two you don't have to learn JS first, so do Html+css first
 
@@ -14,6 +11,8 @@
     
      var myElement = document.getElementById('ch_87512');
      myElement.style.display = 'none';
+     // getElementsByClassName is new, brought with html5
+     // if you are using IE8-, use jQuery for this
 
    Do not talk about DOM, call it a tree, everybody will understand
 
@@ -81,6 +80,18 @@
    1. Let chromedevtool tell you the error
 
 1. library
-  https://developers.google.com/speed/libraries/?hl=zh-CN
+   https://developers.google.com/speed/libraries/?hl=zh-CN
    http://lokeshdhakar.com/projects/lightbox2/
    twitter-bootstrap js components
+
+1. where can I learn more?
+   1. http://www.codecademy.com/#!/exercises/0
+   1. https://developer.mozilla.org/en-US/docs/JavaScript/Reference
+   1. http://jqueryair.com/
+
+   1. search javascript in youku
+      http://www.miaov.com/index.html.php
+      you get some training schools
+      1. they are great, but two problems:
+         1. they don't use Unix
+         1. they don't read doc in English, which means they teach oboselete stuff
