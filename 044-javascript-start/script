@@ -3,32 +3,31 @@
    But to know the other two you don't have to learn JS first, so do Html+css first
    So if you don't know CSS, never try to start JS
 
+1. It's not how it looks, it is how it works
+
 1. JS is now almost everywhere
    1. server side JS: node
    1. we will focus on browser for this video
-1. show people document.getElementById("someid"), then what if sth without a id
-   so people need to know a bit abot DOM
-    
-     var myElement = document.getElementById('ch_87512');
-     myElement.style.display = 'none';
-     // getElementsByClassName is new, brought with html5
-     // if you are using IE8-, use jQuery for this
+   1. As to the use with web, JS is: behavior, "give sophisticated functionality to web pages" as wikipedia put it
+      1. no language is competing with js as web client side language
 
-   Do not talk about DOM, call it a tree, everybody will understand
+1. http://twitter.github.com/bootstrap/javascript.html#modals
+   give people a basic idea, what JS can do
 
-    theElement.parentElement
-
-1. once you know the basics, anything specific first google it, then type into the chromedev tools and try it out
-   starting from the reference manual usually does not work for beginners
-   Give a example.
-
-1. first get code work in devtools, then paste it into a js file, and link to it
-   1. window.onload
-      1. otherwise put your code at the bottom
 
 1. why u can do with JS?
    1. manipulating the TREE(DOM)?
-      1. hide a element
+      1. show people document.getElementById("someid"), then what if sth without a id
+         so people need to know a bit abot DOM
+          
+           var myElement = document.getElementById('ch_87512');
+           myElement.style.display = 'none';
+           // getElementsByClassName is new, brought with html5
+           // if you are using IE8-, use jQuery for this
+
+         Do not talk about DOM, call it a tree, everybody will understand
+
+          theElement.parentElement
 
    1. listen to events
       1. you don't need to write events they are already there, you write "event handler"
@@ -45,6 +44,10 @@
         undefined
         setTimeout(hello, 2000)
 
+1. first get code work in devtools, then paste it into a js file, and link to it
+   1. window.onload
+      1. otherwise put your code at the bottom
+
 1. chrome devtools is not only the great way to learn CSS, but also greate to lean JS
 
        document.getElementsByTagName('a'); # devtools offer auto-completion
@@ -54,6 +57,11 @@
    twitter-bootstrap js components
 
 1. why Jquery? (general purpose lib)
+   1. once you know the basics, anything specific first google it, then type into the chromedev tools and try it out
+      Think about something you want to do, and do it.
+      starting from the reference manual usually does not work for beginners
+      Start with Juery is smart. Give a example.
+
    https://developers.google.com/speed/libraries/?hl=zh-CN
    1. auto detect dirfferent browsers
       so that you don't need a lot if-else in your code
@@ -62,7 +70,10 @@
         document.getElementById("myDiv").className = "highlight";
         jQuery('#myDiv').addClass('highlight');
 
-        $('img').hide(4000); //very cool
+     1. hide a element
+
+        JS: style.display = 'none'
+        JQ: $('img').hide(4000); //very cool
 
         $('document').ready() mucher nicer than window.load() cause it can be called multiple times
 
