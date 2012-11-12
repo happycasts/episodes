@@ -1,11 +1,11 @@
 1 Web = Js + css + html
    To learn JS, you first need to know about the other too
    But to know the other two you don't have to learn JS first, so do Html+css first
+   So if you don't know CSS, never try to start JS
 
-1. timer
-   http://project.mahemoff.com/timer/timer.html
-1. code sth samll, show sth cool
-
+1. JS is now almost everywhere
+   1. server side JS: node
+   1. we will focus on browser for this video
 1. show people document.getElementById("someid"), then what if sth without a id
    so people need to know a bit abot DOM
     
@@ -18,23 +18,46 @@
 
     theElement.parentElement
 
+1. once you know the basics, anything specific first google it, then type into the chromedev tools and try it out
+   starting from the reference manual usually does not work for beginners
+   Give a example.
+
+1. first get code work in devtools, then paste it into a js file, and link to it
+   1. window.onload
+      1. otherwise put your code at the bottom
+
 1. why u can do with JS?
    1. manipulating the TREE(DOM)?
       1. hide a element
-
-   1. server side JS: node
-   1. getGeometry API
 
    1. listen to events
       1. you don't need to write events they are already there, you write "event handler"
 
          img.onclick = function() { this.style.display = "none" ;}
 
-1. why Jquery?
+   1. Timer
+
+        function hello() { alert('nice'); }
+        undefined
+        hello
+        function hello() { alert('nice'); }
+        hello()
+        undefined
+        setTimeout(hello, 2000)
+
+1. chrome devtools is not only the great way to learn CSS, but also greate to lean JS
+
+       document.getElementsByTagName('a'); # devtools offer auto-completion
+
+1. library (specific purpose lib)
+   http://lokeshdhakar.com/projects/lightbox2/
+   twitter-bootstrap js components
+
+1. why Jquery? (general purpose lib)
+   https://developers.google.com/speed/libraries/?hl=zh-CN
    1. auto detect dirfferent browsers
       so that you don't need a lot if-else in your code
    1. Jquey have a much more newbie-friendly syntax
-        
 
         document.getElementById("myDiv").className = "highlight";
         jQuery('#myDiv').addClass('highlight');
@@ -44,49 +67,15 @@
         $('document').ready() mucher nicer than window.load() cause it can be called multiple times
 
       It's not just jquey will do the same thing, it will do things in a bit better way
-   1. do same thing with both JS and Juery, show people why jquey rocks?
-
-      http://www.lynda.com/home/Player.aspx?lpk4=87543&playChapter=True
-      Addevent 
-
-
-
-1. chrome devtools is not only the great way to learn CSS, but also greate to lean JS
-
-   document.getElementsByTagName('a'); # devtools offer auto-completion
-1. where is the best doc? mozilla? why?
-
-1. once you know the basics, anything specific first google it, then type into the chromedev tools and try it out
-   starting from the reference manual usually does not work for beginners
-   Give a example.
-
-1. window.onload
-   1. otherwise put your code at the bottom
-
-1. Timer
-
-     function hello() { alert('nice'); }
-     undefined
-     hello
-     function hello() { alert('nice'); }
-     hello()
-     undefined
-     setTimeout(hello, 2000)
-
-1. sth bigger as real world example
-   change Image every 5 sec, http://www.lynda.com/home/Player.aspx?lpk4=87543&playChapter=True
 
 1. debugging
    1. Let chromedevtool tell you the error
-
-1. library
-   https://developers.google.com/speed/libraries/?hl=zh-CN
-   http://lokeshdhakar.com/projects/lightbox2/
-   twitter-bootstrap js components
+   1. check ep: chrome-devtools
 
 1. where can I learn more?
    1. http://www.codecademy.com/#!/exercises/0
-   1. https://developer.mozilla.org/en-US/docs/JavaScript/Reference
+   1. where is the best doc? mozilla? why?
+      1. https://developer.mozilla.org/en-US/docs/JavaScript/Reference
    1. http://jqueryair.com/
 
    1. search javascript in youku
