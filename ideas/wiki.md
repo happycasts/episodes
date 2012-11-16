@@ -1,3 +1,8 @@
+1. there are many good videos out there, and there will be more, so what's the
+point to make your own?
+   A: happycasts won't be popular without some sort of service. or sth.
+      Need to figure out the missing piece!
+
 however great a graph helps with explaining things, I won't use it!
 casue "limit the number the details" is key!
 
