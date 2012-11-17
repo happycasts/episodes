@@ -1,0 +1,43 @@
+1. What you can build as a web app? How fun it is?
+   1. Everything you see and use everyday in your browser
+   1. Mobile app with a browser embedded.
+
+1. why you need?
+   1. A editor
+        http://www.sublimetext.com/
+        http://macromates.com/
+        http://en.wikipedia.org/wiki/Emacs
+        http://en.wikipedia.org/wiki/Vim_(text_editor)
+      1. the winer is vim
+   1. A platform
+      1. use Unix and Learn with English Plz
+         1. Unix is not difficult, it's far more developer-friendly than windows
+      1. sudo apt-get install vim on ubuntu
+   1. A Server
+      Linux+apache
+   1. A databse
+      Mysql + Nosql + postgresql
+      1. mysql for data storage -> my video
+   1. A language to manipulte the data: ruby python, java, php
+      1. server side logic: ruby python, java, C ... 
+   1. generate the response: html+css+js
+
+   1. why git?
+      1. delete sth by accident, and see how to recover
+      1. change sth show diff and throw
+      1. github, clone railsgirls, change sth and throw it, mention send pullRequest, -> my video: github fork
+
+   1. why English?
+      1. Use google not baidu
+      1. Stackoverflow and wikipedia
+
+   1. Why rails?
+      Even rails is not for Day1 programmer, but I do insist you joining a rails community on Day1
+      1. rails is the best community.
+      1. https://www.djangoproject.com/
+      ruby-china.org
+      rubyonrails.com
+      http://ruby.railstutorial.org/
+      http://railscasts.com/
+
+      Rails is not only ruby, you will also find html&CSS&JS code here, you won't find sql code here, cause it's part of rails stack.
