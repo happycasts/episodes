@@ -1,3 +1,7 @@
+1. SHOW DON'T TELL
+   don't try to explain things to people, screencasts is not for these, slides
+   is. Just do your work, talk a bit so people can follow you, do not talk to
+   much.
 1. tutorial series with more than one video for each one
    1. Web basics, before rails
    1. rails from ZEROtoTwitter
