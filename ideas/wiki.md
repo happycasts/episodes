@@ -1,3 +1,9 @@
+1. tutorial series with more than one video for each one
+   1. Web basics, before rails
+   1. rails from ZEROtoTwitter
+      1. fllowing the idea of sundevilyong
+   1. Each of them will take one or two or three month, during the period I will do offline meetup for them.
+
 1. there are many good videos out there, and there will be more, so what's the
 point to make your own?
    A: happycasts won't be popular without some sort of service. or sth.
