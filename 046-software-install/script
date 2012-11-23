@@ -1,0 +1,31 @@
+1. If we so web, we don't code C a lot, but still we need a lot of software written in C. Like ruby
+1. People has difficulties using Package Managers like Apt-get, dpkg, rubygem HomeBrew, that's why we make this video to explain the basics a bit.
+1. When you need to compile by your own hands?
+
+1. do 
+
+   vim hello.c
+   gcc hello.c -o hello
+   ldd hello 
+   locate stdio.h
+
+   http://www.gnu.org/software/make/
+   show config-file, binary/exe file is not all of the stroy of `make install`
+
+1. when you need to install by hand?
+   install tig
+
+     1. make will bring a 'no ncurse.h' error
+     1. apt-get can install it, so it's binary in that deb package
+     1. Gem install xxx also has such .h missing problem, so we know 'Gem install' will download source and do compiling locally
+
+Everything people need to know is a binary is not running along it has dependencies.
+
+   1. why configue&make&make install
+
+1. why you should use package manager?
+   EP14-makedeb: http://happycasts.net/episodes/14
+   dpkg -S ..../stdio.h
+   dpkg -S ..../libc.so
+   dpkg -l
+   dpkg -L
