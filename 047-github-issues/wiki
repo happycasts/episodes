@@ -1,0 +1,20 @@
+check howgithubusegithutobuildgithub, issue mentioned
+
+1. commit msg #issue number
+   "fix #5"
+
+1. pullRequest and issues
+
+   when you send a pullR, the receiver can find it in both issues and pullRequest, but after it is closed, you can only find it as a closed issue.
+   So "a pullResquest is a issue"
+
+1. @somebody
+
+1. click on the "commented" on each comment, you get a link to that very comment.
+
+1. Realtime update, if somebody post a comment while you are composing yours
+
+
+https://github.com/blog/411-github-issue-tracker
+http://stackoverflow.com/questions/10963205/how-to-attach-file-to-a-github-issue
+https://github.com/blog/831-issues-2-0-the-next-generation
