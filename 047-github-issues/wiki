@@ -15,6 +15,9 @@ check howgithubusegithutobuildgithub, issue mentioned
 1. Realtime update, if somebody post a comment while you are composing yours
 1. show people the tab completion in search box
 
+1. Create a "Bug" issue, make a commit for it, and push with "#the_issue_number", show people the diff on issue page by click on the commit number.
+   better to have imgs in the diff, also shows up the old/new img.
+
 
 https://github.com/blog/411-github-issue-tracker
 http://stackoverflow.com/questions/10963205/how-to-attach-file-to-a-github-issue
