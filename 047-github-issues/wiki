@@ -3,6 +3,13 @@ check howgithubusegithutobuildgithub, issue mentioned
 1. commit msg #issue number
    "fix #5"
 
+1. can you survive on simple tools
+   "how github use github to build github"
+   http://v.youku.com/v_show/id_XMzgzMjI1ODcy.html
+   Use issues : (22:16)
+       shit, sometime is broken
+       hey, this is cool
+       todo list
 1. pullRequest and issues
 
    when you send a pullR, the receiver can find it in both issues and pullRequest, but after it is closed, you can only find it as a closed issue.
@@ -17,6 +24,9 @@ check howgithubusegithutobuildgithub, issue mentioned
 
 1. Create a "Bug" issue, make a commit for it, and push with "#the_issue_number", show people the diff on issue page by click on the commit number.
    better to have imgs in the diff, also shows up the old/new img.
+
+1. keyboard shorcut
+1. API http://developer.github.com/v3/issues/#list-issues
 
 
 https://github.com/blog/411-github-issue-tracker
