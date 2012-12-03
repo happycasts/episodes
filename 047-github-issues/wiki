@@ -1,5 +1,4 @@
-check howgithubusegithutobuildgithub, issue mentioned
-
+1. Bugzilla
 1. commit msg #issue number
    "fix #5"
 
@@ -10,6 +9,7 @@ check howgithubusegithutobuildgithub, issue mentioned
        shit, sometime is broken
        hey, this is cool
        todo list
+
 1. pullRequest and issues
 
    when you send a pullR, the receiver can find it in both issues and pullRequest, but after it is closed, you can only find it as a closed issue.
@@ -19,7 +19,7 @@ check howgithubusegithutobuildgithub, issue mentioned
 
 1. click on the "commented" on each comment, you get a link to that very comment.
 
-1. Realtime update, if somebody post a comment while you are composing yours
+1. Realtime update, if somebody post a comment while you are composing yours: NOT WORKING YET
 1. show people the tab completion in search box
 
 1. Create a "Bug" issue, make a commit for it, and push with "#the_issue_number", show people the diff on issue page by click on the commit number.
