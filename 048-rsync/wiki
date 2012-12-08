@@ -1,0 +1,30 @@
+rsync stands for remote sync.
+1. offsite backup
+   bullshit we don't want tech terms
+
+1. github for plaintext is nice
+1. no checksum needed if you use rsync
+   1. tell people they need to understand what "HASH" is, point them to the resouces, but don't expect people the understand this already.
+      1. show a download process of a CD download, show md5sum to people
+      1. then tell people rsync actually dvivd a big file into many smaller ones
+
+1. use rsync other than ssh
+   
+      rsync -auH rsync://rsync.chiark.greenend.o
+
+   wikipedia: The recipient splits its copy of the file into fixed-size non-overlapping chunks and computes two checksums for each chunk:
+
+   1. if people goto my tree on server and change one file maliciously, can rsync detect that for me
+
+1. no compression needed .cause rsync will do that for you.
+1. how not to type your password:
+   http://happycasts.net/episodes/3
+1. you need go to your server, delete your dir_old first, than you need to scp the whole thing again, quite slow and troublesome
+   
+    rsync --delete
+    rsync --exclude
+
+1. put the script later, basic things first.
+   1. http://rsync.samba.org/examples.html
+1. It works over ssl, it works for many protocals, it much cooler than I mentioned here.
+1. http://en.wikipedia.org/wiki/Cron to get mirrors
