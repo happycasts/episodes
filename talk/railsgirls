@@ -1,6 +1,12 @@
 UPLOAD: https://speakerdeck.com/railsgirls/rails-girls-bentobox-exercise  
 try ruby shensiwei
 
+1. Topic
+
+    Understanding Web Apps
+    An Introduction to Software Engineering & Best Practices on Designing & Developing a Web Application
+    http://railsgirls.com/beijing
+
 
 
 h a p  lilu
@@ -14,6 +20,15 @@ h a p  lilu
         1. as a business culture，it's you in charge, build a lifestyle business!
 
     1. So rails is the sword for your personal freedom.
+    
+
+1. About Me:
+
+  1. My name is Peter
+  1. Happycasts.net 
+  1. I quit postgraduate school
+  1. I was a Linux C++ programmer
+  1. started as web dev at my second employer, using Python
 
 ## 
 what is rails
@@ -35,3 +50,11 @@ html css
    1. lifestyle business: The main requirement of a lifestyle business is just that it allows the entrepreneur/owner to live how he or she wants to live now, while running the company.
 
    A startup’s job is to grow big enough to provide a return to investors. A lifestyle business’s job is to provide a great quality of life to its owners
+
+
+1. tech side
+
+ Rails is a full-stack framework, meaning that it gives the web developer the ability to gather information from the web server, talk to or query the database, and render templates out of the box.
+
+
+ have server and db, have html&css,  MVC for them
