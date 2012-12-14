@@ -7,10 +7,6 @@ try ruby shensiwei
     An Introduction to Software Engineering & Best Practices on Designing & Developing a Web Application
     http://railsgirls.com/beijing
 
-
-
-h a p  lilu
-
 1. my letter to Shensiwei
 
     1. what is web development ？
@@ -22,39 +18,35 @@ h a p  lilu
     1. So rails is the sword for your personal freedom.
     
 
-1. About Me:
+1. Ruby is a programming language, Rails is a Web framework
 
-  1. My name is Peter
-  1. Happycasts.net 
-  1. I quit postgraduate school
-  1. I was a Linux C++ programmer
-  1. started as web dev at my second employer, using Python
+     Rails is a full-stack framework, meaning that it gives the web developer the ability to gather information from the web server, talk to or query the database, and render templates out of the box.
 
-## 
-what is rails
 
-html css
-
-## rails is a framework
-1. rails has it's OPnION on how tech and bussiness shall be done
-   1. tech side
-      we build simple things
-      getting real
+ 1. What makes rails special?
+    Java: for large enterprise
+    Rails: for programmer happiness, rails is so fast
+    Check Twitter talk
+    1. lean startup/lifestyle business
+    1. from Rails to Java: http://www.youtube.com/watch?v=ohHdZXnsNi8
+       1. small companies shall still stick to RubyOnRails, cause it's fast!
+       1. startup world.
+    1. rails has it's OPnION on how tech and bussiness shall be done
+       1. tech side
+          we build simple things
+          getting real
+    1. We value
+       1. promote programmer's happyness and productivity over tight contol of a large team
 
    1. business side
     http://david.heinemeierhansson.com/#video2
       1. "lifestyle business"?
 
-1. we value
 
-   1. lifestyle business: The main requirement of a lifestyle business is just that it allows the entrepreneur/owner to live how he or she wants to live now, while running the company.
+1. Why ruby/Rails
+    1. Rails is a great community
+    1. Rails and Ruby is so so fast
+    1. Rails make your idea, to a site, very fast
+    1. 文艺复兴人
 
-   A startup’s job is to grow big enough to provide a return to investors. A lifestyle business’s job is to provide a great quality of life to its owners
-
-
-1. tech side
-
- Rails is a full-stack framework, meaning that it gives the web developer the ability to gather information from the web server, talk to or query the database, and render templates out of the box.
-
-
- have server and db, have html&css,  MVC for them
+1. Rails
