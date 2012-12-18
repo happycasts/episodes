@@ -1,0 +1,26 @@
+还有看了你的视频，对tig很感兴趣，希望能看到一个关于介绍tig的视频
+
+if you are not have basic understanding of how git works, this video is not for you.
+
+tig is a so called "front-end" to git, so tig is nothing but a prettier git output thing.
+
+1. nice
+
+   tig status
+   tig blame
+
+   much nicer than git xxx
+
+1. as a pager
+
+   git log|tig
+
+1. tig -- a_file nice
+
+1. find like vim
+   / N n
+1. Problem
+
+   tig commands are not full-featured
+
+   like `git diff`, I don't have a `tig diff`
