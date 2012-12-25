@@ -1,0 +1,44 @@
+- <http://guides.rubyonrails.org/>
+
+1. scaffolding
+
+1. -d mysql
+
+1. bundle install
+   
+   http://gembundler.com/
+
+1. rake db:create; rake db:migrate
+
+1. drop db, and git checkout -b tmp 232342
+
+   1. route
+      rake routes
+
+      get "/posts" => "posts#index"
+
+      1. then git checkout master; rake routes
+            http://guides.rubyonrails.org/routing.html
+
+
+   1. controller
+      http://guides.rubyonrails.org/action_controller_overview.html
+
+      1. pass a variable to view
+
+   1. view (http://guides.rubyonrails.org/  search: views)
+
+      1. tell people why it's xxx.erb
+
+
+   1. database
+
+      rails g migration
+      rake db:create; rake db:migrate
+
+   1. module
+      $ rails c
+
+      1. show some commands, get index value, pass it to controller, show it in view, all done
+
+
