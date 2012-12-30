@@ -2,7 +2,7 @@
 
 1. scaffolding
 
-1. -d mysql
+1. rails new blog -d mysql
 
 1. bundle install
    
@@ -16,6 +16,7 @@
       rake routes
 
       get "/posts" => "posts#index"
+
 
       1. then git checkout master; rake routes
             http://guides.rubyonrails.org/routing.html
@@ -40,5 +41,4 @@
       $ rails c
 
       1. show some commands, get index value, pass it to controller, show it in view, all done
-
 
