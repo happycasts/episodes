@@ -1,0 +1,7 @@
+1. http://guides.rubyonrails.org/routing.html
+1. rake routes
+1. params[:id], tell people where is this from?
+1. http verbs
+1. pretty URLs matter, like twitter.com/happypeter
+
+1. `get "demo/index" will work

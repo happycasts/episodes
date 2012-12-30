@@ -1,0 +1,7 @@
+rails g controller <enter> see what you get
+rails g controller demo index
+
+you can not talk about controller without talking about view
+
+so on video for controller+view
+another for model+db console
