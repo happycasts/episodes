@@ -1,3 +1,4 @@
+routing: 告诉你往那走
 no need to mention advanced features, cause it takes a lot more understanding how MVC works as a whole
 1. http://guides.rubyonrails.org/routing.html
 1. rake routes
