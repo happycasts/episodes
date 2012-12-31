@@ -1,7 +1,52 @@
+no need to mention advanced features, cause it takes a lot more understanding how MVC works as a whole
 1. http://guides.rubyonrails.org/routing.html
 1. rake routes
 1. params[:id], tell people where is this from?
 1. http verbs
+
+   show people
+
+       posts GET    /posts(.:format)          {:action=>"index", :controller=>"posts"}
+          POST   /posts(.:format)          {:action=>"create", :controller=>"posts"}
+ new_post GET    /posts/new(.:format)      {:action=>"new", :controller=>"posts"}
+edit_post GET    /posts/:id/edit(.:format) {:action=>"edit", :controller=>"posts"}
+     post GET    /posts/:id(.:format)      {:action=>"show", :controller=>"posts"}
+          PUT    /posts/:id(.:format)      {:action=>"update", :controller=>"posts"}
+          DELETE /posts/:id(.:format)      {:action=>"destroy", :controller=>"posts"}
+
+   .format
+
+   why_put_and_delete: http://www.artima.com/lejava/articles/why_put_and_delete.html
+   HTML specification only allows GET and POST as form actions: http://cafe.elharo.com/web/why-rest-failed/
 1. pretty URLs matter, like twitter.com/happypeter
 
 1. `get "demo/index" will work
+    
+      get "demo/index" 
+      match "demo/index", :to => "demo#index"
+
+1. put a "demo/index.html" in "public/"
+1. show people the graph.
+
+
+1. check default route.rb file, good info there:
+
+  # The priority is based upon order of creation:
+  # first created -> highest priority.
+
+1. three basic types
+   1. simple route
+
+        get "demo/index" 
+
+   1. default route
+
+      # This is a legacy wild controller route that's not recommended for RESTful applications. 
+      # Note: This route will make all actions in every controller accessible via GET requests. 
+      # match ':controller(/:action(/:id(.:format)))' 
+
+   1. root route
+  
+      root :to
+
+
