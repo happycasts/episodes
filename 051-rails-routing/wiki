@@ -20,6 +20,7 @@ edit_post GET    /posts/:id/edit(.:format) {:action=>"edit", :controller=>"posts
    why_put_and_delete: http://www.artima.com/lejava/articles/why_put_and_delete.html
    HTML specification only allows GET and POST as form actions: http://cafe.elharo.com/web/why-rest-failed/
    use "scaflod" code as form example
+
 1. pretty URLs matter, like twitter.com/happypeter
 
 1. `get "demo/index" will work
@@ -50,5 +51,3 @@ edit_post GET    /posts/:id/edit(.:format) {:action=>"edit", :controller=>"posts
    1. root route
   
       root :to
-
-
