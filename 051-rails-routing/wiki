@@ -3,6 +3,12 @@ no need to mention advanced features, cause it takes a lot more understanding ho
 1. http://guides.rubyonrails.org/routing.html
 1. rake routes
 1. params[:id], tell people where is this from?
+1. the very basic
+
+       match "peter", :to => "demo#say_hi", :as => pet
+
+1. show default index.html in public/, then remove it, and then show "root :to => xxx"
+
 1. http verbs
 
    show people
