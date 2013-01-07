@@ -1,6 +1,8 @@
-A controller can thus be thought of as a middle man between models and views
-rails g controller <enter> see what you get
-rails g controller demo index
+1. overview
+   http://guides.rubyonrails.org/action_controller_overview.html#what-does-a-controller-do
+    A controller can thus be thought of as a middle man between models and views
+
+
 Move your logic in view to controller/helper, move your controller logic to model, 
 controller_name -> Model_name -> Table_name
 show method maps to the "show.html.erb", so you can move your logic in show.html.erb to show action
@@ -8,6 +10,10 @@ but now you need to be aware of variable scope, use @variable
 at the end of the controller, you need to do redirect_to or render "sth_else", otherwise you will render default!
 also use show action, show people the params[:id]
 
+1. get the code
+   
+    rails g controller <enter> see what you get
+    rails g controller demo index
 
 1. talk about before_filter, and then tell people see more on http://guides.rubyonrails.org/action_controller_overview.html#filters
    I need to talk about filter, use before_fillter, @post=Post.find(params[:id])
@@ -37,25 +43,4 @@ also use show action, show people the params[:id]
    but in controller's create=new+create update=edit+update...
 
    talk more about delete->detroy things, people get confused why they need to add "method=> delete" in their view.
-
-1. on the main doc page: http://guides.rubyonrails.org/action_controller_overview.html
-   A lot of the stuff is talking about 
-     1. params[]
-     1. session&cookie
-     1. form
-     1. filter
-     1.  Request Forgery Protection
-     1. Request and Response Objects
-     1. execpetion handling
-
-  All of the above are very imporatant, but they won't help the new users understand the whole picture
-  So I will talk about things to help people get a overview of how pieces fit together, like
-    
-    1. set layout for specific controller
-    1. application_controller
-    1. how to talk to model
-    1. how to talk to db
-    1. how to send data to view
-    1. self.xxx in model
-    1. xxx
 
