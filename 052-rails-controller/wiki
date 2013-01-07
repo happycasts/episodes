@@ -25,6 +25,25 @@
     but now you need to be aware of variable scope, use @variable
     at the end of the controller, you need to do redirect_to or render "sth_else", otherwise you will render default!
     also use show action, show people the params[:id]
+1.  create model and table
+    
+        rails new blog -d mysql
+        cd blog
+        rails g model Post title:string content:text
+        rake db:create; rake db:migrate
+        rails c
+        >p = Post.new()
+        >p.save
+        >Post.find(1)
+        >Post.all
+        >p.content = "nice"
+        >p.save
+        >p.destory
+        
+     note that: if you rails g controller, view comes along, but if you g model, db table come along 
+
+        >rails g controller posts index # first do all logic in index.html,
+                                        #then move things into the controller, do show later for params[:id]
 
 1. You do CRUD in controller's that's a bit confusing!
    http://www.lynda.com/home/Player.aspx?lpk4=75218&playChapter=True
