@@ -2,27 +2,56 @@
    http://guides.rubyonrails.org/action_controller_overview.html#what-does-a-controller-do
     A controller can thus be thought of as a middle man between models and views
 
+1. rewirte "resources :posts"
 
-Move your logic in view to controller/helper, move your controller logic to model, 
-controller_name -> Model_name -> Table_name
-show method maps to the "show.html.erb", so you can move your logic in show.html.erb to show action
-but now you need to be aware of variable scope, use @variable
-at the end of the controller, you need to do redirect_to or render "sth_else", otherwise you will render default!
-also use show action, show people the params[:id]
+       get "/posts"
+       put "/posts/:id"
+       delete "" => "posts#destroy"
+       put "" => "update"
+
+   and  now create link in Views to do everything, put all the links on root page
+   people will see, the whole flow: click a link, send the request to call some_controller#some_action, the action go to talk to db through model methods, get the data,
+   now render or redirect to generate the response
 
 1. get the code
    
     rails g controller <enter> see what you get
     rails g controller demo index
 
+1. Move your Ruby logic  in view to controller, move your controller logic to model, 
+    Model_name -> Table_name
+
+    show method maps to the "show.html.erb", so you can move your logic in show.html.erb to show action
+    but now you need to be aware of variable scope, use @variable
+    at the end of the controller, you need to do redirect_to or render "sth_else", otherwise you will render default!
+    also use show action, show people the params[:id]
+
+1. You do CRUD in controller's that's a bit confusing!
+   http://www.lynda.com/home/Player.aspx?lpk4=75218&playChapter=True
+   but in controller's create=new+create update=edit+update...
+
+   talk more about delete->detroy things, people get confused why they need to add "method=> delete" in their view.
+   CRUD is not just about the db, the db part is simpler, taken care of by model
+
+     Post.create
+     Post.find
+     Post.update
+     Post.destroy
+
+   CRUD = 7 things in "resources :posts"
+   C =  new + create
+   R = index + show
+   U = edit + update
+   D = destroy
+
 1. talk about before_filter, and then tell people see more on http://guides.rubyonrails.org/action_controller_overview.html#filters
    I need to talk about filter, use before_fillter, @post=Post.find(params[:id])
+   DRY the code
+
 1. Talk about params[] in details, but move "session and cookie and flash and user auth" to another video, see more: http://guides.rubyonrails.org/action_controller_overview.html#parameters
-1. mention session, but do not talk
 
 1. a controller doesn't have to talk with db, but it should produce sth at least, so 
    Tell people about format.js/json/html stuff
-   you can not talk about controller without talking about view
 
 1. controller can render a view, but it can also do redirecting
    http://www.lynda.com/home/Player.aspx?lpk4=75181&playChapter=True
@@ -37,10 +66,4 @@ also use show action, show people the params[:id]
    from db-model->controller, user self.some_function
 
    controller can not get something backfrom the view.
-
-1. You do CRUD in controller's that's a bit confusing!
-   http://www.lynda.com/home/Player.aspx?lpk4=75218&playChapter=True
-   but in controller's create=new+create update=edit+update...
-
-   talk more about delete->detroy things, people get confused why they need to add "method=> delete" in their view.
 
