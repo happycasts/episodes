@@ -9,7 +9,7 @@
        delete "" => "posts#destroy"
        put "" => "update"
 
-   and  now create link in Views to do everything, put all the links on root page
+   and  now create link in Views to do everything, put all the links on index page
    people will see, the whole flow: click a link, send the request to call some_controller#some_action, the action go to talk to db through model methods, get the data,
    now render or redirect to generate the response
 
@@ -47,7 +47,6 @@
 
 1. You do CRUD in controller's that's a bit confusing!
    http://www.lynda.com/home/Player.aspx?lpk4=75218&playChapter=True
-   but in controller's create=new+create update=edit+update...
 
    talk more about delete->detroy things, people get confused why they need to add "method=> delete" in their view.
    CRUD is not just about the db, the db part is simpler, taken care of by model
