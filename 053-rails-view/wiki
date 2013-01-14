@@ -1,3 +1,71 @@
-1. we need to talk about forms
+1. rails g controller demo hello
+
+1. files
+   1. tell people where they are located
+   1. tell people what all the extentions mean
+
+       erb
+       htm.erb
+       js.erb
+       onestep/application.css.scss.erb
+   1. tell people about the <% %> and <%= %>
+   1. tell why layout?
+      yield
+      content_for
+
+1. first show people what is render and a view template
+   then:
+
+   layout->partial->helper
+
+    1. helpers
+       javascript_include_tag
+       markdown(text)
+
+1. form_helper: http://guides.rubyonrails.org/form_helpers.html
+
    form_tag, form_for @posts, empty or not
    params[]
+
+   you can pass params in URL(:id/ in route, or ?id=2&page=1), or in Form, give people a clear example, show all the values in view/log.
+   people will know
+   NOTE: you can use <%= params[:id] %>, you don't need to pass it from the controller, but not recommended
+
+   You use @variables to go from CONTROLLER to VIEW, and you use PARAMS to go from Client->Controller, show people the graph
+
+
+   1. still it's the resources thing make it complex, so first use a verbose action="/posts/get_mydata"
+ 
+   1. show the whole params hash within a error shown in View
+      or use <%= params.inspect %>
+
+1. render 'hello'
+ 
+   def index
+     render 'hello'
+   end
+
+   def hello
+     render (:text => "hello everyone")
+   end
+
+1. redirect_to
+
+   def show
+      if params[:tag]
+        redirect_to
+      else
+        render 
+      end
+   end
+   --------
+   def hello
+     redirect_to other_hello
+   end
+
+   def other_hello
+     render (:text => "hello everyone")
+   end
+   -------
+   if you use render, the URL won't change in your addressbar, but redirect_to will...
+
