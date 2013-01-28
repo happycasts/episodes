@@ -1,0 +1,55 @@
+1. funny 
+
+    1 app => 1 database
+    1 model => 1 table
+    1 attribute => 1 column # a column is a set of data of a single type
+    1 object => 1 row
+
+    1 column is also called a field
+
+    t = Tweet.find(3)
+    t is a object, Tweet is a model => a table
+    t.name is a attribute
+
+    lower case, use under score, plural for databases;
+ 
+1. Not details, tell people how pieces fit together
+   1. what is rake?
+   1. schema.rb
+   1. database.yml
+   1. people have to know what a `migration` is!
+      A: a set of db instructions that 'migrate' the db from one state to another
+      write a up and down by hand is interesting
+
+1. You want to use `t = Tweet.new` in your controller, you have to have a model then
+   name relation among table and model
+
+1. What can we do within a model?
+   1. validations
+   1. relation
+      has_many ...
+
+1. why activeRecord?
+
+   1. user = User.new
+      user.name = "Peter"
+      user.save # Do a SQL insert
+
+      then \
+      user.name = "Billie"
+      user.save # Do a SQL update
+
+      Much simpler than raw sql.
+
+1. do a one to many, let people know foreign key pri key 
+ 
+     http://guides.rubyonrails.org/association_basics.html
+
+1.  you mention validation, then why not callbacks 
+    http://guides.rubyonrails.org/active_record_validations_callbacks.html
+
+1. db console
+   http://guides.rubyonrails.org/active_record_querying.html
+   Yes, I need to show people with real code that what all the four docs are about
+
+1. you do things in the console, you can paste the code in controller, you can pass the result to view
