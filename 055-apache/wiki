@@ -1,0 +1,50 @@
+1. apache
+-
+-     superbatironmans5 说 大约 16 小时前
+-     @happypeter 我一直在看您的视频，一直在学rails,前几天自己买了linode
+vps,可我发现自己对服务器什么的不是很懂，您有时间能不能讲一讲apache服务器呢，他的模块什么的，和然后和
+
+appserver mode_rails mod_php, what is a mod? why appserver, like unicorn?
+
+netstat
+check port
+open port, iptables
+only static stuff, how about I want to calculate things? mod_cgi...
+
+
+In general, httpd should not be invoked directly, but rather should be invoked via apachectl on Unix-based systems 
+http://httpd.apache.org/docs/2.2/programs/httpd.html
+
+
+Apache is the most commonly used Web Server on Linux systems. Web Servers are used to serve Web Pages requested by client computers. Clients typically request and view Web Pages using Web Browser applications such as Firefox, Opera, or Mozilla.
+https://help.ubuntu.com/8.04/serverguide/httpd.html
+
+1. virtualhost
+
+The term Virtual Host refers to the practice of running more than one web site (such as company1.example.com and company2.example.com) on a single machine. Virtual hosts can be "IP-based", meaning that you have a different IP address for every web site, or "name-based", meaning that you have multiple names running on each IP address. The fact that they are running on the same physical server is not apparent to the end user.
+http://httpd.apache.org/docs/2.2/vhosts/
+  1. http://httpd.apache.org/docs/2.2/vhosts/name-based.html
+
+
+The Apache HTTP Server, commonly referred to as Apache (/əˈpætʃiː/ ə-pa-chee), is a web server software notable for playing a key role in the initial growth of the World Wide Web.[3]
+http://en.wikipedia.org/wiki/Apache_HTTP_Server  # so apache == apache httpd
+
+1. log
+
+    log analys with AWStats
+    google analytics
+
+
+1. rack and cgi
+    http://railscasts.com/episodes/317-rack-app-from-scratch
+    http://railscasts.com/episodes/151-rack-middleware
+   passenger is also called mod_rails/mod_rack
+
+   1. run a rack app on apache
+      http://www.modrails.com/documentation/Users%20guide%20Apache.html#_tutorial_example_writing_and_deploying_a_hello_world_rack_application
+   1. run a sinatra app on apache
+      http://stackoverflow.com/questions/3371208/how-to-setup-a-sinatra-app-under-apache-with-passenger
+
+   1. a apache mod OR a app-server
+
+1. apache can also be used as app server http://www.slideshare.net/windley/using-apache-as-an-application-server
