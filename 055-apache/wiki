@@ -2,14 +2,23 @@
 -
 -     superbatironmans5 说 大约 16 小时前
 -     @happypeter 我一直在看您的视频，一直在学rails,前几天自己买了linode
-vps,可我发现自己对服务器什么的不是很懂，您有时间能不能讲一讲apache服务器呢，他的模块什么的，和然后和
+vps,可我发现自己对服务器什么的不是很懂，您有时间能不能讲一讲apache服务器呢，他的模块什么的，和然后和 rails 结合一下。
 
 appserver mode_rails mod_php, what is a mod? why appserver, like unicorn?
 
-netstat
-check port
-open port, iptables
-only static stuff, how about I want to calculate things? mod_cgi...
+1. so first talk about how to setup a basic static site, then virtualhost, then install mod to do sth
+   then install mod_rack to run ruby...
+
+1. apache is a http web server, so talk a bit about http: http://www.w3.org/Protocols/rfc2616/rfc2616.html 
+  https://developer.mozilla.org/en-US/docs/HTTP
+  MDN has lots of introductory/tutorial like docs for developers.
+
+1. port: doors
+
+    netstat
+    check port
+    open port, iptables
+    only static stuff, how about I want to calculate things? mod_cgi...
 
 
 In general, httpd should not be invoked directly, but rather should be invoked via apachectl on Unix-based systems 
