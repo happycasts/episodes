@@ -19,6 +19,7 @@ appserver mode_rails mod_php, what is a mod? why appserver, like unicorn?
     check port
     open port, iptables
     only static stuff, how about I want to calculate things? mod_cgi...
+    http://www.jmarshall.com/easy/cgi/
 
 
 In general, httpd should not be invoked directly, but rather should be invoked via apachectl on Unix-based systems 
