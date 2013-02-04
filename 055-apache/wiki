@@ -1,3 +1,8 @@
+1. app server
+
+   db server <-> app server : business logic calculate
+   web server <-> app server : load banlancing...
+
 1. apache
 -
 -     superbatironmans5 说 大约 16 小时前
