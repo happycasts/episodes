@@ -1,3 +1,9 @@
+1. http: hyperText Trans Pro
+   html: HyperText ML
+   Web: HyperLinks HTML
+
+   names are interesting too.
+
 1. app server
 
    db server <-> app server : business logic calculate
@@ -5,11 +11,42 @@
 
 1. apache
 -
--     superbatironmans5 说 大约 16 小时前
--     @happypeter 我一直在看您的视频，一直在学rails,前几天自己买了linode
+-     我一直在看您的视频，一直在学rails,前几天自己买了linode
 vps,可我发现自己对服务器什么的不是很懂，您有时间能不能讲一讲apache服务器呢，他的模块什么的，和然后和 rails 结合一下。
 
 appserver mode_rails mod_php, what is a mod? why appserver, like unicorn?
+
+1. Mod
+   1. list all installed mods
+
+          apachectl -M
+
+   you install a mod than it's part of Apache, like mod_php, but you can also run PHP with CGI
+   1. what is a mod?
+      http://en.wikipedia.org/wiki/Apache_modules#Features
+      Apache supports a variety of features, many implemented as compiled modules which extend the core functionality. These can range from server-side programming language support to authentication schemes. 
+
+1. RACK and CGI
+   http://www.anchor.com.au/hosting/dedicated/Running-Rails-2.3-Using-CGI-with-Rack
+   One of the new features of Rails 2.3 is full Rack support, and the removal of all the CGI-specific code that has been with us since the beginning of time. While this is generally a Good Thing, because Rack is a cleaner way to support different ways of deploying and running your Rails app, one unfortunate side-effect of this is that there's no longer a dispatch.cgi in your shiny new Rails apps which allow you to run your app in CGI mode.
+
+   You can run Ruby with apache trough CGI, that what we do before rails2.3
+   so there are three ways you can run ruby on apache
+   1. install the interpreter in apache itself, namely mod_ruby: http://en.wikipedia.org/wiki/Mod_ruby
+      1. passenger also call itself mod_rails, and I see in http.conf
+         loadModel passenger...
+         but is it a real mod_xxx or a app server?
+         A: and on it's official site, it is called a "app server", so it is a appserver, that talks to apache as a mod,
+            while unicorn talk to nginx throght a socket file.
+
+   1. install ruby on local OS, and run it as CGI: http://shifteleven.com/articles/2008/03/13/dont-forget-about-little-old-cgi
+   1. install rack
+
+   CGI create new process for each request, while mod_xxx just use apache processes
+
+1. what is a REquest?
+   http://en.wikipedia.org/wiki/Common_Gateway_Interface
+   In the case of HTTP PUT or POSTs, the user-submitted data is provided to the program via the standard input. The web server creates a subset of the environment variables passed to it and adds details pertinent to the HTTP environment.
 
 1. so first talk about how to setup a basic static site, then virtualhost, then install mod to do sth
    then install mod_rack to run ruby...
@@ -17,6 +54,8 @@ appserver mode_rails mod_php, what is a mod? why appserver, like unicorn?
 1. apache is a http web server, so talk a bit about http: http://www.w3.org/Protocols/rfc2616/rfc2616.html 
   https://developer.mozilla.org/en-US/docs/HTTP
   MDN has lots of introductory/tutorial like docs for developers.
+
+1. apache is a web server, html is the heart of web, http is used to transfer html files
 
 1. port: doors
 
