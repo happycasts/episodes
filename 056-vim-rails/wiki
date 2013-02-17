@@ -45,3 +45,7 @@ http://ndpsoftware.com/git-cheatsheet.html
 all the file finding or switching tools, like `find`, `Rfind`, `1R`, `Rfouctionaltext`, `Rcontroller` will not be so useful, since we already have fuzzyfinder working so well.
 even `gf hh ii` is no longer sexy
 
+
+1. how to surround some code with a div tag, and indent the text at the same time?
+   1. surrounding.vim or text-object+macro 
+      A: https://github.com/tpope/vim-surround   prefect! V+S+<div class="">
