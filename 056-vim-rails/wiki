@@ -1,0 +1,47 @@
+# rails
+感谢分享。有时间能否分享一下您是如何用VIM做rails开发的。尤其是怎么样重构。比如抽取函数，partial。还有debug。谢谢
+#
+# vim indent
+Now my problem is in a .c file my indent is four spaces, this is nice, but NOT for my htmls!!!
+so have a look at 
+
+    filetype indent on
+
+see how to set tabstops according to filetype
+and of course, there is a lot more to fix.
+
+things show work well with <enter> <c-t> <c-d> ...
+
+tabstop=xxx is not enough, you still need `expandtab`
+it's also about codingStyle
+
+
+# how to comment in vim
+https://github.com/tomtom/tcomment_vim
+# for railscasts-china.com
+rails.vim
+http://ruby-china.org/topics/4478
+# requst from ruby-china 
+感觉以后可以顺便讲讲.vimrc文件的语法
+http://stevelosh.com/blog/2010/09/coming-home-to-vim/ --great philology
+# 10 tips
+daw caw
+ci" ca" da" ci) da{ # da{ is very sepical for C
+inoremap ( ()<Esc>i #http://vim.wikia.com/wiki/Making_Parenthesis_And_Brackets_Handling_Easier
+nnoremap <leader>1 yypVr= # things like this maybe not so useful but very inspiring, I think  people will love it
+
+
+
+# Ben Orenstein - Write code faster: expert-level vim (Railsberry 2012)
+http://www.youtube.com/watch?v=SkdrYWhh-8s
+)
+vim is a programming language for text editing, it's not easy, but if you can learn ruby you can learn vim!
+I've been using vim for more than a decade, but I'm still learning new things everyday.
+I use Ctrl-s installed of "Shift+:+w+<enter>"
+
+# git 
+http://ndpsoftware.com/git-cheatsheet.html
+# rails.vim
+all the file finding or switching tools, like `find`, `Rfind`, `1R`, `Rfouctionaltext`, `Rcontroller` will not be so useful, since we already have fuzzyfinder working so well.
+even `gf hh ii` is no longer sexy
+

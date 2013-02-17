@@ -21,8 +21,6 @@ caniuse.com
 http://www.kaltura.org/
 
 also check EP043
-# rails
-感谢分享。有时间能否分享一下您是如何用VIM做rails开发的。尤其是怎么样重构。比如抽取函数，partial。还有debug。谢谢
 # bash
 http://wiki.bash-hackers.org/scripting/newbie_traps
 # mongodb
@@ -60,20 +58,6 @@ change Email for all commits
   show people the `7lines` rule, when talking about git merging
   what's a conflict
 
-# vim indent
-Now my problem is in a .c file my indent is four spaces, this is nice, but NOT for my htmls!!!
-so have a look at 
-
-    filetype indent on
-
-see how to set tabstops according to filetype
-and of course, there is a lot more to fix.
-
-things show work well with <enter> <c-t> <c-d> ...
-
-tabstop=xxx is not enough, you still need `expandtab`
-it's also about codingStyle
-
 # emacs manual
 
  我的github账号是 https://github.com/Teddy-ma
@@ -90,14 +74,7 @@ it's also about codingStyle
  如果有空的话,请指导一下我这个小菜鸟吧:)
 
 
-# for railscasts-china.com
-rails.vim
-http://ruby-china.org/topics/4478
-# requst from ruby-china 
-感觉以后可以顺便讲讲.vimrc文件的语法
 
-# how to comment in vim
-https://github.com/tomtom/tcomment_vim
 
 # pkg package, apt-get
 
@@ -113,29 +90,7 @@ http://ruby-china.org/topics/1271
 # revise github-pages
 http://hi.baidu.com/quvia/item/077546dbdf60caf1cb0c3997
 
-# 10 tips
-daw caw
-ci" ca" da" ci) da{ # da{ is very sepical for C
-inoremap ( ()<Esc>i #http://vim.wikia.com/wiki/Making_Parenthesis_And_Brackets_Handling_Easier
-nnoremap <leader>1 yypVr= # things like this maybe not so useful but very inspiring, I think  people will love it
-
-
-
-# Ben Orenstein - Write code faster: expert-level vim (Railsberry 2012)
-http://www.youtube.com/watch?v=SkdrYWhh-8s
-)
-vim is a programming language for text editing, it's not easy, but if you can learn ruby you can learn vim!
-I've been using vim for more than a decade, but I'm still learning new things everyday.
-I use Ctrl-s installed of "Shift+:+w+<enter>"
-
-# git 
-http://ndpsoftware.com/git-cheatsheet.html
-# rails.vim
-all the file finding or switching tools, like `find`, `Rfind`, `1R`, `Rfouctionaltext`, `Rcontroller` will not be so useful, since we already have fuzzyfinder working so well.
-even `gf hh ii` is no longer sexy
-
 # others
-http://stevelosh.com/blog/2010/09/coming-home-to-vim/ --great philology
 OOP demisistified -- requested by Zhanglu
 keyword subscribable -- if somebody only interested in vim, or git
 
