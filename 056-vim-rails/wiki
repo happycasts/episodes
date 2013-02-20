@@ -1,3 +1,10 @@
+1. indenting is a MUST
+   1. requirement
+       `o` takes me to the right place next line
+       `=` gives me right formatting
+       'V>' indent with 2 spaces, `>` actually gives you a tab, so you need to have "set expandtab" and "shiftwidth=2"
+       also affect surround.vim
+   
 1. rails.vim
    1. now I have fuzzy-finder, do I need this？
       A: Rcontroller stuff is slow
