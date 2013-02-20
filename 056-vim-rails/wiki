@@ -1,3 +1,13 @@
+1. rails.vim
+   1. now I have fuzzy-finder, do I need this？
+      A: Rcontroller stuff is slow
+1. search 
+   ack/xxx/https://github.com/ggreer/the_silver_searcher
+
+1. git stuff
+   1. do I really need fugitive?
+      A: can I survive with "ctrl-z + fg"
+
 # rails
 感谢分享。有时间能否分享一下您是如何用VIM做rails开发的。尤其是怎么样重构。比如抽取函数，partial。还有debug。谢谢
 #
@@ -50,3 +60,7 @@ even `gf hh ii` is no longer sexy
    1. surrounding.vim or text-object+macro 
       A: https://github.com/tpope/vim-surround   prefect! V+S+<div class="">
          You can use this in .html or .erb files, cool
+
+
+
+  1. you can do really awesome stuff with snipMate+surround.vim in html/erb files
