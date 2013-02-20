@@ -49,3 +49,4 @@ even `gf hh ii` is no longer sexy
 1. how to surround some code with a div tag, and indent the text at the same time?
    1. surrounding.vim or text-object+macro 
       A: https://github.com/tpope/vim-surround   prefect! V+S+<div class="">
+         You can use this in .html or .erb files, cool
