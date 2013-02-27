@@ -35,6 +35,11 @@ pathogen
 way, or even simpler, fuzzyfinder+Ctrl-K
    1. Rextract is nice to have
 
+1. fuzzyfinder
+
+   when you use fuzzyfinder, don't cd to go into subdirs of your project
+   use :cd and ,cd + :sh to do things
+
 1. search
    ack
 
