@@ -48,6 +48,9 @@ way, or even simpler, fuzzyfinder+Ctrl-K
    set ft
    to check which snippet file you should edit
 
+
+------above is must have, below is nice to have
+
 1. how to surround some code with a div tag, and indent the text at the same time?
    1. surrounding.vim or text-object+macro 
       A: https://github.com/tpope/vim-surround   prefect! V+S+<div class="">
@@ -65,3 +68,5 @@ way, or even simpler, fuzzyfinder+Ctrl-K
    filetype plugin on 
    is needed
    use css.snippets with this
+
+1. ci"
