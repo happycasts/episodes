@@ -1,67 +1,44 @@
+- <http://railscasts-china.com/episodes/rails-with-vim?autoplay=true>
+
+1. install things
+   show all the videos on happycasts.net, tell people now I install with
+pathogen
+
 1. indenting is a MUST
    1. requirement
        `o` takes me to the right place next line
        `=` gives me right formatting
        'V>' indent with 2 spaces, `>` actually gives you a tab, so you need to have "set expandtab" and "shiftwidth=2"
        also affect surround.vim
-   
+
+   Now my problem is in a .c file my indent is four spaces, this is nice, but NOT for my htmls!!!
+   so have a look at 
+
+       filetype indent on
+
+   see how to set tabstops according to filetype
+   and of course, there is a lot more to fix.
+
+   things show work well with <enter> <c-t> <c-d> ...
+
+   tabstop=xxx is not enough, you still need `expandtab`
+   it's also about codingStyle
+
+
 1. rails.vim
    1. now I have fuzzy-finder, do I need this？
-      A: Rcontroller stuff is slow
-1. search 
-   ack/xxx/https://github.com/ggreer/the_silver_searcher
+      A: find, Rcontroller stuff is not sexy
+         gf is still cool
+      A: you also have RV..., which is nice, but I prefer :vs + fuzzyfinder
+way, or even simpler, fuzzyfinder+Ctrl-K
 
-1. git stuff
-   1. do I really need fugitive?
-      A: can I survive with "ctrl-z + fg"
-
-# rails
-感谢分享。有时间能否分享一下您是如何用VIM做rails开发的。尤其是怎么样重构。比如抽取函数，partial。还有debug。谢谢
-#
-# vim indent
-Now my problem is in a .c file my indent is four spaces, this is nice, but NOT for my htmls!!!
-so have a look at 
-
-    filetype indent on
-
-see how to set tabstops according to filetype
-and of course, there is a lot more to fix.
-
-things show work well with <enter> <c-t> <c-d> ...
-
-tabstop=xxx is not enough, you still need `expandtab`
-it's also about codingStyle
+1. search
+   ack
 
 
-# how to comment in vim
-https://github.com/tomtom/tcomment_vim
-# for railscasts-china.com
-rails.vim
-http://ruby-china.org/topics/4478
-# requst from ruby-china 
-感觉以后可以顺便讲讲.vimrc文件的语法
-http://stevelosh.com/blog/2010/09/coming-home-to-vim/ --great philology
-# 10 tips
-daw caw
-ci" ca" da" ci) da{ # da{ is very sepical for C
-inoremap ( ()<Esc>i #http://vim.wikia.com/wiki/Making_Parenthesis_And_Brackets_Handling_Easier
-nnoremap <leader>1 yypVr= # things like this maybe not so useful but very inspiring, I think  people will love it
-
-
-
-# Ben Orenstein - Write code faster: expert-level vim (Railsberry 2012)
-http://www.youtube.com/watch?v=SkdrYWhh-8s
-)
-vim is a programming language for text editing, it's not easy, but if you can learn ruby you can learn vim!
-I've been using vim for more than a decade, but I'm still learning new things everyday.
-I use Ctrl-s installed of "Shift+:+w+<enter>"
-
-# git 
-http://ndpsoftware.com/git-cheatsheet.html
-# rails.vim
-all the file finding or switching tools, like `find`, `Rfind`, `1R`, `Rfouctionaltext`, `Rcontroller` will not be so useful, since we already have fuzzyfinder working so well.
-even `gf hh ii` is no longer sexy
-
+1. snipMate.vim
+   set ft
+   to check which snippet file you should edit
 
 1. how to surround some code with a div tag, and indent the text at the same time?
    1. surrounding.vim or text-object+macro 
@@ -69,5 +46,15 @@ even `gf hh ii` is no longer sexy
          You can use this in .html or .erb files, cool
 
 
+   1. you can do really awesome stuff with snipMate+surround.vim in html/erb files
 
-  1. you can do really awesome stuff with snipMate+surround.vim in html/erb files
+1. ctags
+
+   show me def of link_to!!!
+
+1. =
+
+1. :h i_Ctr-x-o
+   filetype plugin on 
+   is needed
+   use css.snippets with this
