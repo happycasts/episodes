@@ -1,5 +1,7 @@
 - <http://railscasts-china.com/episodes/rails-with-vim?autoplay=true>
 
+enough is enough
+
 1. install things
    show all the videos on happycasts.net, tell people now I install with
 pathogen
@@ -49,8 +51,7 @@ way, or even simpler, fuzzyfinder+Ctrl-K
    1. you can do really awesome stuff with snipMate+surround.vim in html/erb files
 
 1. ctags
-
-   show me def of link_to!!!
+   no need to include rails source in, api.rubyonrails.com is good enough
 
 1. =
 
