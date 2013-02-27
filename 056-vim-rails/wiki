@@ -38,7 +38,7 @@ way, or even simpler, fuzzyfinder+Ctrl-K
 1. fuzzyfinder
 
    when you use fuzzyfinder, don't cd to go into subdirs of your project
-   use :cd and ,cd + :sh to do things
+   use :cd and ,cd + :sh to do things, and `cd -` to go back
 
 1. search
    ack
