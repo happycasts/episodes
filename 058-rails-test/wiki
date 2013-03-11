@@ -8,12 +8,17 @@
       test is good document itself
 
 1. show people rspec with simplest case
+   do a unit test
+   http://ruby.railstutorial.org/chapters/modeling-users#top
+
+1. BDD not TDD, top-down, not bottom-up
+   capybara feature test acutually covers View and Controller test very well,
+delele users#create and see the bug report
 
 1. now I love testing, but I will still go a minimum view.
    1. Won't talk about how to test js with capybara
       http://railscasts.com/episodes/257-request-specs-and-capybara
    1. won't talk about how to test rich client side js: http://railscasts.com/episodes/261-testing-javascript-with-jasmine-revised
-
 
 1. I will talk about guard, factoryGirl, if I can make it in 10 min
    will give on Unit test example
@@ -22,8 +27,6 @@
 
   http://railscasts.com/episodes/275-how-i-test
   http://railscasts.com/episodes/264-guard
-    test js shown here
-
   http://railscasts.com/episodes/158-factories-not-fixtures
 
 1. I can follow the flow in railstutorial, and 275-how-i-test, I will make
