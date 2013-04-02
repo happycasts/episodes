@@ -1,0 +1,5 @@
+tail -f log/devlopment.log
+
+  Started POST "/comments" for 127.0.0.1 at 2013-04-02 08:27:07 +0800
+  Processing by CommentsController#create as JS
+
