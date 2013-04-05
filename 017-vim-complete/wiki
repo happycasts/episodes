@@ -1,0 +1,55 @@
+# vim --version
+lsb_release -a
+becasue some of the feathers only available in VIM7
+
+# set ic
+very necessary
+
+# English word completion
+
+Ctrl-x-k
+set spell
+Ctrl-x s
+set nospell
+
+.vimrc
+
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "
+    "          Spell checking
+    "
+    """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    "Pressing ,ss will toggle and untoggle spell checking
+    map ,ss :setlocal spell!<cr>
+
+
+# i_Ctrl-N
+
+:set complete
+:help `complete'
+:set complete=k/home/peter/.vim/CtrlN_dict # this cause problems, Don't use it.
+
+you can add anyfile into the search scope.
+
+
+# others
+i_Ctrl-x-l
+i_Ctrl-x-f
+
+show everthing with a helloworld_three_file
+# sinpmate
+css.snippets + css.vim
+
+# auto complete 
+http://blog.csdn.net/crazyjixiang/article/details/6677291
+there is nothing needed to install actually, try" locate css.vim" to see why
+
+css.vim, it is context sensitive. e.g. only things like "right, left..." will showup after "text-align"
+
+# others
+ia xdate  <c-r>=strftime("%d/%m/%y %H:%M:%S")<cr>
+
+__Resources:__
+
+- [Clang Complete](http://www.vim.org/scripts/script.php?script_id=3302)
+- [OmniCppComplete](http://www.vim.org/scripts/script.php?script_id=1520)
