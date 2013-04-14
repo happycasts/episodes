@@ -1,0 +1,19 @@
+I need to focus on "get the job done", like in this video, I sure need to setup pubkey and private key for people, but I won't explain, at leat not too much.
+
+http://www.ruanyifeng.com/blog/2011/12/ssh_remote_login.html
+SSH不仅可以用于远程主机登录，还可以直接在远程主机上执行操作
+ssh server 'touch abcd'
+
+# install
+
+sudo apt-get install openssh # this is mostly pre-installed
+sudo apt-get install openssh-server # need to do this, if you want your machine to be a server
+http://www.openssh.com/
+
+
+# login without password
+
+first do what ssh-copy-id can do, then tell people that maybe available, maybe not.
+
+# scp
+
