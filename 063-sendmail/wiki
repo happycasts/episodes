@@ -5,6 +5,8 @@
    https://github.com/happypeter/happycasts/commit/cb908
 
 1. smtp is slow
+   http://railscasts.com/episodes/61-sending-email-revised?autoplay=true
+
 1. http://library.linode.com/email/postfix
    it seems postfix is the popular one
 
@@ -32,7 +34,7 @@ does match the IP of the sender.
 
 1. sendmail cli
 
- http://mail-index.netbsd.org/netbsd-users/2002/07/18/0000.html
+  http://mail-index.netbsd.org/netbsd-users/2002/07/18/0000.html
   peter@li411-244:/etc/mail$ sendmail happypeter1983@gmail.com
   Subject: Re: maybe OT: sendmail subject
   To: None <vodka@intoxicate.us>
