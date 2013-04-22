@@ -1,0 +1,46 @@
+1. send mail to all your users as no-reply@happyec.org
+
+1. what to do?
+   http://happycasts.net/new_mail
+   https://github.com/happypeter/happycasts/commit/cb908
+
+1. smtp is slow
+1. http://library.linode.com/email/postfix
+   it seems postfix is the popular one
+
+1. on ubuntu1204-server, apt-get sendmail, it just works
+   sendmail to my emailbox and then I go to my gmail and check the sender:
+  peter@li411-244.members.linode.com
+   need to change it into support@happyec.org, but HOW?
+
+   BTW, the mail is not put in the spam, cause li411-244.members.linode.com
+does match the IP of the sender.
+
+1. change sender to happyec.org
+
+     echo "MASQUERADE_AS(`happypeter.org')dnl`)" >sendmail.mc
+     # do git init /etc
+     root@lover:/etc/mail# m4 sendmail.mc >sendmail.cf
+     root@lover:/etc/mail# /etc/init.d/sendmail restart
+
+   now the sender is "peter@happyec.org"
+   Edit: the simpler way, change /etc/mail/local-host-names ---DOESNOT work
+
+
+   spam, do make sure your domain match your IP.
+
+
+1. sendmail cli
+
+ http://mail-index.netbsd.org/netbsd-users/2002/07/18/0000.html
+  peter@li411-244:/etc/mail$ sendmail happypeter1983@gmail.com
+  Subject: Re: maybe OT: sendmail subject
+  To: None <vodka@intoxicate.us>
+  From: Steven M. Bellovin <smb@research.att.com>
+  List: netbsd-users
+  Date: 07/18/2002 09:58:20
+.
+   
+1. receive email
+   do this in another episode
+   support@happyec.org

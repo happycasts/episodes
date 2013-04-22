@@ -1,0 +1,13 @@
+~/edocs/plaintext/misc/mail
+
+1. receive email
+
+   http://library.linode.com/beginners-guide#sph_how-can-i-send-and-receive-email-with-my-linode
+   do `nmap happyec.org`, I see only 22 and 80 are opening. so it seems I need
+to open 25 port to receive mails.
+
+   >Port 25 needs to be open in order for it to receive mail from the
+   >internet.Port 587 is preferred in SMTP settings of clients over port 25
+   >because port 25 is blocked by many ISPs.
+ 
+   http://serverfault.com/questions/149903/what-ports-to-open-for-mail-server
