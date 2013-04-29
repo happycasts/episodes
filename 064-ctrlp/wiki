@@ -1,0 +1,46 @@
+1. what to do? Open one file in a big tree
+   1. it's not just navigation, it's creating new files and more.
+
+1. why abandon fuf?
+   1. no updata for 3 years
+1. search mode
+  1. default to filename mode?
+     1. find by filename is not as nice as find by path, like in my episodes/
+  dir, all files are named `wiki`, what differs is the dirname, so yes find by
+  path is so sweet here. Find by filename is a bit faster in most cases though.
+     1. set ctrlp_by_filename
+
+  1. no matter in file mode or path mode, it's all using fuzzy search. fuzzy
+  search is nice. patial match is faster, but not necessary.
+
+  1. Ctrp only has fuzzy match, no patial match, it's great.
+     1. I still miss fuzzyfinder's `;`
+
+1. search scope
+  1. by default search .git/.hg things to get project root, but what if these
+  are not found
+     1. search scope will be CWD and down. cool
+  1. CtrlP default search scope, it's from the Current Buffer to the .git place.
+     1. so if you start vim in `onestep/`, and then you want to open a file in
+  `auth-love/`, you can 'cd ../auto-love' then run ctrp now. do a 404 copy.
+
+1. prompt operations
+  1. usually you don't use C-j, C-k, unless you use ctrl-z
+  1. create file and dir
+     1. you can do tab completion, while creating things, cool, lcd is not
+needed
+  1. explain to people all the bottom info line items means
+     1. Ctrl-D to switch between file and path mode
+     1. C-f to switch among MRU-FILE-BUF
+
+  1. Ctrl-W, to clear the prompt, it you mistyped things
+     1. Use <c-n>, <c-p> to select the next/previous string in the prompt's
+  history.
+
+  1. run command while opening file
+
+        videcont:/show
+        vicot:25
+
+1. ignore things
+  1. how to ignore jpeg files? By defualt ctlp does not.
