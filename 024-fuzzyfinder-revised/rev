@@ -1,4 +1,31 @@
 As told by happyhacking，CtrlP has all I missed here with fuzzyfinder
 
 - create dir/file
+  I can use lcd---sh---Ctrl-D---`cd -`
+  big problem is I contently need to cd ../..
+  So Ctrlp's project home finder is nice
 - reload filelist
+  for fuf, I have FufRenewcache
+
+1. fuffilewithcurrentbufferdir
+1. CtrlP Issue
+   1. https://groups.google.com/forum/#!topic/vim_use/U6L33ZWvfj4
+      CtrlP gets wired when porject is not SCM repo. aka, .git .hg is not
+found
+
+
+1. I can find project root with
+
+    let origcurdir = getcwd()
+    let curdir = origcurdir
+    let prevdir = ""
+    while curdir != prevdir
+      if filereadable(".fuzzyfinder")
+        break
+      endif
+      cd ..
+      let prevdir = curdir
+      let curdir = getcwd()
+    endwhile
+
+1. fuzzyfinder last updata 3 years ago
