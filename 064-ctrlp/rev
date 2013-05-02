@@ -1,3 +1,6 @@
 when you have your one tmux session having vim opening all the time, you can
 create another tmux session to run `rails g ....`, then go back to the vim
 session and hit <F5>, then ctrlp will know the new files. It Rocks.
+
+1. ;
+   https://github.com/kien/ctrlp.vim/issues/400
