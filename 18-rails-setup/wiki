@@ -1,0 +1,25 @@
+http://railscasts.com/episodes/122-passenger-in-development?autoplay=true
+Why passenger in development?
+1. don't need to set different port for different site, like using `r s`
+2. close to real production evironment
+
+check log: tail -f log/development.log
+
+http://modrails.com/
+
+# rvm
+after you install rvm and properly add a line in .bashrc
+you can use
+
+    rvm use 1.9.2
+
+to switch from your system ruby, to 1.9.2, however, if you start a new terminal, it will go back, so
+
+   rvm 1.9.2 --defualt
+
+is needed. check http://railscasts.com/episodes/200-rails-3-beta-and-rvm
+"if you use rvm, you won't ever use `sudo` for gem installs" --Ryan
+
+    gem list # list out all gems installed for current ruby
+
+so even you have "mysql2" gem installed for your system ruby, you still need to install it again for 1.9.2
