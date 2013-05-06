@@ -1,5 +1,24 @@
+描述：rbenv passenger apache, 实现一键完成项目在 linode 上的部署。
 1. this will bring all valuable things from ep18 and ep38
    1. I will add a bit happycasts code deploy thing
+      1. Yes, I will have the details
    1. will use rbenv-apache-passenger
    1. will show people my gists
    1. share a link on the README.md of happycasts source
+
+1. first setup local dev enviroment on ubuntu1204, then on the server, it's
+almost the same.
+   1. add sshkey to github
+   1. rbenv, check my gist
+   1. bundle error: install libmysqlclient-dev
+      sudo apt-get -y install libmysqlclient-dev
+      sudo apt-get -y install libxml2-dev libxslt1-dev # for nokogiri
+   1. rename database.example.yml, settings.example.yml ...
+   1. mysql
+   1. why passenger+apache
+   1. tail -f log/dev...
+
+1. create a linode, use lastest LTS,
+
+   1. sudo adduser peter --ingroup sudo
+   1. happycasts_deploy.sh https://gist.github.com/happypeter/3634487
