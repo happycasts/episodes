@@ -4,3 +4,5 @@ session and hit <F5>, then ctrlp will know the new files. It Rocks.
 
 1. ;
    https://github.com/kien/ctrlp.vim/issues/400
+
+1. https://github.com/burke/matcher
