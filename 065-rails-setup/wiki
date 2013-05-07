@@ -3,13 +3,18 @@
    1. I will add a bit happycasts code deploy thing
       1. Yes, I will have the details
    1. will use rbenv-apache-passenger
-   1. will show people my gists
    1. share a link on the README.md of happycasts source
 
 1. first setup local dev enviroment on ubuntu1204, then on the server, it's
 almost the same.
-   1. add sshkey to github
    1. rbenv, check my gist
+      1. why this time there is no msg to tell me add things to .profile
+
+   1. install rails
+      1. rubyracer, mysql
+      1. show people with a simple blog thing
+
+   1. add sshkey to github
    1. bundle error: install libmysqlclient-dev
       sudo apt-get -y install libmysqlclient-dev
       sudo apt-get -y install libxml2-dev libxslt1-dev # for nokogiri
@@ -21,4 +26,7 @@ almost the same.
 1. create a linode, use lastest LTS,
 
    1. sudo adduser peter --ingroup sudo
+   1. will show people my gists
+      1. tell people don't trust the video, but they can count on the gist, I
+will update it all the time
    1. happycasts_deploy.sh https://gist.github.com/happypeter/3634487

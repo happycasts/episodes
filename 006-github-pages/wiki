@@ -1,0 +1,7 @@
+Jekyll won't work if you do not add markdown and layout at the same time
+
+if for whatever reason, your code fail to meet jekyll's requirement, you will soon get a Notification:
+
+    page built failure, unable to run jekyll
+
+so do not stupidly refresh your page, over and over again, cause you will never see the new version anyway.
