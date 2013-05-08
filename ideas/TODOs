@@ -14,6 +14,11 @@ for them, and keep the book dev alive.
 1. curl
    how can you claim yourself a web developer, if you don't know curl
    also checkout restful_client
+
+     $curl happycasts.net/episodes/65.json
+     $restclient
+     >Restclient.get 'happycasts.net/episodes/65.json'
+
 1. git
 git 的课程以及 github 的使用，我觉得可以帮助很多找工作的学生来撰写简历，受众面和影响力会更大一些。
 李明给的建议，要的是一套hpcasts 的课。
