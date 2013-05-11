@@ -1,2 +1,1 @@
-
-Stuff for http://happycasts.net episodes
+http://happycasts.net episode notes
