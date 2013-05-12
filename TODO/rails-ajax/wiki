@@ -1,5 +1,45 @@
-tail -f log/devlopment.log
+1. this ep do ajax, have pjax for the next
 
-  Started POST "/comments" for 127.0.0.1 at 2013-04-02 08:27:07 +0800
-  Processing by CommentsController#create as JS
 
+http://www.youtube.com/watch?v=IyCnbyWZkRU
+http://chloerei.com/2012/04/21/rails-3-2-ajax-guide/
+
+1. http://railscasts.com/episodes/136-jquery-ajax-revised?autoplay=true
+   3:30 the devtool thing is super cool
+
+1. ajax has Xml in it's name, but xml is not popular now, we use json and js
+here
+   1. dataType: http://api.jquery.com/jQuery.ajax/
+      1. you can also get js from the server
+      1. so yes $.ajax() is much more powerful than rails ajax convention
+
+1. $.ajax() another powerful way to do ajax
+   1. use this to do a "show me all products" button
+   1. use get/json
+   1. http://www.youtube.com/watch?feature=player_detailpage&v=IyCnbyWZkRU#t=670s
+
+1. steps to change a normal thing to ajax thing
+   1. add 'remote: true', can you see
+      tail -f log/devlopment.log
+        Started POST "/comments" for 127.0.0.1 at 2013-04-02 08:27:07 +0800
+        Processing by CommentsController#create as JS
+   1. so add response_to format.js in controller
+   1. add the right xxx.js.erb in right place
+   1. u can use instance variables, you can render paritial even, so that's
+powerful
+   1. but when there is a error, you often won't get noticed.
+
+1. debug: when there is a error, but no error msg? under what situation?
+   1. if you have ruby error in controller code, you see the error in the
+broswer, and of course it's 500
+   1. but if you have error in the .js.erb
+      1. if you have error in ruby code you have 500 shown by devtools
+         but the detailed error msg,  only shown devtools
+      1. But if you have error in the js returned by server, no msg
+         you get the full response js code in devtools, you can copy it to
+console to check errors.
+   1. if you have error in the pure client-side script, devtool will report
+1. routing
+1. the variable scope, how to pass instance variable to .js.erb file
+1. why `j`
+1. jquery-ujs for `date-remote: true`
