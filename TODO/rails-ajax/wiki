@@ -1,6 +1,3 @@
-1. this ep do ajax, have pjax for the next
-
-
 http://www.youtube.com/watch?v=IyCnbyWZkRU
 http://chloerei.com/2012/04/21/rails-3-2-ajax-guide/
 
@@ -43,3 +40,4 @@ console to check errors.
 1. the variable scope, how to pass instance variable to .js.erb file
 1. why `j`
 1. jquery-ujs for `date-remote: true`
+1. mention pjax
