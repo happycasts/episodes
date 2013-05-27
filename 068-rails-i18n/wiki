@@ -1,0 +1,31 @@
+* #encoding: utf-8
+  the easily i18n police is no i18n at all :-)
+  if you want to have Chinese in xxx.rb file, you have to use this to tell
+ruby, otherwise error. but not needed for .erb or haml file, since it is set
+in application.rb.
+
+* set_locale
+  * `t` means translate
+    use names, set en.yml
+  * change to chinese
+  use cookie
+  use params
+
+* .zh-CN.html, sometimes you need to change template as well
+
+* for datetime, flash message, form label
+  show people a form with datatime select input
+  show them they can not switch to Chinese, since the translation is missing
+  show them they can do them by hand
+  show them they can also install rails-i18n gem, once for all
+  and if you don't like things in rails-i18n, you can always overwrite in your
+only locale/xxx.yml file
+
+
+* more stuff
+  https://github.com/svenfuchs/globalize3 for saving translation in db
+  http://railscasts.com/episodes/138-i18n-revised
+  check copycopter, backend stuff
+  * generally you don't want programmer's to maintain the locale files, so you
+need a backend.
+    RC#256
