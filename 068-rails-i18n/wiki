@@ -9,11 +9,22 @@ in application.rb.
     use names, set en.yml
   * change to chinese
   use cookie
-  use params
+  
+  * use params,http://guides.rubyonrails.org/i18n.html
+
+      before_filter :set_locale
+      def set_locale
+        I18n.locale = params[:locale] || I18n.default_locale
+      end
+
+ 
+
+* I18n.l
+  u can now use <%= l Time.now %>, without rails-i18n
 
 * .zh-CN.html, sometimes you need to change template as well
 
-* for datetime, flash message, form label
+* for datetime,form label, every static string in the Rails framework 
   show people a form with datatime select input
   show them they can not switch to Chinese, since the translation is missing
   show them they can do them by hand
@@ -21,7 +32,9 @@ in application.rb.
   and if you don't like things in rails-i18n, you can always overwrite in your
 only locale/xxx.yml file
 
-
+* flash msg, http://guides.rubyonrails.org/i18n.html
+  flash[:notice] = t(:hello_flash)
+  
 * more stuff
   https://github.com/svenfuchs/globalize3 for saving translation in db
   http://railscasts.com/episodes/138-i18n-revised
