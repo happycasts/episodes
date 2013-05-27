@@ -17,12 +17,14 @@ in application.rb.
         I18n.locale = params[:locale] || I18n.default_locale
       end
 
+    set default_locale in application.rb
  
 
 * I18n.l
   u can now use <%= l Time.now %>, without rails-i18n
 
 * .zh-CN.html, sometimes you need to change template as well
+   tell, don't show, 3.4 of the guide
 
 * for datetime,form label, every static string in the Rails framework 
   show people a form with datatime select input
