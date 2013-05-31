@@ -1,1 +1,5 @@
 http://ruby-china.org/topics/11104
+
+* often need to
+  rake db:migrate RAILS_ENV=test
+
