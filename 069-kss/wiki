@@ -1,0 +1,11 @@
+* first: what to do?
+  second: why this is nice?
+  third: how to get this.
+
+* At its core, KSS is a documenting syntax for CSS.
+
+* copy http://warpspire.com/kss/styleguides/ into your codebase, everything
+just works
+
+* want to konw what kss can do in a plain way? https://github.com/kneath/kss
+  Ruby library
