@@ -3,3 +3,7 @@ http://ruby-china.org/topics/11104
 * often need to
   rake db:migrate RAILS_ENV=test
 
+* factorygirl
+  it does not load things to test db, like fixtures, it's just there help you
+ro pass validations, when you create objects in your xxx_spec.rb
+
