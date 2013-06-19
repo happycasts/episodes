@@ -1,2 +1,12 @@
 1. help luckyyang transcode the video made on ubuntu
   https://github.com/happypeter/onestep/issues/247#issuecomment-19506914
+1. ffmpeg --formats
+
+* I want my mp3
+
+  ffmpeg -i xxx.mov xxx.mp3
+
+* check resolution and change resolution
+  
+  ffmpeg -i xxx.mov
+  ffmpeg -i xxx.mov -s 100x100 out.mov
