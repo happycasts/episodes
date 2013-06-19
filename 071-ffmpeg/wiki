@@ -1,6 +1,16 @@
-1. help luckyyang transcode the video made on ubuntu
+* install
+  if you want real mp4/mov/h264 support you need x264
+
+  http://askubuntu.com/questions/148554/installingffmpeg-libx264-and-libavfilter
+
+    peter@goodcat:~$ dpkg -l|grep ffmp
+    ii  ffmpeg                                 5:201305151029-git-1 Package created with checkinstall 1.6.2
+
+
+* help luckyyang transcode the video made on ubuntu
   https://github.com/happypeter/onestep/issues/247#issuecomment-19506914
-1. ffmpeg --formats
+
+* ffmpeg --formats
 
 * I want my mp3
 
