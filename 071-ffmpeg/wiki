@@ -16,7 +16,12 @@
     ii  x264                                   3:0.132.2310+git76a5c3a-1
     Package created with checkinstall 1.6.2
 
+* real steps on ubuntu1204
+
+   git clone --depth 1 git://source.ffmpeg.org/ffmpeg
+
 * x264 is for AVC(h246), for what's for the audio AAC?
+  A:faac, free aac
 
 * help luckyyang transcode the video made on ubuntu
   https://github.com/happypeter/onestep/issues/247#issuecomment-19506914
