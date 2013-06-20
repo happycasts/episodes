@@ -18,8 +18,32 @@
 
 * real steps on ubuntu1204
 
+    sudo apt-get update
+    sudo apt-get -y install build-essential checkinstall git libfaac-dev libgpac-dev \
+    libjack-jackd2-dev libmp3lame-dev libopencore-amrnb-dev libopencore-amrwb-dev \
+    libsdl1.2-dev libtheora-dev libva-dev libvdpau-dev libvorbis-dev libx11-dev \
+    libxfixes-dev texi2html yasm zlib1g-dev
+
+    cd
+    git clone git://git.videolan.org/x264
+    cd x264
+    ./configure --enable-static  --disable-asm #1204 doesnot have higher enough
+    version of yaml for x264, so show people the git version of current x264,
+people maybe need to reset to this version, if future commits in x264 repo
+require more higher version of ubuntu packages.
+
+
+   cd
    git clone --depth 1 git://source.ffmpeg.org/ffmpeg
-   sudo apt-get install yasm libfaac-dev 
+   cd ffmpeg
+   ./configure --enable-gpl --enable-libfaac --enable-libmp3lame
+   --enable-libopencore-amrnb \
+     --enable-libopencore-amrwb --enable-libtheora --enable-libvorbis \
+     --enable-libx264 --enable-nonfree --enable-version3 --enable-x11grab
+    make
+   sudo checkinstall --pkgname=ffmpeg --pkgversion="5:$(date +%Y%m%d%H%M)-git" --backup=no \
+  --deldoc=yes --fstrans=no --default
+
 
 * x264 is for AVC(h246), for what's for the audio AAC?
   A:faac, free aac
@@ -39,3 +63,13 @@
   ffmpeg -i xxx.mov -s 100x100 out.mov
 * 例11、把r2d2.mkv的视频和darth_vader.mkv的音频合成一个文件
   http://blog.sgsub.org/2012/02/ffmpeg-avconv-notes/
+
+* what is a REAL mp4 file?
+  A: h264+AAC
+     but not h264 actuall has two version 'baseline' and 'high', they are not
+alway compitiable
+
+  but you can change it by setting:
+
+    ffmpeg -i hello.mp4 -profile:v baseline baseline-hello.mp4
+
