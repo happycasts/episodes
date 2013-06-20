@@ -1,3 +1,8 @@
+* uninstall the ubuntu ffmpeg
+  sudo apt-get purge ffmpeg
+  but /user/bin/ffmpeg is still there
+  dpkg -S shows me I need to remove libav-tools
+
 * install
   if you want real mp4/mov/h264 support you need x264
 

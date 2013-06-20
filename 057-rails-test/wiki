@@ -1,89 +1,9 @@
-1. The story of how I fall in love with TEST
-   1. PR should be deployable
-   1. how to define deployable?
-      A: click everywhere B: run the specs and click somewhere
-
-   1. test helps me drive the development
-      test helps me trace the bugs
-      test is good document itself
-
 1. show people rspec with simplest case
    do a unit test
    http://ruby.railstutorial.org/chapters/modeling-users#top
-
-1. BDD not TDD, top-down, not bottom-up
-   capybara feature test acutually covers View and Controller test very well,
-delele users#create and see the bug report
-
-1. now I love testing, but I will still go a minimum view.
-   1. Won't talk about how to test js with capybara
-      http://railscasts.com/episodes/257-request-specs-and-capybara
-   1. won't talk about how to test rich client side js: http://railscasts.com/episodes/261-testing-javascript-with-jasmine-revised
-
-1. I will talk about guard, factoryGirl, if I can make it in 10 min
-   will give on Unit test example
 
 1. railscasts
 
   http://railscasts.com/episodes/275-how-i-test
   http://railscasts.com/episodes/264-guard
   http://railscasts.com/episodes/158-factories-not-fixtures
-
-1. I can follow the flow in railstutorial, and 275-how-i-test, I will make
-this ep general, so I won't talk about advaced things like testing js. Rather,
-I need to decide a simple testing scheme for my team, maybe only "Unit
-test/modle test + Request test/feature test", and no "fucntional
-test/controller test", I need sth live! not dead theories.
-
-1. rails buildin integration test == rspec request test == accecptance test(
-capybara is a AT tool)
-
-1. request vs specs
-
-  A functional specification is the more technical response onto a matching
-  requirements document, e.g. the Product Requirement Document "PRD". Thus it
-  picks up the results of the requirements analysis stage.
-
-  A Software requirements specification (SRS), a requirements specification for
-  a software system, is a complete description of the behavior of a system to be
-  developed and may include a set of use cases that describe interactions the
-  users will have with the software.
-
-1. unit, functional, integration test
-  http://guides.rubyonrails.org/testing.html
-
-  The unit folder is meant to hold tests for your models, the functional folder
-  is meant to hold tests for your controllers, and the integration folder is
-  meant to hold tests that involve any number of controllers interacting.
-  Fixtures are a way of organizing test data; they reside in the fixtures
-  folder. The test_helper.rb file holds the default configuration for your
-  tests.
-
-  1. so do I really need "functional test"/test for controllers?
-     http://railscasts.com/episodes/275-how-i-test 5:16
-     "I don't use controller or view spec, cuase I think request spec handles
-them very well, if the logic is too complex, it should go to model"
-
-1. with capybara in hand, I don't need fucntional or integration test, and I
-don't need to test view/controller, but still do I have to write Unit
-test/model test?
-
-  A: http://www.youtube.com/watch?NR=1&v=cMcEgOPza8A&feature=endscreen has
-only request test.
-  A: railscasts use RequestTest+UnitTest, there is even people thinking
-testing for controllers is a good thing:
-http://everydayrails.com/2012/04/07/testing-series-rspec-controllers.html
-
-       so for me now, there is no one right way to do testing, it's you to
-deside which works best for your project.
-
-1. http://guides.rubyonrails.org/testing.html
-
-  1. I don't like the bottom-up approach, I will prefer BDD
-     Here: Unit + functional + Integration
-     BDD: acceptance test + Unit
-
-1. big project or small ones?
-   http://www.youtube.com/watch?v=ra8Q0M3DJYk
-   1. for big projects, testing means a lot more
-   1. but even for one person project, tdd make sense.
