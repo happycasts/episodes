@@ -5,7 +5,13 @@
 
     peter@goodcat:~$ dpkg -l|grep ffmp
     ii  ffmpeg                                 5:201305151029-git-1 Package created with checkinstall 1.6.2
+    peter@goodcat:~$ dpkg -l |grep x264
+    ii  libx264-120                            2:0.120.2151+gita3f4407-2
+    x264 video coding library
+    ii  x264                                   3:0.132.2310+git76a5c3a-1
+    Package created with checkinstall 1.6.2
 
+* x264 is for AVC(h246), for what's for the audio AAC?
 
 * help luckyyang transcode the video made on ubuntu
   https://github.com/happypeter/onestep/issues/247#issuecomment-19506914
@@ -17,6 +23,7 @@
   ffmpeg -i xxx.mov xxx.mp3
 
 * check resolution and change resolution
-  
+
   ffmpeg -i xxx.mov
   ffmpeg -i xxx.mov -s 100x100 out.mov
+
