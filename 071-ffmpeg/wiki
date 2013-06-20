@@ -26,4 +26,5 @@
 
   ffmpeg -i xxx.mov
   ffmpeg -i xxx.mov -s 100x100 out.mov
-
+* 例11、把r2d2.mkv的视频和darth_vader.mkv的音频合成一个文件
+  http://blog.sgsub.org/2012/02/ffmpeg-avconv-notes/
