@@ -73,3 +73,5 @@ alway compitiable
 
     ffmpeg -i hello.mp4 -profile:v baseline baseline-hello.mp4
 
+* really want to know more check google webm talk
+  http://www.youtube.com/watch?v=K6JshvblIcM
