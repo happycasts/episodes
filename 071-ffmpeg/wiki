@@ -19,6 +19,7 @@
 * real steps on ubuntu1204
 
    git clone --depth 1 git://source.ffmpeg.org/ffmpeg
+   sudo apt-get install yasm libfaac-dev 
 
 * x264 is for AVC(h246), for what's for the audio AAC?
   A:faac, free aac
