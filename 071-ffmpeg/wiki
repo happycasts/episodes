@@ -4,6 +4,9 @@
   dpkg -S shows me I need to remove libav-tools
 
 * install
+  highly suggested: LOCK the git version, so that the cli interface and build
+deps keeps the same.
+
   if you want real mp4/mov/h264 support you need x264
 
   http://askubuntu.com/questions/148554/installingffmpeg-libx264-and-libavfilter
