@@ -27,25 +27,25 @@ deps keeps the same.
     libsdl1.2-dev libtheora-dev libva-dev libvdpau-dev libvorbis-dev libx11-dev \
     libxfixes-dev texi2html yasm zlib1g-dev
 
-    cd
-    git clone git://git.videolan.org/x264
-    cd x264
-    ./configure --enable-static  --disable-asm #1204 doesnot have higher enough
+cd
+git clone git://git.videolan.org/x264
+cd x264
+./configure --enable-static  --disable-asm #1204 doesnot have higher enough
     version of yaml for x264, so show people the git version of current x264,
 people maybe need to reset to this version, if future commits in x264 repo
 require more higher version of ubuntu packages.
 
 
-   cd
-   git clone --depth 1 git://source.ffmpeg.org/ffmpeg
-   cd ffmpeg
-   ./configure --enable-gpl --enable-libfaac --enable-libmp3lame
-   --enable-libopencore-amrnb \
-     --enable-libopencore-amrwb --enable-libtheora --enable-libvorbis \
-     --enable-libx264 --enable-nonfree --enable-version3 --enable-x11grab
-    make
-   sudo checkinstall --pkgname=ffmpeg --pkgversion="5:$(date +%Y%m%d%H%M)-git" --backup=no \
-  --deldoc=yes --fstrans=no --default
+cd
+git clone --depth 1 git://source.ffmpeg.org/ffmpeg
+cd ffmpeg
+./configure --enable-gpl --enable-libfaac --enable-libmp3lame
+--enable-libopencore-amrnb \
+ --enable-libopencore-amrwb --enable-libtheora --enable-libvorbis \
+ --enable-libx264 --enable-nonfree --enable-version3 --enable-x11grab
+make
+sudo checkinstall --pkgname=ffmpeg --pkgversion="5:$(date +%Y%m%d%H%M)-git" --backup=no \
+--deldoc=yes --fstrans=no --default
 
 
 * x264 is for AVC(h246), for what's for the audio AAC?
