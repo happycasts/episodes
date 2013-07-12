@@ -1,0 +1,52 @@
+* if you are not familiar with sass, this video is not for you
+* show people the whole idea by evolving a simple code base.
+
+* some things are global, some are local
+  class names in global sort will have low specifity, use short names
+  class names in local sort will use very long precise names to avoid
+conflcting with global names, and to be Ack friendly, you don't want to two
+diffent styling under the same class name.
+
+  * global
+    * helpers
+    * mixin
+    * variables
+    * shared/    -- reusuable styles, mixed with other styles to define a
+                    element.
+      * if a file in shared/ dir is too small, it can be placed as a mixin in
+        globals/mixin.css
+
+  * local
+    * components/ -- reusuable parts, must be used more than once
+    * sections/   -- business logic, controller based
+    *
+
+* differences between require and import
+  * sass and sporcket who run first?
+    - for globales/variables or mixins, you HAVE TO use @import, if you use
+      =require, sass compiler simply can not find these variables
+      because sass compilation is done before sprockets compilation
+
+
+* a real example: how you define the markdown style
+  * have shared/markdown.scss
+
+     @include globals/...
+
+     .markdown-format {
+       basic markdown rules here
+     }
+
+  * have sections/blog.scss
+
+      .blog-markdown-body {
+        font-size: 20px;
+        color: yellow;
+      }
+
+  * in the blog.html
+
+      <div class="blog-markdown-body markdown-format">
+
+* more
+  http://css-tricks.com/css-style-guides/
