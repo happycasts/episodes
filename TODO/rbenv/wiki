@@ -1,1 +1,18 @@
-rbenv local 1.9.3-p125 to set project level ruby version is very necessary
+* rbenv local 1.9.3-p125 to set project level ruby version is very necessary
+
+    cd aa; rbenv local 1.9.3-p125;cd ../bb; cat "2.0.0-dev">>.ruby-verson
+    cd ../aa; check rubyverion here
+    cd ../bb; check rubyverion here
+
+* rbenv pk rvm
+  I love rbenv cause it's LESS.
+  cause, smart people is using it. show people in the commits history. tpope
+here
+  http://37signals.com/svn/posts/2998-setting-up-a-new-machine-for-ruby-development
+
+* first talk about things in detail, later show people my linode script.
+
+* uninstall a ruby version
+  To remove old Ruby versions, simply rm -rf the directory of the version you
+want to remove.
+
