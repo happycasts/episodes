@@ -1,0 +1,62 @@
+ep77: alipay_dualfun
+
+社区资源
+
+Nice things: https://github.com/chloerei/alipay
+
+rei 的这个 Gem 不但支持 verify 来源，同时也有发货接口，支持担保交易。
+
+https://github.com/daqing/china_pay
+
+So I steal :-)
+
+ why activemerchant_for_china sucks?
+
+I have tried, quite frustrated!
+
+   https://github.com/flyerhzm/activemerchant_patch_for_china/wiki/Alipay-(%E6%94%AF%E4%BB%98%E5%AE%9D)
+
+
+
+payfu is dead for long
+
+the who stack is tooo complex, if you only want to use alipay
+
+
+
+but if you want a lot of the other service，like paypal，you can still try
+activemerchant          
+
+我的 Gem 及 demo 的特点
+
+求小不求大，求大没有那么多精力维护
+
+不是产品应用，极力透明化底层运行机制，让大家清楚支付的整个过程都发生了什么
+
+
+
+
+
+申请业务，获取 API key&secret 和开发资料
+
+双接口，个人也可以申请，可以支持即时到账。
+
+发送请求 checkout
+
+必须要填的参数，不用信 pdf 文档，信 我和 rei 的 Gem 就好了
+
+同步返回和异步通知
+
+参考：https://github.com/happypeter/alipay_dualfun_demo 的代码
+
+如支付包官方所建议的不管是 `done` 还是 `notify` 中都要防止数据库被重复修改
+
+
+
+为何要有异步通知？防止页面被关掉
+
+
+
+我这里没有安全策略
+
+https://github.com/happypeter/alipay_dualfun_demo/issues/9
