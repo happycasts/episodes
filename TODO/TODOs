@@ -1,7 +1,10 @@
-1. alipay integration
+1. authorization
+   你好，能讲一些权限划分么？自己看cancan，感觉很零碎，很难动手。
+
 1. http://taligarsiel.com/Projects/howbrowserswork1.htm
 1. 话说有没好一点的计算机词汇一类的书
 http://ruby-china.org/topics/11075
+
 1. deploy with git
    http://net.tutsplus.com/articles/from-ftp-to-git-a-deployment-story/
   http://net.tutsplus.com/tutorials/tools-and-tips/how-to-use-git-with-ftp/
@@ -10,11 +13,14 @@ http://ruby-china.org/topics/11075
 1. a simple guide to show newbies how to touch a
 http://www.opensourcerails.com/ project, like how to deploy and then how to
 check the code
+
 1. LGCB and TLCL
    a lot people are watching the two books, so maybe I can make some videos
 for them, and keep the book dev alive.
+
 1. http
    http://www.jmarshall.com/easy/http/
+
 1. curl
    how can you claim yourself a web developer, if you don't know curl
    also checkout restful_client
