@@ -1,0 +1,34 @@
+This will be for deploying the thing to production server, not setting up a
+local dev thing.
+
+* ruby version: check .ruby-version
+  rails version: check Gemfile
+
+* js runtime
+  sudo apt-get install nodejs
+
+* passenger
+    https://gist.github.com/happypeter/5187692#file-get_linode_ready_for_rails-sh-L58
+    * need to talk about pssenger and mysql here, cause people may have
+      mogodb/postgresql for themselves
+
+* mysql
+  change database.yml
+  https://gist.github.com/happypeter/5187692#file-get_linode_ready_for_rails-sh-L70
+
+
+
+* small details
+
+  * github login
+    settings.yml
+
+  * Solr
+    http://happycasts.net/episodes/72
+    sudo apt-get install openjdk-6-jdk
+
+  * ffmpeg
+    add all dependencies to README.md
+    sudo apt-get install ffmpeg
+    https://github.com/happypeter/happycasts/blob/master/app/models/episode.rb#L10
+
