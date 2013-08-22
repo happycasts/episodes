@@ -1,0 +1,10 @@
+这个文件，我的直观感觉应该是放在 components/ 下的。
+
+到底有何区别呢？举个例子同样是一个叫做 box.css.scss 的文件（其中包括 .box
+的规则）。
+
+如果它自己就精确的定义了一个元器件的样式，那他就应该放在 compoents/ 下
+如果实际使用中必须和其他 css 文件中的 class 规则同时使用，例如 <div
+class="comment-box box"> 和 <div class="form-box box">
+看起来样式差别相当大，那 .box 这个家伙就应该放在 shared/ 下。
+不知道本文件属于以上何种情况？
