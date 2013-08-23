@@ -1,3 +1,6 @@
+* shay
+  http://www.confreaks.com/videos/2230-html5tx2013-front-end-legos-better-design-with-reusable-html-css
+
 * add slides
   连续的讲解有些疲劳轰炸，穿插几个 slide 相当于老王和小芳
   确实有些地方加几个大字，可以情调一下，给人印象深刻，
@@ -16,3 +19,8 @@
   class="comment-box box"> 和 <div class="form-box box">
   看起来样式差别相当大，那 .box 这个家伙就应该放在 shared/ 下。
   不知道本文件属于以上何种情况？
+
+* 关于一个元器件的摆放位置
+  component 本身的样式不受它的 parent 的影响。
+  同时 component 自身不去规定自己的摆放位置，这应该通过它的 parent elment
+去规定，而这些规定一般是放在 sections/ 下的。
