@@ -1,0 +1,48 @@
+080-chinese-typo 文字排版
+
+让大家听完我这期就可以做出美丽的中文显示：
+
+* 抄一个默认设置，最佳适应自己的客户群体： linux windows 和 mac
+
+ * 测试替代理论：（理论可能还是有用的，没用的是一些临时的原则）
+  https://github.com/happypeter/onestep/issues/360#issuecomment-24486560
+
+  各个平台差异，一些细节原则（
+  - http://www.kendraschaefer.com/2012/06/chinese-standard-web-fonts-the-ultimate-guide-to-css-font-family-declarations-for-web-design-in-simplified-chinese/
+  - http://ruby-china.org/topics/14005
+  ）测出问题来再去参考是明智的工程实践。
+
+ * font-family 的原理   
+
+ * 浏览器中的字体来源：
+
+   * 来自操作系统上的字体，这个我们决定不了
+   * 云端字库，可以随页面一起加载，可以实现个平台上的显示一致性，未来应该是趋势：
+
+     英文的可选范围是无限的：http://www.google.com/fonts
+	 中文字库：          http://www.justfont.com/                                                                            
+     jianshu 的标题用“楷体” mac 下显示幽美，linux 下显示一团糟                                                                                                                    
+
+* 一些使用美化技巧
+  * 视觉层次感(visual hirachay) 很重要：http://webdesign.tutsplus.com/articles/design-theory/understanding-visual-hierarchy-in-web-design/
+  * 标题文字
+
+   * font-weight: normal 对于中文标题字体是非常必要的
+
+     例子：writings.io
+
+     但是如果不 bold 了，那 h4 跟普通文字的区别就很小了，所以在必须使用很多级标题的前提下，去掉 bold 未必是个好主意，不过相信可以通过改变 h4 的颜色为其他颜色来解决。一般原则是，标题字体要 normal 的，但是字号要明显大于普通文字。 
+     也可以通过一个鲜明对比的新字体（jianshu.io）来产生美感      
+  * 副标题，辅助内容可以用淡色
+  * 正文内容
+	* 中文的 CPL 是多少？
+	  * jianshu 36
+	  * writings.io: 38
+	  * 好奇：41(确实比起前面两个来，给人一些压力感)
+
+	* 行间距中文也是 1.5 吗？ 挺好看，基本字体大小的 150%
+	* sans-serif (sans: without) for sure（jianshu 不如 我们这两个好了）
+	   简书：http://jianshu.io/p/JK6ZuD
+		 即时是使用宋体的简书，也不得不承认：
+		  - 宋体在分辨率小的情况下可读性差
+		  - 黑体更具现代感，适合科技媒体  
