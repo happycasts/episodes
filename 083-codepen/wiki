@@ -1,0 +1,38 @@
+* pro
+  http://blog.codepen.io/2013/01/08/video-introduction-to-codepen-pro/
+  all the pro account bonus, as a free account you can only link to one css resource and one js resource
+
+* I love codepen so much over jsfiddle cause
+  *  it's so much like github
+    * codepen.io/happypeter
+    * share to github gist
+    * login with github
+
+* all the sublimeT like shortcut works
+  ul<tab>
+  div<tab>
+  shift-tab: reindent the lines
+  undo: ctrl-z
+  zencoding: ul>li*3
+  even color picker, #<alt>
+
+
+* show external js, give a demo
+  * only one allowed for free account
+  * you can selet jquery dojo etc for free
+
+* as a substitution for my https://github.com/happypeter/dev-site
+
+* team talking about a new component
+  peter show a demo on codepen, billie can fork it and suggest her modification
+  end result go to 
+
+* http://css-tricks.com/reduced-test-cases/
+* sass and haml supported right in codepen, big big plus
+* oh, did I metion you can also embed things into your blog: http://davidwalsh.name/chris-coyiers-favorite-pens
+
+* share
+  * share -> full page to tested on your phone or whatever
+  * share to your gists
+* get raw file
+  add .html .js to the url
