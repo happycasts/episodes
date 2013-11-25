@@ -1,0 +1,52 @@
+* ref:
+  http://guides.rubyonrails.org/form_helpers.html
+  http://guides.rubyonrails.org/active_record_validations.html#displaying-validation-errors-in-views
+
+* I will not cover has_secure_password, I will not do a whole featured
+  signup form here, cause it's too much stuff
+  * will cover a best UI
+  * will do a customize validator
+
+* 故事可以这样开始：
+  我学习 railscasts#250 非常喜欢手动做 auth 的这种方式，所以我这里做了一个，但是我遇到困难的地方是如果加 valdation，并且很好的在 view 层显示这些 errors。所以才有了今天这个视频。
+  
+* 不做 authenication, 就做普通表单提交的 validation 
+
+* 不用 devise，不用 ajax（不用 anglur.js https://github.com/malsup/form/)
+  不用手写 js
+  * tell the beginners, it's not wise to use devise, cause
+    * you don't learn a lot
+    * you can not customize it without knowing it which is hard
+  * rei also hate devise: http://chloerei.com/2013/11/22/you-do-not-need-these-gems/
+  
+  * 网上对 devise 的批评和支持：
+    http://ruby-china.org/topics/3272
+    >我是了解元编程后才读得懂devise这些gem的源码的
+
+    >推荐大家放弃复杂的devise...虽然他很省事，但是需要实现一些用户系统的高级功能的时候，要考虑下自己能不能驾驭他...
+    peter:
+    确实，用户登陆这块其实牵涉很多东西，很多需求下都需要自定制，到时如果玩不转 devise 那就杯具了。
+
+    >Rei: 还是自己写好。devise 内部机制是带 scope 逻辑的，每个方法都要对应任何 Model，要读懂成本太大了。
+
+  * 我还是不用 devise 啦
+    我发现自己手写 devise 的这些功能的时候，使用到的都是很基础的 ruby 和 rails
+  知识。而要去使用 devise 要对很多高级的思想（meta-programming)有心得，感觉很不好。
+  * omniauth-identity 也够烦的
+    http://railscasts.com/episodes/304-omniauth-identity
+
+* 用不用 rails 的 validation?
+  开始，我喜欢直接在 controller 中自己手动做 validation，后来发现这样其实很快 controller 就会变得很大（skinny controller is good)
+  那么如果不能在 controller 中直接操作而需要把代码移到其他的地方，那就干脆移到 model 中，或是 validator 中，这样，干脆就用 rails 自带的 validation 就好了。
+  https://github.com/happypeter/onestep/issues/424
+
+* 经典的 erb：
+
+    <%= form_for @article, url: {action: "create"}, html: {class: "nifty_form"} do
+    |f| %>
+      <%= f.text_field :title %>
+      <%= f.text_area :body, size: "60x12" %>
+      <%= f.submit "Create" %>
+    <% end %>
+
+
