@@ -1,28 +1,4 @@
-* 主要内容
-  https://github.com/happycasts/episodes/issues/7
 
-
-* going from vim
-  * yes, it has vintage mode, so why not try it.
-
-
-* install
-  https://www.sublimetext.com/
-
-
-* how to use multi-cursor
-  * ctrl+D
-  * Ctrl+click
-
-* set project and open file
-  * ignore files
-  * have project wide settings
-  * switch quickly
-  * try open a file, it's lightening fast
-  * open within commandline
-
-* command 面板
-  * you can use key-bindings, but you don't have to
 
 * install pkg and install pkg control
   * the ecosystem rocks
@@ -32,6 +8,13 @@
 * emmet and snippets
   * ctrl+shift-p-> snippet, you will see all your snippet for this file type
 
+* set project and open file
+  * ignore files
+  * have project wide settings
+  * switch quickly
+  * try open a file, it's lightening fast
+  * open within commandline
+
 * find and replace
   * you can right click on the folder name
   * you can select by broswing
@@ -40,8 +23,6 @@
 * how to set key-bindings
   * ref to Key-bindings Defult
   * use console.log_commands(True)
-
-* mult-pane
 
 * my file
   https://github.com/happypeter/edocs/blob/master/plaintext/ubuntu/sublimetext2
