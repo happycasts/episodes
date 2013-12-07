@@ -1,0 +1,42 @@
+* this ep is for people who need a real website, not some static page
+  * they can use github pages: http://happycasts.net/episodes/6
+* which VPS should I use?
+  * linode
+    * 有日本机房，所以速度上略有优势，不过 DO 也并不弱，在我这个 youku 都看不流畅的网络条件下，播视频也是没问题。
+
+  * DigitalOcean
+    * 在 DO 的 vps 上装 ubuntu 的包飞快，因为他们有自己的 Ubuntu mirror
+    * show people how to get a droplet
+    * tell people it's awesome to do rails dev here, so python dev will feel good too.
+
+  * aliyun
+    * 备案，不备案？
+      * aliyun 的速度当然是飞快，但是域名不备案用不了
+      * 备案不是特别困难，有了 aliyun 的帮助
+      * 不过还是可以绕过这一步，域名一般都不会被墙，IP 被墙了，换个 IP 用不了多长时间
+
+
+
+* 用 whois 查看一下你的域名是在那里买的？
+  whois happyec.org|grep Registrar
+
+* 现在来到 domain.com
+  * 注意国外买的域名一样可以在国内备案啊
+  * domain.com 也是不太好用，国内推荐万网
+
+  * 原来过程是这样的，domain.com 的 domaincentral 里有两项可以设置，一个是 DNS 另一个是 nameservers 如果 nameservers 中的域名服务器我们指向了 lionde，那么 domain.com 上的 DNS 这一项就无效了。但是如果我们没有修改 domain.com 默认的 namvservers，那么就可以通过 DNS 这一项，直接添加 A record 来实现各个子域名的指向。（目前 happyec.org 就是这种情况）
+
+  * 所以其实最关键的一步就是：
+    he first thing you need to do to set up your host name is to change your domain name server to point to the DigitalOcean name servers. You can do this through your domain registrar’s website.
+
+  * 填入三个 nameserver，不要添一个，不确定是否管用
+  * 也可以在 DNS 一项下面指定 VPS 的 IP，但是一般都到 DO 上操作就好了
+
+* 然后来到 DO 做子域名的具体指向设置
+  https://www.digitalocean.com/community/articles/how-to-set-up-a-host-name-with-digitalocean
+  * 不同的子域名可以指向不同的 VPS/IP
+  * 添加 A record，CNAME and MX has its own use, we don't need to touch for now
+  * tell people on linode, it's 100% the same
+
+
+* 告诉大家有了 apache 大家可以在同一个 vps 上拥有多个 virtualhost
