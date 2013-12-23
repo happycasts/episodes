@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>87</title>
+</head>
+<body>
+<div class="card">
+  <div class="text">IMAGE</div>
+  <img class="cat" src="cat200.jpg" alt="">
+  <img class="magic" src="magic200.jpg" alt="">
+  <img class="gimp" src="gimp200.jpg" alt="">
+</div>
+</body>
+<style>
+  body {
+  }
+  .card {
+    position: relative;
+    background: #EAEDF1;
+    width:200px;
+    height: 125px;
+    border: 20px solid #EAEDF1;
+    padding: 10px;
+  }
+  .text {
+    font-size: 50px;
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    font-family: sans-serif;
+    overflow: hidden;
+    font-weight: bold;
+    z-index: 20;
+  }
+  img {
+    display: block;
+    border-radius: 50%;
+    border: 2px solid black;
+  }
+  img.cat {
+    position: absolute;
+    top: 50px;
+    left:50px;
+    width: 90px;
+    height: 90px;
+    z-index: 40;
+  }
+  img.magic {
+    position: absolute;
+    top: 55px;
+    left:155px;
+    width: 60px;
+    height: 60px;
+    z-index: 30;
+  }
+  img.gimp {
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+  }
+</style>
+</html>
