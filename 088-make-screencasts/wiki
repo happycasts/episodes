@@ -19,15 +19,15 @@
   * 不做讲稿，但是做提纲，缩进式结构
   * 具体讲的时候，按与朋友聊天的感觉，把所有的点融入一个自然的故事流之中。
   * 慢慢说，不会了就停下想一会，不要 uhm
-  * jeffery way 也是这么弄的：https://tutsplus.com/lesson/editing-the-video-in-screenflow/
+    * jeffery way 也是这么弄的：https://tutsplus.com/lesson/editing-the-video-in-screenflow/
   * 到时把停下的部分切掉就可以了
-  * 有时候 mouse 的位置会造成麻烦，用 unclutter
+    * 有时候 mouse 的位置会造成麻烦，用 unclutter
 
 * 我用到的 screenflow 技巧
   * Cmd+ delete to delete，NOT just delete
   * i and o
 
-* keycastr 和 unclutter
+* keycastr
 
 * ref:
   * https://github.com/happypeter/happycasts/wiki
