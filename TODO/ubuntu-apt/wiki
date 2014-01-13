@@ -1,3 +1,17 @@
+* will deprecate this: http://happycasts.net/episodes/46?autoplay=true
+  * 可以以安装一些 web 开发中常用的包或者工具为例来讲：
+    - rbenv
+    - imagemagick
+  * 何时不能用 apt-get，必须手动安装？
+    - ffmpeg
+
+  * >@happypeter大师能讲讲编译安装软件吗，我想在ubuntu上装个RubyMine,不知道咋整
+  * phpmyadmin
+
+  * 一些心得体会，但是并不直接解决实际问题的讲解是垃圾
+    * 例如 homebrew and gem 安装软件时会在本地编译，而 apt-get 不会
+    * 这种内容越解释越糊涂
+    * happycasts  的内容应该瞄准“解决方案”而且是“最佳解决方案”，所有的讲解都围绕这个方案来讲，所有的拓展都没有必要
 * install specific version of a package
 
     sudo apt-get install yasm=1.2.0
