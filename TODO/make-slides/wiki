@@ -2,3 +2,9 @@
    1. put components on one slide
 speakerdeck
 get color, from one of http://zachholman.com/talks
+
+- 弄一个元器件列表
+  - lable 的字体是 24px 边线宽度是 5px ，可选择的背景色：inner-green，inner-red，inner-blue...
+  - table 应该是什么样子的...
+  - 做出一个 html 页面，类似于 https://github.com/styleguide/css/1.0
+
